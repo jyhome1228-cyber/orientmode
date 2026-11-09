@@ -35,3 +35,8 @@
 body.menu-open{overflow:hidden}
 .site-footer{padding:72px 7vw 25px}.site-footer .sf-top{grid-template-columns:1fr;gap:42px;padding-bottom:75px}.site-footer .sf-col:last-child{grid-column:auto}.site-footer .sf-brand{font-size:clamp(48px,15vw,84px)}.site-footer .sf-tagline{font-size:23px}.site-footer .sf-bottom{display:block;line-height:2}.site-footer .sf-bottom span{display:block}}
 @media(prefers-reduced-motion:reduce){.site-header,.site-header .site-nav a,.site-footer .sf-links a{transition:none}}
+
+/* Official vector wordmark — preserve intrinsic 536:77 aspect ratio */
+.site-header .site-logo img{display:block;width:clamp(158px,14.5vw,210px);height:auto;max-width:100%;object-fit:contain}
+.site-footer .sf-brand img{display:block;width:clamp(245px,35vw,440px);height:auto;max-width:100%;object-fit:contain}
+@media(max-width:760px){.site-header .site-logo img{width:160px}.site-footer .sf-brand img{width:min(78vw,330px)}}
