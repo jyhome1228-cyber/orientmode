@@ -1,0 +1,117 @@
+/* ORIENTIVE · refined editorial system · 2026-11-09
+   Single final override shared by all public pages. */
+:root{--ref-ink:#242d2d;--ref-sub:#606d6b;--ref-paper:#f6f6f4;--ref-line:#d9ddda;--ref-accent:#ef780b}
+html{scroll-padding-top:72px}
+body{font-size:15px;line-height:1.7;letter-spacing:-.018em}
+.site-header.header,.site-header.header.scrolled{height:66px!important;padding:0 clamp(24px,4.4vw,74px)!important;gap:24px!important}
+.site-header .site-logo img{width:clamp(122px,9.4vw,148px)!important;height:auto!important;max-height:36px!important}
+.site-header .site-nav{gap:clamp(18px,2.3vw,34px)!important}
+.site-header .site-nav a{font-size:11px!important;letter-spacing:.095em!important;font-weight:500!important}
+.site-header .site-nav .site-cta{padding:11px 18px!important;gap:19px!important;font-size:11px!important;font-weight:700!important;min-height:38px}
+.site-header .site-nav .site-cta span{font-size:12px}
+.container{width:min(1320px,calc(100% - 11vw))}
+h1,h2,h3{font-weight:600!important;letter-spacing:-.052em!important}
+h1{font-size:clamp(43px,5.4vw,78px)!important;line-height:1.17!important;max-width:940px!important}
+h2{font-size:clamp(32px,3.4vw,52px)!important;line-height:1.24!important;margin:14px 0 24px!important}
+.eyebrow{font-size:10px!important;letter-spacing:.18em!important}
+.lead{font-size:clamp(15px,1.2vw,17px)!important;line-height:1.8}
+.section{padding:clamp(80px,7.6vw,112px) 0!important}
+.sectiontop{gap:clamp(30px,5vw,85px)!important;margin-bottom:clamp(42px,4.8vw,66px)!important;align-items:end}
+.sectiontop h2{max-width:670px!important}
+.sectiontop p{font-size:15px!important;line-height:1.85!important;margin:0 0 7px!important;max-width:360px}
+.problems{border-color:var(--ref-line)!important}
+.problem{padding:26px 23px 32px!important;border-color:var(--ref-line)!important}
+.problem:first-child{padding-left:0!important}
+.problem b{font-size:10px!important;font-weight:600!important;letter-spacing:.035em}
+.problem h3{font-size:19px!important;margin:40px 0 9px!important;font-weight:600!important}
+.problem p{font-size:13px!important;line-height:1.8!important;margin:0}
+.plan{min-height:335px!important;padding:29px!important}
+.plan:hover{transform:translateY(-3px)}
+.plan h3{font-size:clamp(29px,3vw,45px)!important;font-weight:600!important}
+.plan small{font-size:10px!important;letter-spacing:.1em!important}
+.plan p{font-size:13px!important}
+.plan .bottom{padding-top:18px!important;font-size:12px!important}
+.case{min-height:355px!important}
+.case .copy{padding:25px!important}
+.case h3{font-size:23px!important}
+.step{grid-template-columns:65px 1fr 1fr!important;padding:24px 0!important}
+.step h3{font-size:21px!important}
+.step p{font-size:13px!important}
+.dash-grid{gap:clamp(35px,5vw,74px)!important}
+.dash-mock{box-shadow:0 12px 36px #2033290e!important;padding:24px!important;border-radius:5px!important}
+.metric{padding:18px!important}
+.metric strong{font-size:23px!important}
+.contact h2{max-width:750px!important}
+.btn{padding:13px 19px!important;gap:20px!important;font-size:11px!important;font-weight:650!important}
+.orient-story__heading{font-size:clamp(42px,5.1vw,76px)!important;line-height:1.2!important;letter-spacing:-.06em!important;max-width:940px!important;font-weight:600!important;margin-bottom:24px!important}
+.orient-story__content{width:min(1220px,calc(100% - 11vw))!important;padding-top:92px!important}
+.orient-story__eyebrow{font-size:10px!important;margin-bottom:22px!important;font-weight:600!important}
+.orient-story__description{font-size:clamp(15px,1.17vw,17px)!important;max-width:565px!important;line-height:1.85!important}
+.orient-story__cta{padding:13px 19px!important;margin-top:29px!important;font-size:11px!important;gap:24px!important}
+.orient-story__ui{left:5.5vw!important;right:5.5vw!important;bottom:31px!important}
+.orient-story__progress span{width:26px!important}
+.orient-story__progress span.is-active{width:40px!important}
+.site-page{padding:clamp(138px,12vw,178px) max(5.5vw,24px) 95px!important;min-height:65svh!important}
+.site-inner{max-width:1260px!important}
+.site-page h1{font-size:clamp(39px,4.8vw,69px)!important;line-height:1.2!important;max-width:860px!important;font-weight:600!important}
+.site-kicker{font-size:10px!important;letter-spacing:.16em!important;font-weight:650!important}
+.site-intro{font-size:clamp(15px,1.4vw,18px)!important;max-width:690px!important;line-height:1.85!important}
+.site-cards{gap:14px!important;margin-top:48px!important}
+.site-card{min-height:230px!important;padding:28px!important;border-color:var(--ref-line)!important}
+.site-card h2{font-size:clamp(22px,2.1vw,30px)!important;margin:10px 0!important}
+.site-card p{font-size:13px!important;line-height:1.8!important}
+.site-note{font-size:12px!important}
+.site-footer .sf-shell{padding:75px clamp(24px,4.4vw,74px) 25px!important}
+.site-footer .sf-cta{padding-bottom:55px!important}
+.site-footer .sf-cta h2{font-size:clamp(29px,3.3vw,49px)!important;line-height:1.25!important;font-weight:500!important}
+.site-footer .sf-cta-button{padding:16px 21px!important;font-size:12px!important}
+.site-footer .sf-top{padding:52px 0 65px!important}
+.site-footer .sf-brand img{width:clamp(185px,19vw,275px)!important}
+.site-footer .sf-tagline{font-size:15px!important}
+.site-footer .sf-desc{font-size:12px!important}
+.site-footer .sf-links a{font-size:13px!important}
+.site-back-top{width:38px!important;height:38px!important}
+@media(min-width:761px) and (max-width:1100px){.sectiontop h2{max-width:610px}.site-header .site-nav{gap:16px!important}.site-header .site-logo img{width:130px!important}}
+@media(max-width:760px){
+ html{scroll-padding-top:62px}
+ .site-header.header,.site-header.header.scrolled{height:62px!important;padding:0 6vw!important}
+ .site-header .site-logo img{width:126px!important;max-height:28px!important}
+ .site-header .site-menu-toggle{width:37px!important;height:37px!important}
+ .site-mobile-menu.overlaymenu{inset:62px 0 0!important;padding:28px 7vw 36px!important}
+ .site-mobile-menu a{font-size:clamp(23px,6.5vw,32px)!important;min-height:60px!important}
+ .container{width:calc(100% - 12vw)!important}
+ h1{font-size:clamp(36px,8.5vw,52px)!important}
+ h2{font-size:clamp(29px,7vw,40px)!important}
+ .section{padding:74px 0!important}
+ .sectiontop{margin-bottom:34px!important;display:block!important}
+ .sectiontop p{margin-top:16px!important;font-size:14px!important;max-width:560px!important}
+ .orient-story__content{width:calc(100% - 12vw)!important;padding:72px 0 76px!important}
+ .orient-story__heading{font-size:clamp(34px,8.1vw,52px)!important;line-height:1.22!important;margin-bottom:20px!important}
+ .orient-story__description{font-size:14px!important;line-height:1.8!important}
+ .orient-story__eyebrow{margin-bottom:17px!important}
+ .orient-story__ui{left:6vw!important;right:6vw!important;bottom:23px!important}
+ .problems{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .problem{padding:22px 15px!important}
+ .problem:first-child{padding-left:15px!important}
+ .problem h3{font-size:18px!important;margin:22px 0 8px!important}
+ .problem p{font-size:12px!important}
+ .plans{grid-template-columns:1fr!important}
+ .plan{min-height:245px!important;padding:25px!important}
+ .plan h3{font-size:33px!important}
+ .casegrid,.dash-grid{grid-template-columns:1fr!important;gap:14px!important}
+ .case{min-height:290px!important}
+ .step{grid-template-columns:34px 1fr!important;gap:12px!important}
+ .step h3{font-size:19px!important}
+ .step p{grid-column:2!important}
+ .site-page{padding:115px 6vw 75px!important}
+ .site-page h1{font-size:clamp(35px,8vw,47px)!important}
+ .site-cards{grid-template-columns:1fr!important;margin-top:35px!important}
+ .site-card{min-height:185px!important;padding:24px!important}
+ .site-card h2{font-size:24px!important}
+ .site-footer .sf-shell{padding:58px 7vw 25px!important}
+ .site-footer .sf-cta h2{font-size:clamp(30px,7vw,43px)!important}
+ .site-footer .sf-top{padding:43px 0 52px!important}
+ .site-footer .sf-brand img{width:min(60vw,245px)!important}
+}
+@media(max-width:480px){.problems{grid-template-columns:1fr!important}.problem{border-right:0!important;padding:19px 0!important}.problem:first-child{padding-left:0!important}.problem h3{margin:14px 0 7px!important}.orient-story__heading{font-size:clamp(32px,8.2vw,42px)!important}.orient-story__cta{margin-top:24px!important}}
+@media(prefers-reduced-motion:reduce){.plan,.site-header,.orient-story__content{transition:none!important}}
