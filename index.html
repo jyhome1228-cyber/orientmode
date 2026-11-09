@@ -24,9 +24,21 @@
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
-<div class="orv-opening" id="orvOpening" role="status" aria-label="ORIENTIVE 브랜드 오프닝">
- <img src="./assets/images/orientive-logo-white.svg" class="orv-opening__logo" alt="ORIENTIVE" width="536" height="77">
- <button class="orv-opening__skip" id="orvIntroSkip" type="button">SKIP INTRO ↗</button>
+<div class="orv-opening orv-booking-intro" id="orvOpening" role="region" aria-label="오리엔티브 브랜드 인트로">
+ <button class="orv-opening__skip" id="orvIntroSkip" type="button" aria-label="인트로 건너뛰기">SKIP <span aria-hidden="true">↗</span></button>
+ <div class="orv-booking-intro__notifications" aria-hidden="true">
+  <div class="orv-booking-intro__card n1"><span class="orv-booking-intro__check">✓</span><div><strong>새로운 예약이 접수되었습니다.</strong><small>객실 A · 주말 1박</small></div><span class="orv-booking-intro__now">NOW</span></div>
+  <div class="orv-booking-intro__card n2"><span class="orv-booking-intro__check">✓</span><div><strong>예약이 확정되었습니다.</strong><small>객실 B · 2박</small></div><span class="orv-booking-intro__now">NOW</span></div>
+  <div class="orv-booking-intro__card n3"><span class="orv-booking-intro__check">✓</span><div><strong>새로운 예약이 접수되었습니다.</strong><small>독채 숙소 · 1박</small></div><span class="orv-booking-intro__now">NOW</span></div>
+  <div class="orv-booking-intro__card n4"><span class="orv-booking-intro__check">✓</span><div><strong>예약이 확정되었습니다.</strong><small>객실 C · 2박</small></div><span class="orv-booking-intro__now">NOW</span></div>
+  <div class="orv-booking-intro__card n5"><span class="orv-booking-intro__check">✓</span><div><strong>새로운 예약이 접수되었습니다.</strong><small>풀빌라 · 주말 2박</small></div><span class="orv-booking-intro__now">NOW</span></div>
+  <div class="orv-booking-intro__card n6"><span class="orv-booking-intro__check">✓</span><div><strong>예약이 확정되었습니다.</strong><small>객실 D · 1박</small></div><span class="orv-booking-intro__now">NOW</span></div>
+ </div>
+ <div class="orv-booking-intro__end" aria-label="이제 당신의 숙소가 달라질 차례, 오리엔티브에서.">
+  <p class="orv-booking-intro__message">이제 당신의 숙소가<br>달라질 차례, <em>오리엔티브에서.</em></p>
+  <img src="./assets/images/orientive-logo-white.svg" class="orv-opening__logo" alt="ORIENTIVE" width="536" height="77">
+ </div>
+ <span class="orv-booking-intro__disclaimer">BRAND MOTION · 예약 알림은 연출용 예시입니다.</span>
 </div>
 <header class="header site-header is-home at-top" id="header"><a href="./" class="site-logo" aria-label="ORIENTIVE 홈"><img src="./assets/images/orientive-logo-white.svg" alt="ORIENTIVE" width="536" height="77" decoding="async"></a><nav class="site-nav" aria-label="주요 메뉴"><a href="./about/">ABOUT</a><a href="./solutions/">SOLUTIONS</a><a href="./cases/">CASES</a><a href="./insights/">INSIGHTS</a><a href="./contact/" class="site-cta">상담 문의 <span aria-hidden="true">↗</span></a></nav><button class="hamb site-menu-toggle" type="button" aria-controls="mobileNav" aria-expanded="false" aria-label="메뉴 열기"><span class="menu-icon" aria-hidden="true"></span></button></header>
 <nav class="overlaymenu site-mobile-menu" id="mobileNav" aria-label="모바일 메뉴" aria-hidden="true"><a href="./about/">ABOUT</a><a href="./solutions/">SOLUTIONS</a><a href="./cases/">CASES</a><a href="./insights/">INSIGHTS</a><a href="./contact/" class="menu-contact">CONTACT <span aria-hidden="true">↗</span></a><span class="mobile-caption">ORIENTIVE · HOSPITALITY GROWTH PARTNER</span></nav>
