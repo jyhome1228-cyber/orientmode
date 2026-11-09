@@ -20,21 +20,34 @@
 
 <link rel="stylesheet" href="assets/css/refinement.css">
 <link rel="stylesheet" href="assets/css/home-2026.css">
+<link rel="stylesheet" href="assets/css/motion-2026.css">
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
+<div class="orv-opening" id="orvOpening" role="status" aria-label="ORIENTIVE 브랜드 오프닝">
+ <img src="./assets/images/orientive-logo-white.svg" class="orv-opening__logo" alt="ORIENTIVE" width="536" height="77">
+ <button class="orv-opening__skip" id="orvIntroSkip" type="button">SKIP INTRO ↗</button>
+</div>
 <header class="header site-header is-home at-top" id="header"><a href="./" class="site-logo" aria-label="ORIENTIVE 홈"><img src="./assets/images/orientive-logo-white.svg" alt="ORIENTIVE" width="536" height="77" decoding="async"></a><nav class="site-nav" aria-label="주요 메뉴"><a href="./about/">ABOUT</a><a href="./solutions/">SOLUTIONS</a><a href="./cases/">CASES</a><a href="./insights/">INSIGHTS</a><a href="./contact/" class="site-cta">상담 문의 <span aria-hidden="true">↗</span></a></nav><button class="hamb site-menu-toggle" type="button" aria-controls="mobileNav" aria-expanded="false" aria-label="메뉴 열기"><span class="menu-icon" aria-hidden="true"></span></button></header>
 <nav class="overlaymenu site-mobile-menu" id="mobileNav" aria-label="모바일 메뉴" aria-hidden="true"><a href="./about/">ABOUT</a><a href="./solutions/">SOLUTIONS</a><a href="./cases/">CASES</a><a href="./insights/">INSIGHTS</a><a href="./contact/" class="menu-contact">CONTACT <span aria-hidden="true">↗</span></a><span class="mobile-caption">ORIENTIVE · HOSPITALITY GROWTH PARTNER</span></nav>
 <main id="main">
-<section class="orv-hero" aria-label="오리엔티브 메인 비주얼">
- <div class="orv-hero__image" aria-hidden="true"></div>
- <div class="orv-wrap orv-hero__inner">
-  <p class="orv-kicker">ORIENTIVE · HOSPITALITY GROWTH PARTNER</p>
-  <h1>숙박의 가능성을,<br>성장의 방향으로.</h1>
-  <p class="orv-hero__intro">숙박시설의 현재를 이해하고,<br>운영의 더 나은 내일을 함께 설계합니다.</p>
-  <a class="orv-link" href="./about/">Discover Orientive <span aria-hidden="true">↗</span></a>
- </div>
- <span class="orv-hero__meta">SCROLL TO EXPLORE ↓</span>
+<section class="orv-hero orv-motion-hero" aria-label="오리엔티브 브랜드 오프닝">
+  <div class="orv-motion-hero__system" aria-hidden="true">
+    <div class="orv-motion-hero__orbit"></div><div class="orv-motion-hero__orbit"></div><div class="orv-motion-hero__orbit"></div>
+    <div class="orv-motion-hero__core"></div>
+    <span class="orv-motion-hero__particle p1">BRAND</span><span class="orv-motion-hero__particle p2">EXPERIENCE</span>
+    <span class="orv-motion-hero__particle p3">OPERATION</span><span class="orv-motion-hero__particle p4">GROWTH</span>
+  </div>
+  <div class="orv-motion-hero__header">ORIENTIVE · HOSPITALITY GROWTH PARTNER</div>
+  <div class="orv-motion-hero__content">
+    <div class="orv-motion-hero__line">숙박의 가능성을<span>Discover the potential.</span></div>
+    <div class="orv-motion-hero__line right">성장의 방향으로.<span>Design the next growth.</span></div>
+  </div>
+  <div class="orv-motion-hero__bottom">
+    <a href="./about/">EXPLORE ORIENTIVE <span aria-hidden="true">↗</span></a>
+    <span class="orv-motion-hero__bottom-note">BRAND · MARKETING · OPERATION</span>
+    <button type="button" class="orv-motion-scroll" id="orvScrollCue" aria-label="다음 섹션으로 스크롤"><span class="orv-motion-scroll__track"></span><span>SCROLL</span></button>
+  </div>
 </section>
 <section class="orv-section orv-intro" id="about">
  <div class="orv-wrap orv-intro__grid">
@@ -110,4 +123,5 @@
 const revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 
 </script>
-<script defer src="./assets/js/navigation.js"></script></body></html>
+<script defer src="./assets/js/navigation.js"></script>
+<script defer src="./assets/js/motion-2026.js"></script></body></html>
