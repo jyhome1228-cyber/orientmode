@@ -139,3 +139,23 @@ h2{font-size:clamp(32px,3.4vw,52px)!important;line-height:1.24!important;margin:
   background:#fff!important;color:#132839!important;
 }
 .site-back-top:hover{background:#f4f4f1!important;color:#132839!important}
+
+/* 2026 refinement of interior pages: aligned editorial hierarchy, varied card rhythm */
+.site-page{background:#f7f7f4!important;color:#1f2d33!important}
+.site-inner{max-width:1220px!important}
+.site-page .site-kicker{color:#c56820!important;font-size:10px!important;letter-spacing:.16em!important;font-weight:600!important}
+.site-page h1{font-size:clamp(36px,4.4vw,62px)!important;line-height:1.25!important;max-width:780px!important;margin:22px 0 23px!important;letter-spacing:-.055em!important}
+.site-page .site-intro{font-size:clamp(15px,1.35vw,17px)!important;line-height:1.9!important;max-width:670px!important;color:#617078!important}
+.site-page .site-cards{grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:14px!important;margin-top:64px!important}
+.site-page .site-card{grid-column:span 4;min-height:240px!important;padding:30px!important;background:#fff!important;box-shadow:none!important;border:1px solid #dde1df!important;transition:background .2s,border-color .2s}
+.site-page .site-card:first-child{grid-column:span 6;background:#edf0ef!important}
+.site-page .site-card:nth-child(2){grid-column:span 3}
+.site-page .site-card:nth-child(3){grid-column:span 3}
+.site-page .site-card:hover{border-color:#9da9ab!important;background:#f3f5f3!important}
+.site-page .site-card .num{font-size:10px!important;color:#b76728!important}
+.site-page .site-card h2{font-size:clamp(22px,2vw,29px)!important;line-height:1.3!important;font-weight:550!important}
+.site-page .site-card p{font-size:13px!important;color:#647177!important}
+.site-page .site-note{background:transparent!important;border-left:2px solid #c66c2b!important;padding:15px 20px!important;margin-top:34px!important;color:#798187!important;font-size:12px!important}
+.site-page .site-link{font-size:12px!important;font-weight:600!important;text-decoration:none!important;border-bottom:1px solid currentColor;padding-bottom:7px}
+@media(max-width:900px){.site-page .site-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important}.site-page .site-card,.site-page .site-card:first-child,.site-page .site-card:nth-child(2),.site-page .site-card:nth-child(3){grid-column:span 1!important;min-height:220px!important}.site-page .site-card:first-child{grid-column:1/-1!important}}
+@media(max-width:680px){.site-page{padding:112px 6vw 70px!important}.site-page h1{font-size:clamp(33px,8vw,43px)!important}.site-page .site-cards{grid-template-columns:1fr!important;margin-top:42px!important;gap:12px!important}.site-page .site-card,.site-page .site-card:first-child,.site-page .site-card:nth-child(2),.site-page .site-card:nth-child(3){grid-column:1/-1!important;min-height:182px!important;padding:25px!important}.site-page .site-card h2{font-size:23px!important}}
