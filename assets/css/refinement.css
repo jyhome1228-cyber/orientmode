@@ -115,3 +115,27 @@ h2{font-size:clamp(32px,3.4vw,52px)!important;line-height:1.24!important;margin:
 }
 @media(max-width:480px){.problems{grid-template-columns:1fr!important}.problem{border-right:0!important;padding:19px 0!important}.problem:first-child{padding-left:0!important}.problem h3{margin:14px 0 7px!important}.orient-story__heading{font-size:clamp(32px,8.2vw,42px)!important}.orient-story__cta{margin-top:24px!important}}
 @media(prefers-reduced-motion:reduce){.plan,.site-header,.orient-story__content{transition:none!important}}
+
+/* CTA palette: orange is reserved for small brand accents, never button fills. */
+.site-header .site-nav .site-cta{
+  background:#f4f4f1!important;color:#152736!important;
+  border:1px solid rgba(255,255,255,.7)!important;
+}
+.site-header .site-nav .site-cta:hover{
+  background:#fff!important;color:#152736!important;
+}
+.orient-story__cta,.btn.teal{
+  background:#f4f4f1!important;color:#132839!important;
+  border:1px solid #f4f4f1!important;
+}
+.orient-story__cta:hover,.btn.teal:hover{
+  background:#fff!important;border-color:#fff!important;color:#132839!important;
+}
+.site-footer .sf-cta-button{
+  background:#f4f4f1!important;color:#132839!important;
+  border:1px solid #f4f4f1!important;
+}
+.site-footer .sf-cta-button:hover{
+  background:#fff!important;color:#132839!important;
+}
+.site-back-top:hover{background:#f4f4f1!important;color:#132839!important}
