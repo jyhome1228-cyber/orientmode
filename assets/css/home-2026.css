@@ -1,5 +1,5 @@
 /* ORIENTIVE 2026 editorial renewal — scoped homepage system */
-:root{--orv-navy:#102635;--orv-ink:#1f2c32;--orv-muted:#667078;--orv-paper:#f7f7f4;--orv-sand:#edede8;--orv-line:#daddd9;--orv-orange:#ff7900}
+:root{--orv-navy:#102635;--orv-ink:#1f2c32;--orv-muted:#667078;--orv-paper:#f7f7f4;--orv-sand:#edede8;--orv-line:#daddd9;--orv-orange:#a9bfcd}
 body{background:var(--orv-paper)}
 .orv-wrap{width:min(1312px,calc(100% - 10vw));margin-inline:auto}
 .orv-kicker{font:600 10px/1.5 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#687379}
@@ -48,7 +48,7 @@ body{background:var(--orv-paper)}
 .orv-cases{background:var(--orv-navy);color:#fff}
 .orv-cases .orv-title{color:#fff}
 .orv-cases .orv-copy{color:#b8c5c8}
-.orv-cases .orv-kicker{color:#e9a263}
+.orv-cases .orv-kicker{color:#b4c9d4}
 .orv-casegrid{display:grid;grid-template-columns:1.16fr .84fr;gap:22px}
 .orv-case{display:block;color:#fff;min-width:0}
 .orv-case__image{height:410px;overflow:hidden;background:#213746}
@@ -83,7 +83,7 @@ body{background:var(--orv-paper)}
 .orv-client__bars i:last-child{background:#587d86}
 .orv-client__mockfoot{font-size:10px;color:#859398;margin-top:17px}
 .orv-final{background:#102635;color:#fff;text-align:left;padding:115px 0}
-.orv-final .orv-kicker{color:#e99c5b}
+.orv-final .orv-kicker{color:#b4c9d4}
 .orv-final h2{font-size:clamp(34px,3.8vw,55px)!important;color:#fff!important;max-width:780px;margin:20px 0 22px!important;font-weight:500!important}
 .orv-final p{color:#bfcbcf;font-size:15px;line-height:1.9;max-width:550px}
 .orv-final .orv-link{color:#fff;margin-top:14px}
