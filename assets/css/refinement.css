@@ -186,3 +186,13 @@ h2{font-size:clamp(32px,3.4vw,52px)!important;line-height:1.24!important;margin:
 .site-footer .sf-top{grid-template-columns:minmax(0,1.45fr) minmax(130px,.45fr) minmax(295px,.85fr)!important;gap:clamp(28px,4vw,76px)!important}
 @media(max-width:1050px){.site-footer .sf-top{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)!important}.site-footer .sf-col-brand{grid-column:1/-1}}
 @media(max-width:680px){.site-footer .sf-top{grid-template-columns:1fr!important;gap:35px!important}.site-footer .sf-col-brand{grid-column:auto}.site-footer .sf-business>div{grid-template-columns:92px minmax(0,1fr)}}
+
+/* Primary and mobile navigation typography: Pretendard */
+.site-header .site-nav,
+.site-header .site-nav a,
+.site-header .site-nav .site-cta,
+.site-mobile-menu,
+.site-mobile-menu a,
+.site-mobile-menu .menu-contact {
+  font-family: "Pretendard", "Pretendard Variable", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif !important;
+}
