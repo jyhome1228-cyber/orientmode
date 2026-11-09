@@ -1,0 +1,26 @@
+/* ORIENTIVE foundation — provisional web palette based on 2026 brand identity deck. */
+:root{--brand-navy:#0c2031;--brand-navy-soft:#17344b;--brand-orange:#ff7900;--brand-white:#f5f7f8;--brand-ink:#142638;--brand-line:#d5dfe5}
+html{scroll-padding-top:80px}body{background:var(--brand-white)}
+:focus-visible{outline:3px solid var(--brand-orange);outline-offset:4px}
+.header.scrolled{background:rgba(12,32,49,.96)}
+.header .brand span{color:var(--brand-orange)!important}
+.tag,.eyebrow.tag{color:var(--brand-orange)}
+.btn.teal{background:var(--brand-orange);border-color:var(--brand-orange);color:#fff}
+.story-dots i.on{background:var(--brand-orange)}.bar-chart i:last-child{background:var(--brand-orange)}
+.hero{background-color:var(--brand-navy)}.statement,.cases,.contact{background:var(--brand-navy)}.story{background:var(--brand-navy-soft)}
+.story-visual:before{background:linear-gradient(90deg,var(--brand-navy-soft),transparent 55%),#07152244}
+.story-name{color:#fff}.plan:hover{background:var(--brand-navy)}.dashboard{background:#e8edf0}
+.footer{background:#071724}.light{background:var(--brand-white)}
+.site-page{min-height:75svh;padding:165px max(5vw,24px) 100px;background:var(--brand-white)}
+.site-inner{max-width:1320px;margin:auto}.site-kicker{font-size:12px;letter-spacing:.2em;color:#bd5200;font-weight:800}
+.site-page h1{color:var(--brand-ink);font-size:clamp(45px,7vw,102px);max-width:1100px;line-height:1.12}
+.site-intro{font-size:clamp(16px,2vw,21px);color:#526675;max-width:800px;line-height:1.85}
+.site-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:60px}
+.site-card{padding:34px;border:1px solid var(--brand-line);background:white;min-height:260px;display:flex;flex-direction:column;justify-content:space-between}
+.site-card .num{color:#bd5200;font-size:12px;font-weight:700}.site-card h2{font-size:clamp(23px,2.5vw,38px);margin:15px 0;color:var(--brand-ink);letter-spacing:-.05em}
+.site-card p{font-size:14px;color:#526675;line-height:1.8}
+.site-link{font-size:13px;font-weight:800;color:var(--brand-ink);text-decoration:underline;text-underline-offset:5px}
+.site-note{margin-top:35px;padding:22px;border-left:3px solid var(--brand-orange);background:#eaf0f3;font-size:13px;color:#475c69;line-height:1.8}
+.nav a[aria-current="page"]{color:var(--brand-orange)}.site-footer{margin-top:0}
+@media(max-width:850px){.site-page{padding-top:125px}.site-cards{grid-template-columns:1fr}.site-card{min-height:210px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
