@@ -184,3 +184,24 @@ html.orv-fullpage-active main>.orv-final>.orv-wrap{
  .site-header .site-nav .site-cta{font-size:13px!important;font-weight:600!important;min-height:40px!important;padding:10px 19px!important}
  .site-header .site-nav{gap:clamp(19px,2vw,31px)!important}
 }
+
+/* Header consultation CTA — restrained editorial link, no white capsule */
+@media(min-width:761px){
+ .site-header .site-nav a.site-cta{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  gap:17px!important;margin-left:8px!important;
+  border:0!important;border-bottom:1px solid rgba(224,235,242,.65)!important;
+  border-radius:0!important;background:transparent!important;
+  box-shadow:none!important;color:#f2f6f9!important;
+  padding:8px 0 9px!important;min-height:0!important;height:auto!important;
+  font-family:"Pretendard","Pretendard Variable",sans-serif!important;
+  font-size:13px!important;font-weight:500!important;letter-spacing:0!important;
+  transform:none!important;transition:border-color .2s,color .2s!important;
+ }
+ .site-header .site-nav a.site-cta:hover,
+ .site-header .site-nav a.site-cta:focus-visible{
+  background:transparent!important;color:#fff!important;
+  border-bottom-color:#fff!important;transform:none!important;
+ }
+ .site-header .site-nav a.site-cta span{font-size:15px!important;font-weight:400!important;line-height:1}
+}
