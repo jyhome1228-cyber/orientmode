@@ -134,3 +134,40 @@ body{font-size:15px!important;line-height:1.7}
  .ux-page .ux-heading,.about-page h2,.service-page .service-heading,.sol-page .sol-heading{font-size:clamp(25px,6.3vw,32px)!important}
  .ux-page .ux-body,.about-page .about-copy,.service-page .service-copy,.sol-page .sol-copy{font-size:14px!important}
 }
+
+/* V4 — ONE layout grid for header, all public page sections and footer.
+   Desktop max-width 1280px; same left/right inset at every page and section. */
+:root{--site-grid-max:1280px;--site-grid-gutter:48px}
+.orv-wrap,.ux-wrap,.about-wrap,.service-wrap,.sol-wrap,
+html.orv-fullpage-active main>.orv-section>.orv-wrap,
+html.orv-fullpage-active main>.orv-final>.orv-wrap{
+ width:min(var(--site-grid-max),calc(100% - var(--site-grid-gutter)*2))!important;
+ max-width:var(--site-grid-max)!important;
+ margin-inline:auto!important;
+}
+.site-header.header,.site-header.header.scrolled{
+ padding-left:max(var(--site-grid-gutter),calc((100% - var(--site-grid-max))/2))!important;
+ padding-right:max(var(--site-grid-gutter),calc((100% - var(--site-grid-max))/2))!important;
+}
+.site-footer .sf-shell{
+ max-width:var(--site-grid-max)!important;
+ width:min(var(--site-grid-max),calc(100% - var(--site-grid-gutter)*2))!important;
+ padding:66px 0 27px!important;
+ margin-inline:auto!important;
+}
+.site-footer .sf-top,.site-footer .sf-bottom,.site-footer .sf-cta{
+ max-width:100%!important;margin-left:0!important;margin-right:0!important;
+}
+/* Last content section already calls for consultation; do not repeat the same huge CTA in footer. */
+.site-footer .sf-cta{display:none!important}
+.site-footer .sf-top{padding:0 0 48px!important}
+@media(max-width:900px){
+ :root{--site-grid-gutter:28px}
+ .site-footer .sf-shell{padding:52px 0 24px!important}
+}
+@media(max-width:760px){
+ :root{--site-grid-gutter:6vw}
+ .site-header.header,.site-header.header.scrolled{padding-left:6vw!important;padding-right:6vw!important}
+ .site-footer .sf-shell{padding:44px 0 24px!important}
+ .site-footer .sf-top{padding:0 0 35px!important}
+}
