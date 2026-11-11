@@ -171,3 +171,9 @@ html.orv-fullpage-active main>.orv-final>.orv-wrap{
  .site-footer .sf-shell{padding:44px 0 24px!important}
  .site-footer .sf-top{padding:0 0 35px!important}
 }
+
+/* Official wide ORIENTIVE wordmark 600:47 ratio */
+.site-header .site-logo img{width:clamp(148px,11.5vw,178px)!important;height:auto!important;max-height:22px!important}
+.site-footer .sf-brand img{width:clamp(200px,20vw,280px)!important;height:auto!important}
+.orv-opening .orv-opening__logo{width:clamp(170px,23vw,255px)!important;height:auto!important}
+@media(max-width:760px){.site-header .site-logo img{width:149px!important;max-height:18px!important}.site-footer .sf-brand img{width:min(65vw,235px)!important}.orv-opening .orv-opening__logo{width:min(68vw,225px)!important}}
