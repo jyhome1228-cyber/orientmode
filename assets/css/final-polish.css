@@ -177,3 +177,10 @@ html.orv-fullpage-active main>.orv-final>.orv-wrap{
 .site-footer .sf-brand img{width:clamp(200px,20vw,280px)!important;height:auto!important}
 .orv-opening .orv-opening__logo{width:clamp(170px,23vw,255px)!important;height:auto!important}
 @media(max-width:760px){.site-header .site-logo img{width:149px!important;max-height:18px!important}.site-footer .sf-brand img{width:min(65vw,235px)!important}.orv-opening .orv-opening__logo{width:min(68vw,225px)!important}}
+
+/* Header navigation readability adjustment — Nov 11 */
+@media(min-width:761px){
+ .site-header .site-nav a:not(.site-cta){font-size:14px!important;font-weight:500!important;letter-spacing:.015em!important}
+ .site-header .site-nav .site-cta{font-size:13px!important;font-weight:600!important;min-height:40px!important;padding:10px 19px!important}
+ .site-header .site-nav{gap:clamp(19px,2vw,31px)!important}
+}
