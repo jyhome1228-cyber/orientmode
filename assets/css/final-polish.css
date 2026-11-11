@@ -97,3 +97,40 @@ body{font-size:15px!important;line-height:1.7}
 .orv-timeline h3{font-size:19px!important;font-weight:500!important}
 .orv-final h2{font-size:clamp(30px,3vw,43px)!important;font-weight:500!important}
 @media(max-width:760px){.orv-motion-hero__line{font-size:clamp(30px,7.8vw,42px)!important}.orv-title{font-size:clamp(27px,6.8vw,35px)!important}}
+
+/* V3: Worxphere-inspired restrained editorial proportions.
+   Reference for hierarchy and density, not proprietary artwork/layout duplication. */
+@media(min-width:901px){
+ .ux-page .ux-hero h1,.about-page .about-intro h1,.service-page .service-hero h1,.sol-page .sol-intro h1{
+  font-size:clamp(32px,2.45vw,42px)!important;line-height:1.35!important;max-width:850px!important;font-weight:500!important;
+ }
+ .ux-page .ux-heading,.about-page h2,.service-page .service-heading,.sol-page .sol-heading{
+  font-size:clamp(26px,1.85vw,32px)!important;line-height:1.44!important;font-weight:520!important;
+ }
+ .ux-page .ux-hero,.about-page .about-intro,.service-page .service-hero,.sol-page .sol-intro{
+  min-height:clamp(430px,64svh,590px)!important;
+ }
+ .ux-page .ux-hero .ux-wrap,.about-page .about-intro .about-wrap,.service-page .service-hero .service-wrap,.sol-page .sol-intro .sol-wrap{
+  padding-top:clamp(125px,14vh,150px)!important;padding-bottom:clamp(65px,8vh,86px)!important;
+ }
+ .ux-page .ux-section,.about-page .about-experience,.about-page .about-expertise,.service-page .service-areas,.service-page .service-process,.sol-page .sol-programs,.sol-page .sol-compare{
+  padding-top:clamp(66px,5.5vw,88px)!important;padding-bottom:clamp(72px,5.8vw,94px)!important;
+ }
+ .ux-page .ux-head,.about-page .about-experience__head,.about-page .about-expertise__head,.service-page .service-areas__top,.service-page .service-process__top,.sol-page .sol-head{margin-bottom:30px!important}
+ .ux-wrap,.about-wrap,.service-wrap,.sol-wrap{width:min(1240px,calc(100% - 13vw))!important}
+}
+.ux-page .ux-body,.about-page .about-copy,.service-page .service-copy,.sol-page .sol-copy{
+ font-size:15px!important;line-height:1.84!important;color:#60727d;
+}
+.ux-page .ux-hero .ux-body,.about-page .about-intro .about-copy,.service-page .service-hero .service-copy,.sol-page .sol-intro .sol-copy{color:#cbd7df!important}
+.ux-page .ux-hero,.about-page .about-intro,.service-page .service-hero,.sol-page .sol-intro{scroll-margin-top:0}
+.ux-page .ux-hero h1,.about-page .about-intro h1,.service-page .service-hero h1,.sol-page .sol-intro h1{
+ overflow:visible!important;padding-top:0!important;
+}
+.ux-page .ux-heading,.about-page h2,.service-page .service-heading,.sol-page .sol-heading{overflow-wrap:normal;word-break:keep-all}
+.ux-page .ux-head,.about-page .about-experience__head,.about-page .about-expertise__head,.service-page .service-areas__top,.service-page .service-process__top,.sol-page .sol-head{align-items:center!important}
+@media(max-width:760px){
+ .ux-page .ux-hero h1,.about-page .about-intro h1,.service-page .service-hero h1,.sol-page .sol-intro h1{font-size:clamp(29px,7.1vw,38px)!important}
+ .ux-page .ux-heading,.about-page h2,.service-page .service-heading,.sol-page .sol-heading{font-size:clamp(25px,6.3vw,32px)!important}
+ .ux-page .ux-body,.about-page .about-copy,.service-page .service-copy,.sol-page .sol-copy{font-size:14px!important}
+}
