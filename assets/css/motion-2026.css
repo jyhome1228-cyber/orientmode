@@ -103,3 +103,22 @@ body.orv-intro-lock{overflow:hidden}
 .orv-booking-intro__disclaimer{font-size:9px;bottom:18px;max-width:65vw;line-height:1.5}
 }
 @media(prefers-reduced-motion:reduce){.orv-booking-intro__card{animation:none!important}.orv-booking-intro__message,.orv-booking-intro .orv-opening__logo{transition:none!important}}
+
+/* Separate message and logo into two distinct cinematic beats. */
+.orv-booking-intro__logo-stage{
+ position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;
+ opacity:0;visibility:hidden;transform:translateY(10px);
+ transition:opacity .65s ease,transform .65s ease,visibility .65s;pointer-events:none;
+}
+.orv-booking-intro.is-logo .orv-booking-intro__message{
+ opacity:0!important;transform:translateY(-18px)!important;transition:opacity .35s ease,transform .35s ease;
+}
+.orv-booking-intro.is-logo .orv-booking-intro__logo-stage{
+ opacity:1;visibility:visible;transform:none;transition-delay:.3s;
+}
+.orv-booking-intro__logo-stage .orv-opening__logo{
+ opacity:1!important;transform:none!important;animation:none!important;
+ width:clamp(175px,20vw,255px)!important;max-height:none!important;
+}
+@media(max-width:760px){.orv-booking-intro__logo-stage .orv-opening__logo{width:min(63vw,225px)!important}}
+@media(prefers-reduced-motion:reduce){.orv-booking-intro__logo-stage{transition:none}}
