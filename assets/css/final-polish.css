@@ -12,3 +12,76 @@ body{font-family:"Pretendard","Pretendard Variable","Apple SD Gothic Neo","Malgu
 .site-footer .sf-cta-button{padding:14px 21px!important;gap:26px!important;font-weight:550!important}
 .site-footer .sf-business dt{font-size:11px!important}
 @media(max-width:760px){.site-header .site-logo img{width:126px!important}.site-mobile-menu a{font-size:clamp(23px,6vw,31px)!important}.site-footer .sf-cta h2{font-size:clamp(29px,7vw,40px)!important}}
+
+/* V2 restrained visual hierarchy — 1440px reference, no oversized titles */
+:root{--page-navy:#102635;--page-ink:#263743;--page-sub:#637681;--page-line:#d8e1e4}
+html{scroll-padding-top:68px}
+body{font-size:15px!important;line-height:1.7}
+.site-header.header,.site-header.header.scrolled{height:60px!important;padding-inline:clamp(28px,3.6vw,66px)!important}
+.site-header .site-logo img{width:clamp(112px,8.1vw,132px)!important;max-height:26px!important}
+.site-header .site-nav{gap:clamp(17px,1.85vw,29px)!important}
+.site-header .site-nav a{font-size:11px!important;font-weight:500!important;letter-spacing:.025em!important}
+.site-header .site-nav .site-cta{font-size:11px!important;padding:9px 17px!important;min-height:36px!important}
+.ux-wrap,.about-wrap,.service-wrap,.sol-wrap,.orv-wrap{width:min(1190px,calc(100% - 12vw))!important}
+.ux-page .ux-hero,.about-page .about-intro,.service-page .service-hero,.sol-page .sol-intro{
+ min-height:clamp(500px,74svh,680px)!important;height:auto!important;align-items:center!important;
+}
+.ux-page .ux-hero .ux-wrap,.about-page .about-intro .about-wrap,.service-page .service-hero .service-wrap,.sol-page .sol-intro .sol-wrap{
+ padding-top:clamp(132px,15vh,170px)!important;padding-bottom:clamp(75px,10vh,110px)!important;
+}
+.ux-page .ux-hero h1,.about-page .about-intro h1,.service-page .service-hero h1,.sol-page .sol-intro h1{
+ font-size:clamp(32px,3.05vw,46px)!important;line-height:1.34!important;font-weight:500!important;
+ letter-spacing:-.045em!important;margin:18px 0 23px!important;max-width:860px!important;
+}
+.ux-page .ux-heading,.about-page h2,.service-page .service-heading,.sol-page .sol-heading{
+ font-size:clamp(27px,2.5vw,36px)!important;line-height:1.37!important;
+ font-weight:500!important;letter-spacing:-.045em!important;margin:14px 0 19px!important;
+}
+.ux-page .ux-body,.about-page .about-copy,.service-page .service-copy,.sol-page .sol-copy{
+ font-size:14px!important;line-height:1.85!important;max-width:560px!important;letter-spacing:-.015em!important;
+}
+.ux-page .ux-label,.about-page .about-label,.service-page .service-kicker,.sol-page .sol-label{
+ font-size:10px!important;letter-spacing:.125em!important;font-weight:550!important;
+}
+.ux-page .ux-section,.about-page .about-experience,.about-page .about-expertise,
+.service-page .service-areas,.service-page .service-process,.sol-page .sol-programs,.sol-page .sol-compare{
+ padding-top:clamp(76px,7.3vw,108px)!important;padding-bottom:clamp(78px,7.3vw,108px)!important;
+}
+.ux-page .ux-head,.about-page .about-experience__head,.about-page .about-expertise__head,
+.service-page .service-areas__top,.service-page .service-process__top,.sol-page .sol-head{
+ margin-bottom:35px!important;gap:7%!important;
+}
+.ux-page .ux-list-row,.service-page .service-item{padding-block:21px!important}
+.ux-page .ux-list-row h3,.service-page .service-item h3{font-size:clamp(18px,1.55vw,23px)!important;font-weight:500!important}
+.ux-page .ux-list-row p,.service-page .service-item p{font-size:13px!important}
+.ux-page .ux-tile,.service-page .service-process__step{min-height:175px!important;padding:25px!important}
+.ux-page .ux-tile h3,.about-page .about-capability h3{font-size:21px!important;font-weight:500!important}
+.ux-page .ux-close,.about-page .about-why,.service-page .service-close,.sol-page .sol-close{
+ min-height:0!important;padding:90px 0!important;
+}
+.ux-page .ux-close .ux-heading,.about-page .about-why h2,.service-page .service-close h2,.sol-page .sol-close h2{
+ font-size:clamp(29px,2.75vw,40px)!important;line-height:1.35!important;font-weight:500!important;
+}
+.about-page .about-year{padding:17px 0!important}
+.about-page .about-year__date{font-size:24px!important}
+.about-page .about-capability{min-height:175px!important;padding:26px!important}
+.sol-page .sol-tab{min-height:108px!important;padding:18px!important}
+.sol-page .sol-tab strong{font-size:19px!important}
+.sol-page .sol-panel h3{font-size:25px!important}
+.sol-page .sol-panel__top b{font-size:25px!important}
+.site-footer .sf-brand img{width:clamp(180px,18vw,255px)!important}
+@media(max-width:760px){
+ html{scroll-padding-top:60px}
+ .site-header.header,.site-header.header.scrolled{height:60px!important;padding-inline:6vw!important}
+ .site-header .site-logo img{width:119px!important}
+ .ux-wrap,.about-wrap,.service-wrap,.sol-wrap,.orv-wrap{width:calc(100% - 12vw)!important}
+ .ux-page .ux-hero,.about-page .about-intro,.service-page .service-hero,.sol-page .sol-intro{min-height:clamp(430px,70svh,590px)!important}
+ .ux-page .ux-hero .ux-wrap,.about-page .about-intro .about-wrap,.service-page .service-hero .service-wrap,.sol-page .sol-intro .sol-wrap{
+ padding-top:115px!important;padding-bottom:62px!important;
+ }
+ .ux-page .ux-hero h1,.about-page .about-intro h1,.service-page .service-hero h1,.sol-page .sol-intro h1{font-size:clamp(29px,7.1vw,39px)!important}
+ .ux-page .ux-heading,.about-page h2,.service-page .service-heading,.sol-page .sol-heading{font-size:clamp(25px,6.4vw,34px)!important}
+ .ux-page .ux-section,.about-page .about-experience,.about-page .about-expertise,.service-page .service-areas,.service-page .service-process,.sol-page .sol-programs,.sol-page .sol-compare{padding-block:67px!important}
+ .ux-page .ux-close,.about-page .about-why,.service-page .service-close,.sol-page .sol-close{padding:75px 0!important}
+ .about-page .about-year__date{font-size:19px!important}
+}
