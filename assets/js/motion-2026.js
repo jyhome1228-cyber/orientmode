@@ -20,8 +20,8 @@
  else {
    document.body.classList.add('orv-intro-lock');
    queue(()=>intro?.classList.add('is-message'),2450);
-   queue(()=>intro?.classList.add('is-logo'),3500);
-   queue(finish,4800);
+   queue(()=>intro?.classList.add('is-logo'),3700);
+   queue(finish,5300);
    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!finished)finish()});
    document.addEventListener('visibilitychange',()=>{if(document.hidden)finish()});
  }
