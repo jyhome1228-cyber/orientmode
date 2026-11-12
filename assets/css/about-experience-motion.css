@@ -1,0 +1,110 @@
+/* ORIENTIVE About · chronological rhythm and four-column photographic expertise */
+.about-page .about-history-animated{border-top:1px solid #cbd2d1}
+.about-page .about-history-animated .about-year{
+ grid-template-columns:minmax(106px,.17fr) minmax(230px,1fr) auto!important;
+ gap:clamp(18px,3vw,42px)!important;
+ padding:23px 0!important;
+ transition:background-color .25s ease;
+}
+.about-page .about-history-animated .about-year__date{
+ font-family:"Pretendard Variable","Pretendard",sans-serif;
+ font-size:clamp(19px,1.6vw,25px)!important;
+ font-weight:550!important;
+ letter-spacing:-.045em!important;
+}
+.about-page .about-history-animated .about-year__title{
+ font-size:15px!important;font-weight:550!important;line-height:1.5!important;
+}
+.about-page .about-history-animated .about-year__desc{
+ font-size:12px!important;color:#73838c!important;
+}
+.about-page .about-expertise-cards{
+ display:grid!important;
+ grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ gap:20px!important;border:0!important;background:transparent!important;
+ align-items:stretch!important;
+}
+.about-page .about-expertise-cards .about-capability{
+ min-width:0!important;min-height:0!important;display:flex!important;
+ flex-direction:column!important;justify-content:flex-start!important;
+ padding:0!important;border:0!important;background:transparent!important;
+ box-shadow:none!important;overflow:visible!important;
+}
+.about-page .about-expertise-cards .about-capability:hover{background:transparent!important}
+.about-page .about-capability__media{
+ margin:0!important;width:100%;aspect-ratio:4/5;min-height:0;
+ position:relative;overflow:hidden;background:#cbd7d9;
+}
+.about-page .about-capability__media img{
+ display:block;width:100%;height:100%;object-fit:cover;object-position:center;
+ filter:saturate(.72) contrast(.96);
+ transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease;
+}
+.about-page .about-capability__content{
+ display:block;padding:22px 2px 4px!important;
+}
+.about-page .about-capability__eyebrow{
+ display:block;color:#728e9c;font-size:10px;font-weight:600;
+ letter-spacing:.10em;line-height:1.4;
+}
+.about-page .about-expertise-cards .about-capability h3{
+ font-family:"Pretendard Variable","Pretendard",sans-serif!important;
+ font-size:clamp(19px,1.35vw,22px)!important;
+ font-weight:550!important;line-height:1.42!important;
+ letter-spacing:-.04em!important;color:#233842!important;
+ margin:12px 0 10px!important;
+ word-break:keep-all!important;
+}
+.about-page .about-expertise-cards .about-capability p{
+ font-size:12.5px!important;line-height:1.85!important;
+ color:#61747d!important;margin:0!important;word-break:keep-all!important;
+}
+@media(hover:hover) and (pointer:fine){
+ .about-page .about-expertise-cards .about-capability:hover img{
+  transform:scale(1.045);filter:saturate(.83) contrast(1);
+ }
+ .about-page .about-history-animated .about-year:hover{background:rgba(88,124,143,.045)}
+}
+/* Initialize hidden states only after motion script is running. */
+@media(prefers-reduced-motion:no-preference){
+ .about-page.about-motion-ready .about-history-animated .about-year{
+  opacity:0;transform:translate3d(0,19px,0);
+  transition:opacity .68s cubic-bezier(.2,.7,.2,1),transform .68s cubic-bezier(.2,.7,.2,1),background-color .25s;
+  transition-delay:calc(var(--reveal-order,0)*90ms);
+ }
+ .about-page.about-motion-ready .about-history-animated.is-visible .about-year{
+  opacity:1;transform:none;
+ }
+ .about-page.about-motion-ready .about-expertise-cards .about-capability{
+  opacity:0;transform:translate3d(-40px,0,0);
+  transition:opacity .72s cubic-bezier(.2,.7,.2,1),transform .72s cubic-bezier(.2,.7,.2,1);
+  transition-delay:calc(var(--card-order,0)*150ms);
+ }
+ .about-page.about-motion-ready .about-expertise-cards.is-visible .about-capability{
+  opacity:1;transform:none;
+ }
+}
+@media(max-width:1100px){
+ .about-page .about-expertise-cards{gap:14px!important}
+ .about-page .about-capability__content{padding:18px 0 4px!important}
+ .about-page .about-expertise-cards .about-capability p{font-size:12px!important}
+}
+@media(max-width:850px){
+ .about-page .about-expertise-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:35px 18px!important}
+ .about-page .about-history-animated .about-year{grid-template-columns:105px 1fr!important;gap:10px 15px!important}
+ .about-page .about-history-animated .about-year__desc{grid-column:2!important;grid-row:2!important}
+}
+@media(max-width:600px){
+ .about-page .about-expertise-cards{grid-template-columns:1fr!important;gap:33px!important}
+ .about-page .about-capability__media{aspect-ratio:4/3}
+ .about-page .about-expertise-cards .about-capability h3{font-size:21px!important}
+ .about-page .about-expertise-cards .about-capability p{font-size:13px!important}
+ .about-page .about-history-animated .about-year__date{font-size:19px!important}
+ .about-page .about-history-animated .about-year__title{font-size:14px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .about-page .about-history-animated .about-year,
+ .about-page .about-expertise-cards .about-capability{
+  opacity:1!important;transform:none!important;transition:none!important;
+ }
+}
