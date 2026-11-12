@@ -89,3 +89,68 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(prefers-reduced-motion:reduce){
  .about-page .about-fade,.service-page .service-reveal,.sol-page .sol-fade,.ux-page .ux-fade{opacity:1!important;transform:none!important}
 }
+
+/* ORIENTIVE premium CTA system / restrained rectangular controls (2026-11-12) */
+:root{--orv-cta-ease:cubic-bezier(.2,.7,.2,1)}
+/* Primary inline actions: dark filled button on light sections */
+.orv-link,.ux-textlink,.about-why__cta,.sol-close__cta,.service-close__links a,.sol-panel__end a{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ box-sizing:border-box!important;gap:0!important;
+ width:max-content;max-width:100%!important;min-height:47px!important;
+ padding:13px 23px!important;
+ border:1px solid #102635!important;border-radius:3px!important;
+ background:#102635!important;color:#fff!important;
+ text-decoration:none!important;box-shadow:none!important;
+ font-family:"Pretendard Variable","Pretendard",sans-serif!important;
+ font-size:13px!important;font-weight:550!important;letter-spacing:-.012em!important;line-height:1.45!important;
+ white-space:normal!important;text-align:center!important;
+ transition:background .25s var(--orv-cta-ease),color .25s var(--orv-cta-ease),border-color .25s var(--orv-cta-ease)!important;
+ transform:none!important;
+}
+.orv-link:hover,.ux-textlink:hover,.about-why__cta:hover,.sol-close__cta:hover,.service-close__links a:hover,.sol-panel__end a:hover{
+ gap:0!important;background:#294455!important;border-color:#294455!important;color:#fff!important;transform:none!important;
+}
+/* On navy backgrounds use a restrained inverse-outline button */
+.orv-final .orv-link,.about-why .about-why__cta,.service-close .service-close__links a,.sol-close .sol-close__cta,.ux-close .ux-textlink,.ux-hero .ux-textlink{
+ background:transparent!important;border:1px solid rgba(224,236,244,.65)!important;color:#fff!important;
+}
+.orv-final .orv-link:hover,.about-why .about-why__cta:hover,.service-close .service-close__links a:hover,.sol-close .sol-close__cta:hover,.ux-close .ux-textlink:hover,.ux-hero .ux-textlink:hover{
+ background:#f4f7f8!important;border-color:#f4f7f8!important;color:#102635!important;
+}
+/* Secondary action in paired service CTA is visual hierarchy, not repeated dark fill */
+.service-close__links a+ a{background:#f2f5f7!important;border-color:#f2f5f7!important;color:#102635!important}
+.service-close__links a+ a:hover{background:#dce6eb!important;border-color:#dce6eb!important;color:#102635!important}
+/* Header consultation: compact quiet button, no bottom rule */
+@media(min-width:761px){
+ .site-header .site-nav a.site-cta{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  min-height:37px!important;height:37px!important;margin-left:7px!important;
+  padding:0 17px!important;border:1px solid rgba(220,232,239,.55)!important;
+  border-radius:3px!important;border-bottom:1px solid rgba(220,232,239,.55)!important;
+  background:transparent!important;color:#f6f9fb!important;
+  gap:0!important;letter-spacing:0!important;line-height:1!important;
+  font-size:13px!important;font-weight:550!important;box-shadow:none!important;
+ }
+ .site-header .site-nav a.site-cta:hover,.site-header .site-nav a.site-cta:focus-visible{
+  background:#f3f6f8!important;color:#102635!important;border-color:#f3f6f8!important;
+  border-bottom-color:#f3f6f8!important;
+ }
+}
+/* Mobile contact action, no arrow-style pseudo icon */
+.site-mobile-menu a.menu-contact{letter-spacing:0!important}
+.site-mobile-menu a.menu-contact::after{content:none!important}
+/* Footer fallback if CTA is later enabled */
+.site-footer .sf-cta-button{border-radius:3px!important;gap:0!important;justify-content:center!important}
+/* Program cards: avoid decorative arrow-only signal; the complete card is clickable */
+.orv-solution__arr{display:none!important}
+.orv-solution{padding-right:clamp(18px,2vw,32px)!important}
+@media(max-width:760px){
+ .orv-link,.ux-textlink,.about-why__cta,.sol-close__cta,.service-close__links a,.sol-panel__end a{
+  min-height:46px!important;padding:12px 18px!important;font-size:13px!important;
+ }
+ .service-close__links{gap:10px!important}
+ .service-close__links a{flex:0 1 auto}
+}
+@media(prefers-reduced-motion:reduce){
+ .orv-link,.ux-textlink,.about-why__cta,.sol-close__cta,.service-close__links a,.sol-panel__end a{transition:none!important}
+}
