@@ -1,0 +1,31 @@
+/* ORIENTIVE brand motion dot — a restrained orange pointer accent */
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+  .orv-cursor-dot {
+    position:fixed;left:0;top:0;
+    width:7px;height:7px;margin:-3.5px 0 0 -3.5px;
+    border-radius:50%;background:#FF9B4D;
+    pointer-events:none;z-index:2147483000;
+    opacity:0;transform:translate3d(-100px,-100px,0) scale(1);
+    transition:opacity .16s ease, width .22s ease,height .22s ease,margin .22s ease,background .22s ease;
+    will-change:transform;
+  }
+  .orv-cursor-dot.is-visible{opacity:.98}
+  .orv-cursor-dot.is-hover{width:11px;height:11px;margin:-5.5px 0 0 -5.5px}
+  .orv-cursor-ring{
+    position:fixed;left:0;top:0;
+    width:9px;height:9px;margin:-4.5px 0 0 -4.5px;
+    border:1.5px solid #FF9B4D;border-radius:50%;
+    pointer-events:none;z-index:2147482999;
+    opacity:0;transform:translate3d(-100px,-100px,0) scale(.45);
+    will-change:transform,opacity;
+  }
+  .orv-cursor-ring.is-active{animation:orv-click-wave .36s cubic-bezier(.16,.65,.25,1) forwards}
+  @keyframes orv-click-wave{
+    0%{opacity:.75;transform:translate3d(var(--orv-click-x),var(--orv-click-y),0) scale(.5)}
+    100%{opacity:0;transform:translate3d(var(--orv-click-x),var(--orv-click-y),0) scale(4.7)}
+  }
+  body.orv-intro-lock .orv-cursor-dot{opacity:0!important}
+}
+@media (hover:none),(pointer:coarse),(prefers-reduced-motion:reduce) {
+ .orv-cursor-dot,.orv-cursor-ring{display:none!important}
+}
