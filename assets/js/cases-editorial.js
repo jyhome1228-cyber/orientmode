@@ -1,6 +1,24 @@
 /* ORIENTIVE Cases — guided explanation of our approach, accessible tab interactions. */
 (()=>{
  const root=document.querySelector('.cases-editorial');if(!root)return;
+ // Keep the supplied CDN files as primary sources. Recover gracefully if a remote image
+ // is blocked, removed, or fails to decode. Do not leave broken-image icons or grey panels.
+ root.querySelectorAll('img[data-fallback]').forEach(img=>{
+   const fallback=img.dataset.fallback;
+   let didFallback=false;
+   img.addEventListener('error',()=>{
+     if(didFallback)return;
+     didFallback=true;
+     img.dataset.source='fallback';
+     img.src=fallback;
+     img.alt='숙박시설 공간 참고 이미지';
+   });
+   img.addEventListener('load',()=>{
+     img.classList.add('is-loaded');
+     const figure=img.closest('figure');
+     if(figure)figure.classList.add('has-photo');
+   });
+ });
  const tablist=root.querySelector('.cases-method__tabs');
  const tabs=[...root.querySelectorAll('.cases-method__tab')];
  const panel=root.querySelector('#cases-panel');
