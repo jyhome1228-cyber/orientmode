@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="../assets/css/interaction-polish.css?v=20261112-cta-premium">
 <link rel="icon" type="image/svg+xml" sizes="any" href="../assets/images/orientive-favicon.svg?v=20261113">
+<link rel="stylesheet" href="../assets/css/cursor-accent.css?v=20261113">
 </head>
 <body><a class="skip" href="#content">본문 바로가기</a>
 <header class="header site-header" id="header"><a href="../" class="site-logo" aria-label="ORIENTIVE 홈"><img src="../assets/images/orientive-logo-white.svg?v=20261111-official" alt="ORIENTIVE" width="600" height="47" decoding="async"></a><nav class="site-nav" aria-label="주요 메뉴"><a href="../about/">ABOUT</a><a href="../service/">SERVICE</a><a href="../solutions/" aria-current="page">SOLUTIONS</a><a href="../cases/">CASES</a><a href="../insights/">INSIGHTS</a><a href="../contact/" class="site-cta">상담 문의</a></nav><button class="hamb site-menu-toggle" type="button" aria-controls="mobileNav" aria-expanded="false" aria-label="메뉴 열기"><span class="menu-icon" aria-hidden="true"></span></button></header>
@@ -39,4 +40,5 @@
  </div></footer><button class="site-back-top" type="button" aria-label="페이지 맨 위로 이동" title="맨 위로">↑</button>
 <script defer src="../assets/js/navigation.js"></script><script>
 (()=>{const tabs=[...document.querySelectorAll('.sol-tab')],panels=[...document.querySelectorAll('.sol-panel')];function activate(i){tabs.forEach((t,j)=>{t.setAttribute('aria-selected',String(i===j));t.tabIndex=i===j?0:-1});panels.forEach((p,j)=>p.hidden=i!==j)}tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>activate(i));tab.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const n=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;activate(n);tabs[n].focus()})});const els=document.querySelectorAll('.sol-fade');if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(x=>x.classList.add('in-view'));return}const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');o.unobserve(e.target)}}),{threshold:.06});els.forEach(x=>o.observe(x))})();
-</script></body></html>
+</script><script defer src="../assets/js/cursor-accent.js?v=20261113"></script>
+</body></html>
