@@ -138,3 +138,10 @@
 @media(max-width:900px){.service-difference__grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(2,minmax(180px,auto))}.service-difference__item,.service-difference__item+.service-difference__item,.service-difference__item:first-child{padding:28px}.service-difference__item:first-child p{font-size:14px}}
 @media(max-width:650px){.service-difference{padding:80px 0}.service-difference__grid{grid-template-columns:1fr;grid-template-rows:auto;gap:12px}.service-difference__item:first-child,.service-difference__item:nth-child(2),.service-difference__item:nth-child(3){grid-column:auto;grid-row:auto}.service-difference__item,.service-difference__item+.service-difference__item,.service-difference__item:first-child{padding:27px;min-height:175px}.service-difference__item:first-child h3{font-size:27px!important}.service-difference__body{margin:22px 0 0}.service-process{padding-bottom:75px}}
 @media(prefers-reduced-motion:reduce){.service-difference__item:hover,.service-difference__item:focus-visible{transform:none}}
+
+/* SERVICE hero: restrained grayscale editorial photo / navy veil */
+.service-hero{isolation:isolate;background:#102635}
+.service-hero::before{content:"";position:absolute;inset:0;right:0;top:0;width:auto;height:auto;border:0;box-shadow:none;transform:none;z-index:-2;background:url("https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-210639-kakaotalk-photo-2026-11-13-06-06-09-4d4efc3a.webp") center 54%/cover no-repeat;filter:grayscale(1)}
+.service-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,31,45,.96) 0%,rgba(10,31,45,.86) 47%,rgba(10,31,45,.58) 100%)}
+.service-hero>.service-wrap{z-index:1}
+@media(max-width:720px){.service-hero::before{background-position:60% center}.service-hero::after{background:linear-gradient(90deg,rgba(10,31,45,.94),rgba(10,31,45,.79))}}
