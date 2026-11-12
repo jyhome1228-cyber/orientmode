@@ -146,3 +146,41 @@
  .orv-growth-hero .orv-growth-hero__traveler{display:none}
  .orv-growth-hero .orv-growth-hero__endpoint-halo{animation:none!important}
 }
+
+/* Hero atmosphere: fade in photograph only after growth-line reveal. */
+.orv-growth-hero .orv-growth-hero__ambient::before{
+ content:"";position:absolute;inset:0;
+ background-image:linear-gradient(90deg,rgba(12,30,43,.72),rgba(12,30,43,.43) 52%,rgba(12,30,43,.71)),url("https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-212839-d02-25-goal-cb407c7a.webp");
+ background-size:cover;background-position:center;background-repeat:no-repeat;
+ opacity:0;transform:scale(1.035);
+ transition:opacity 2.25s ease,transform 7s cubic-bezier(.2,.7,.2,1);
+ pointer-events:none;
+}
+.orv-growth-hero.has-background .orv-growth-hero__ambient::before{
+ opacity:.25;transform:scale(1);
+}
+.orv-growth-hero .orv-growth-hero__light-trace{
+ opacity:0;transition:opacity .3s ease;pointer-events:none;
+ filter:drop-shadow(0 0 8px rgba(215,236,248,.72));
+}
+.orv-growth-hero.is-interacting .orv-growth-hero__light-trace{opacity:1}
+.orv-growth-hero .orv-growth-hero__light-halo{
+ fill:none;stroke:#cde2ef;stroke-width:1.2;opacity:.5;
+}
+.orv-growth-hero .orv-growth-hero__light-point{
+ fill:#f0f8fc;filter:drop-shadow(0 0 7px #d5edf9);
+}
+.orv-growth-hero .orv-growth-hero__idle-point{
+ fill:#d9ebf5;opacity:0;pointer-events:none;
+ filter:drop-shadow(0 0 6px rgba(215,237,248,.65));
+}
+@media(max-width:760px){
+ .orv-growth-hero .orv-growth-hero__ambient::before{background-position:60% center}
+ .orv-growth-hero.has-background .orv-growth-hero__ambient::before{opacity:.18}
+ .orv-growth-hero .orv-growth-hero__light-trace,.orv-growth-hero .orv-growth-hero__idle-point{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ .orv-growth-hero .orv-growth-hero__ambient::before{transition:none!important;transform:none!important}
+ .orv-growth-hero.has-background .orv-growth-hero__ambient::before{opacity:.2}
+ .orv-growth-hero .orv-growth-hero__light-trace,.orv-growth-hero .orv-growth-hero__idle-point{display:none!important}
+}
