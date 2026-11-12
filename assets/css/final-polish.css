@@ -221,3 +221,17 @@ html.orv-fullpage-active main>.orv-final>.orv-wrap{
  .site-header.header,.site-header.header.scrolled{height:58px!important;min-height:58px!important}
  .site-mobile-menu.overlaymenu{inset:58px 0 0!important;top:58px!important}
 }
+
+/* 2026-11-12: final header height adjustment requested: spacious 76px / mobile 70px */
+@media(min-width:761px){
+ .site-header.header,.site-header.header.scrolled{
+  height:76px!important;min-height:76px!important;
+  padding-top:0!important;padding-bottom:0!important;align-items:center!important;
+ }
+ .site-header .site-nav{height:100%!important;align-items:center!important}
+ .site-header .site-logo{align-self:center!important}
+}
+@media(max-width:760px){
+ .site-header.header,.site-header.header.scrolled{height:70px!important;min-height:70px!important}
+ .site-mobile-menu.overlaymenu{inset:70px 0 0!important;top:70px!important}
+}
