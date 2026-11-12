@@ -205,3 +205,19 @@ html.orv-fullpage-active main>.orv-final>.orv-wrap{
  }
  .site-header .site-nav a.site-cta span{font-size:15px!important;font-weight:400!important;line-height:1}
 }
+
+/* 2026-11-12 — compact header height and vertical centering */
+@media(min-width:761px){
+ .site-header.header,.site-header.header.scrolled{
+  height:56px!important;min-height:56px!important;
+  padding-top:0!important;padding-bottom:0!important;
+  align-items:center!important;
+ }
+ .site-header .site-nav{height:100%!important;align-items:center!important}
+ .site-header .site-logo{align-self:center!important}
+ .site-header .site-nav a:not(.site-cta){padding-top:9px!important;padding-bottom:9px!important}
+}
+@media(max-width:760px){
+ .site-header.header,.site-header.header.scrolled{height:58px!important;min-height:58px!important}
+ .site-mobile-menu.overlaymenu{inset:58px 0 0!important;top:58px!important}
+}
