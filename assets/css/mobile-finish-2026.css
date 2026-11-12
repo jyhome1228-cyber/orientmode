@@ -1,0 +1,172 @@
+/* ORIENTIVE responsive finishing pass — 2026-11-13
+   One mobile navigation rhythm; contained hero graphic; readable program picker.
+   Desktop styling intentionally unchanged. */
+@media(max-width:760px){
+  html,body{max-width:100%;overflow-x:clip}
+  /* Compact editorial hamburger without circle or button chrome. */
+  .site-header.header .site-menu-toggle{
+    display:flex!important;
+    flex:0 0 40px!important;
+    width:40px!important;height:40px!important;
+    padding:0!important;margin:0!important;
+    border:0!important;outline:0!important;
+    border-radius:0!important;
+    background:transparent!important;box-shadow:none!important;
+    align-items:center!important;justify-content:center!important;
+    appearance:none!important;
+  }
+  .site-header.header .site-menu-toggle:focus-visible{
+    outline:2px solid #D8E8F0!important;outline-offset:2px!important;
+  }
+  .site-header .site-menu-toggle .menu-icon,
+  .site-header .site-menu-toggle .menu-icon::before,
+  .site-header .site-menu-toggle .menu-icon::after{
+    width:22px!important;height:1.7px!important;
+    background:#F4F8FA!important;border-radius:1px!important;
+  }
+  .site-header.menu-active .site-menu-toggle .menu-icon{
+    background:transparent!important;
+  }
+  .site-header .site-menu-toggle .menu-icon::before{top:-6px!important}
+  .site-header .site-menu-toggle .menu-icon::after{top:6px!important}
+  .site-header.menu-active .site-menu-toggle .menu-icon::before,
+  .site-header.menu-active .site-menu-toggle .menu-icon::after{top:0!important}
+  /* Keep every item, including CONTACT, on the same grid and baseline. */
+  .site-mobile-menu.overlaymenu,
+  .site-mobile-menu.overlaymenu.open{
+    inset:70px 0 0!important;
+    top:70px!important;
+    padding:16px 6vw max(26px,env(safe-area-inset-bottom))!important;
+    gap:0!important;
+    background:#0C2031!important;
+  }
+  .site-mobile-menu.overlaymenu a,
+  .site-mobile-menu.overlaymenu .menu-contact{
+    font-family:"Pretendard Variable","Pretendard",sans-serif!important;
+    display:flex!important;align-items:center!important;
+    box-sizing:border-box!important;
+    width:100%!important;min-height:59px!important;
+    margin:0!important;padding:11px 2px!important;
+    font-size:20px!important;line-height:1.35!important;
+    font-weight:500!important;letter-spacing:.005em!important;
+    color:#F1F5F7!important;
+    border:0!important;border-bottom:1px solid rgba(201,219,231,.18)!important;
+    border-radius:0!important;
+    background:transparent!important;
+    text-decoration:none!important;
+  }
+  .site-mobile-menu.overlaymenu a[aria-current="page"]{
+    color:#FFF!important;font-weight:650!important;
+  }
+  .site-mobile-menu.overlaymenu a[aria-current="page"]::after{
+    content:"";width:5px;height:5px;border-radius:50%;
+    background:#B8CCD6;flex:0 0 auto;
+  }
+  .site-mobile-menu.overlaymenu .menu-contact{
+    margin:0!important;color:#F1F5F7!important;
+  }
+  .site-mobile-menu.overlaymenu .menu-contact::after{content:none!important}
+  .site-mobile-menu.overlaymenu .mobile-caption{
+    margin-top:36px!important;padding-top:0!important;
+    font-size:10px!important;letter-spacing:.08em!important;
+    line-height:1.55!important;color:#8CA6B6!important;
+  }
+  /* Keep the growth-path within the visible mobile viewport. */
+  .orv-growth-hero.orv-motion-hero{
+    overflow:hidden!important;
+    width:100%!important;max-width:100%!important;
+    min-height:100svh!important;height:100svh!important;
+  }
+  .orv-growth-hero .orv-growth-hero__graphic{
+    width:min(95vw,540px)!important;
+    max-width:95vw!important;
+    left:50%!important;top:49%!important;
+    transform:translate(-50%,-50%)!important;
+    opacity:.78!important;
+    overflow:hidden!important;
+  }
+  .orv-growth-hero .orv-growth-hero__svg{
+    overflow:hidden!important;width:100%!important;height:100%!important;
+  }
+  .orv-growth-hero .orv-motion-hero__content{
+    left:0!important;right:0!important;
+    width:88vw!important;max-width:calc(100% - 12vw)!important;
+    margin-inline:auto!important;
+    gap:clamp(56px,11vh,95px)!important;
+    padding:54px 0 0!important;
+    overflow:visible!important;
+  }
+  .orv-growth-hero .orv-motion-hero__line{
+    font-size:clamp(27px,7.1vw,35px)!important;
+    max-width:100%!important;line-height:1.3!important;
+    letter-spacing:-.055em!important;
+    overflow-wrap:normal!important;word-break:keep-all!important;
+  }
+  .orv-growth-hero .orv-motion-hero__line span{
+    font-size:11px!important;line-height:1.5!important;
+    margin-top:11px!important;
+  }
+  /* Solutions: replace cramped three-column selector with stacked concise rows. */
+  .sol-page .sol-programs{padding-top:124px!important}
+  .sol-page .sol-program-switch{
+    display:grid!important;grid-template-columns:1fr!important;
+    gap:0!important;margin-bottom:26px!important;
+    border-top:1px solid #CBD6DB!important;
+    border-bottom:1px solid #CBD6DB!important;
+  }
+  .sol-page .sol-select,
+  .sol-page .sol-program-switch .sol-select{
+    display:grid!important;
+    grid-template-columns:80px minmax(0,1fr)!important;
+    column-gap:13px!important;row-gap:4px!important;
+    align-content:center!important;align-items:center!important;
+    width:100%!important;min-height:73px!important;
+    height:auto!important;margin:0!important;
+    padding:12px 15px!important;
+    border:0!important;border-left:3px solid transparent!important;
+    border-right:0!important;border-bottom:1px solid #D8E2E6!important;
+    border-radius:0!important;
+    background:transparent!important;
+    text-align:left!important;
+    box-shadow:none!important;
+  }
+  .sol-page .sol-program-switch .sol-select:last-child{border-bottom:0!important}
+  .sol-page .sol-program-switch .sol-select[aria-selected="true"]{
+    border-left:3px solid #102635!important;
+    border-bottom:1px solid #D8E2E6!important;
+    background:#EAF0F2!important;
+  }
+  .sol-page .sol-select__eyebrow{
+    grid-column:1!important;grid-row:1 / span 2!important;
+    font-size:10px!important;letter-spacing:.09em!important;
+    align-self:center!important;
+  }
+  .sol-page .sol-select strong{
+    grid-column:2!important;grid-row:1!important;
+    font-size:17px!important;line-height:1.35!important;
+    font-weight:550!important;letter-spacing:-.025em!important;
+    margin:0!important;
+  }
+  .sol-page .sol-select__summary{
+    grid-column:2!important;grid-row:2!important;
+    font-size:11px!important;line-height:1.45!important;
+    margin:0!important;white-space:normal!important;
+  }
+  .sol-page .sol-head .sol-heading{
+    font-size:clamp(25px,6.5vw,30px)!important;
+    line-height:1.4!important;
+  }
+  .sol-page .sol-detail__price{align-items:center!important;gap:9px!important}
+  .sol-page .sol-detail__price strong{font-size:29px!important}
+  .sol-page .sol-detail__price>div{flex-wrap:wrap!important;justify-content:flex-end!important}
+  .sol-page .sol-detail__head h3{font-size:24px!important;line-height:1.43!important}
+  .sol-page .sol-detail__head>div>p{font-size:13px!important;line-height:1.8!important}
+}
+@media(max-width:380px){
+  .site-mobile-menu.overlaymenu a{font-size:18px!important;min-height:55px!important}
+  .orv-growth-hero .orv-motion-hero__line{font-size:27px!important}
+  .sol-page .sol-select{grid-template-columns:72px minmax(0,1fr)!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .site-mobile-menu.overlaymenu a,.sol-page .sol-select{transition:none!important}
+}
