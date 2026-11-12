@@ -3,7 +3,8 @@
 <title>SERVICE | ORIENTIVE</title><meta name="description" content="오리엔티브의 숙박사업 진단, 판매·가격 전략, 브랜드·마케팅, 고객 유입, 운영 점검 서비스 소개."><link rel="stylesheet" href="../assets/css/brand.css">
 <style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all}a{color:inherit;text-decoration:none}.header{background:#0c2031!important;color:white;position:fixed;inset:0 0 auto;padding:20px 5%;z-index:10;display:flex;justify-content:space-between;align-items:center}.brand{font-family:Arial,sans-serif;font-weight:800;font-size:22px;letter-spacing:-1.4px}.nav{display:flex;gap:30px;font-size:12px;font-weight:700}.hamb{background:transparent;border:0;color:white;font-size:27px;display:none}.overlaymenu{display:none}.footer{background:#071724;color:#fff;padding:65px 5%;font-size:12px}.footer p{color:#b7c7d0}.footer .brand{font-size:28px}@media(max-width:850px){.nav{display:none}.hamb{display:block}.overlaymenu.open{display:flex;position:fixed;inset:66px 0 0;z-index:9;background:#0c2031;color:#fff;flex-direction:column;padding:32px;gap:28px;font-size:22px}.header{padding:17px 6%}}</style><link rel="stylesheet" href="../assets/css/layout.css">
 <link rel="stylesheet" href="../assets/css/refinement.css">
-<link rel="stylesheet" href="../assets/css/service-2026.css?v=20261113-clean-layout">
+<link rel="stylesheet" href="../assets/css/service-2026.css?v=20261113-detail-modal">
+<link rel="stylesheet" href="../assets/css/service-details.css?v=20261113">
 <link rel="stylesheet" href="../assets/css/final-polish.css?v=20261112-header76">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="../assets/css/interaction-polish.css?v=20261112-cta-premium">
@@ -48,12 +49,12 @@
 <div class="service-wrap">
  <div class="service-process__top service-reveal"><div><p class="service-kicker">6-STEP TURNAROUND SOLUTION</p><h2 class="service-heading" id="service-process-title">숙박업의 변화를 설계하는,<br>여섯 가지 실행 영역.</h2></div><p class="service-copy">진단부터 운영까지, 숙소에 필요한 여섯 가지 실행 영역을 연결합니다.</p></div>
  <div class="service-process__grid service-reveal" aria-label="턴어라운드 솔루션 6단계">
-  <article class="service-process__step" tabindex="0"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203457-1-10c6a2c8.webp" alt="숙소 운영 분석 테이블과 자료" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>01</span><span>DIAGNOSIS</span></div><h3>사업 진단</h3><p>입지·상품·가격·판매 현황 분석</p></div></article>
-  <article class="service-process__step" tabindex="0"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203457-2-0546c370.webp" alt="브랜드 설계와 소재 검토" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>02</span><span>BRANDING</span></div><h3>브랜딩</h3><p>시장 포지셔닝과 브랜드 방향 설계</p></div></article>
-  <article class="service-process__step" tabindex="0"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203458-4-5ad06c7d.webp" alt="프리미엄 숙소의 객실 사진" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>03</span><span>CONTENT</span></div><h3>콘텐츠 제작</h3><p>사진·영상·상세페이지 콘텐츠 구축</p></div></article>
-  <article class="service-process__step" tabindex="0"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203459-5-7c1abb2e.webp" alt="숙소의 공간을 보여주는 거실" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>04</span><span>MARKETING</span></div><h3>마케팅 실행</h3><p>검색·SNS·프로모션 전략 실행</p></div></article>
-  <article class="service-process__step" tabindex="0"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203458-3-2f4044da.webp" alt="숙박시설 리셉션과 운영 접점" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>05</span><span>SALES</span></div><h3>판매 인프라</h3><p>회원 모집·제휴·패키지 상품 구성</p></div></article>
-  <article class="service-process__step" tabindex="0"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203500-6-7d3a9313.webp" alt="네이비톤 숙소 외관" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>06</span><span>OPERATIONS</span></div><h3>운영 및 투자</h3><p>운영 개선과 사업 확장 가능성 검토</p></div></article>
+  <article class="service-process__step"><button type="button" class="service-process__trigger" data-service-detail="diagnosis" aria-haspopup="dialog" aria-label="사업 진단 상세 보기"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203457-1-10c6a2c8.webp" alt="숙소 운영 분석 테이블과 자료" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>DIAGNOSIS</span></div><h3>사업 진단</h3><p>입지·상품·가격·판매 현황 분석</p></div><span class="service-process__more">자세히 보기 <span aria-hidden="true">＋</span></span></button></article>
+  <article class="service-process__step"><button type="button" class="service-process__trigger" data-service-detail="branding" aria-haspopup="dialog" aria-label="브랜딩 상세 보기"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203457-2-0546c370.webp" alt="브랜드 설계와 소재 검토" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>BRANDING</span></div><h3>브랜딩</h3><p>시장 포지셔닝과 브랜드 방향 설계</p></div><span class="service-process__more">자세히 보기 <span aria-hidden="true">＋</span></span></button></article>
+  <article class="service-process__step"><button type="button" class="service-process__trigger" data-service-detail="content" aria-haspopup="dialog" aria-label="콘텐츠 제작 상세 보기"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203458-4-5ad06c7d.webp" alt="프리미엄 숙소의 객실 사진" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>CONTENT</span></div><h3>콘텐츠 제작</h3><p>사진·영상·상세페이지 콘텐츠 구축</p></div><span class="service-process__more">자세히 보기 <span aria-hidden="true">＋</span></span></button></article>
+  <article class="service-process__step"><button type="button" class="service-process__trigger" data-service-detail="marketing" aria-haspopup="dialog" aria-label="마케팅 실행 상세 보기"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203459-5-7c1abb2e.webp" alt="숙소의 공간을 보여주는 거실" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>MARKETING</span></div><h3>마케팅 실행</h3><p>검색·SNS·프로모션 전략 실행</p></div><span class="service-process__more">자세히 보기 <span aria-hidden="true">＋</span></span></button></article>
+  <article class="service-process__step"><button type="button" class="service-process__trigger" data-service-detail="sales" aria-haspopup="dialog" aria-label="판매 인프라 상세 보기"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203458-3-2f4044da.webp" alt="숙박시설 리셉션과 운영 접점" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>SALES</span></div><h3>판매 인프라</h3><p>회원 모집·제휴·패키지 상품 구성</p></div><span class="service-process__more">자세히 보기 <span aria-hidden="true">＋</span></span></button></article>
+  <article class="service-process__step"><button type="button" class="service-process__trigger" data-service-detail="operations" aria-haspopup="dialog" aria-label="운영 및 투자 상세 보기"><div class="service-process__visual"><img src="https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203500-6-7d3a9313.webp" alt="네이비톤 숙소 외관" loading="lazy" decoding="async" width="1200" height="700"></div><div class="service-process__card-content"><div class="service-process__index"><span>OPERATIONS</span></div><h3>운영 및 투자</h3><p>운영 개선과 사업 확장 가능성 검토</p></div><span class="service-process__more">자세히 보기 <span aria-hidden="true">＋</span></span></button></article>
  </div>
  
 </div></section>
@@ -64,6 +65,20 @@
  </div>
 </section>
 </main>
+<dialog class="service-detail" id="serviceDetailDialog" aria-labelledby="serviceDetailTitle">
+  <div class="service-detail__layout">
+    <div class="service-detail__media"><img id="serviceDetailImage" alt="" width="1200" height="900"></div>
+    <div class="service-detail__content">
+      <div class="service-detail__top"><span class="service-detail__eyebrow" id="serviceDetailCategory"></span><button type="button" class="service-detail__close" id="serviceDetailClose" aria-label="상세 설명 닫기">×</button></div>
+      <h2 id="serviceDetailTitle"></h2>
+      <p class="service-detail__intro" id="serviceDetailIntro"></p>
+      <h3>주요 검토 및 실행 영역</h3>
+      <ul id="serviceDetailPoints"></ul>
+      <p class="service-detail__note">실제 수행 범위는 숙소의 현황과 선택한 프로그램, 계약 조건에 따라 달라질 수 있습니다.</p>
+      <a class="service-detail__action" href="../contact/">서비스 상담 문의하기</a>
+    </div>
+  </div>
+</dialog>
 <footer class="footer site-footer" id="footer"><div class="sf-shell">
  <div class="sf-cta"><div><div class="sf-overline">START WITH ORIENTIVE</div><h2>숙박의 가능성을,<br>다음 성장으로.</h2></div><a href="../contact/" class="sf-cta-button">상담 문의하기</a></div>
  <div class="sf-top">
@@ -81,5 +96,6 @@
 <script>(()=>{const a=document.querySelectorAll('.service-reveal');if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){a.forEach(x=>x.classList.add('in-view'));return}const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');o.unobserve(e.target)}}),{threshold:.08});a.forEach(x=>o.observe(x))})();</script>
 <script>
 (()=>{const blocks=document.querySelectorAll('.about-fade');if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){blocks.forEach(el=>el.classList.add('in-view'));return}const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');observer.unobserve(entry.target)}})},{threshold:.07});blocks.forEach(el=>observer.observe(el))})();
-</script><script defer src="../assets/js/cursor-accent.js?v=20261113"></script>
+</script><script defer src="../assets/js/service-details.js?v=20261113"></script>
+<script defer src="../assets/js/cursor-accent.js?v=20261113"></script>
 </body></html>
