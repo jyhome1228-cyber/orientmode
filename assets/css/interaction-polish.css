@@ -1,0 +1,53 @@
+/* ORIENTIVE · interaction finesse · 2026-11-12
+   Restraint first: subtle feedback, reliable focus, no visual clutter. */
+:root{--motion-ease:cubic-bezier(.22,.68,.2,1)}
+/* Shared links and buttons */
+.site-header .site-nav a:not(.site-cta){transition:color .2s ease!important}
+.site-header .site-nav a:not(.site-cta)::after{transition:right .25s var(--motion-ease)!important}
+.site-header .site-nav a.site-cta{transition:color .2s ease,border-color .2s ease!important}
+.site-footer .sf-links a{transition:color .2s ease!important}
+.orv-link,.ux-textlink,.about-why__cta,.service-close__links a,.sol-close__cta,.sol-panel__end a{transition:color .23s ease,border-color .23s ease,gap .3s var(--motion-ease)!important}
+.orv-link:hover,.ux-textlink:hover,.about-why__cta:hover,.service-close__links a:hover,.sol-close__cta:hover,.sol-panel__end a:hover{gap:clamp(24px,2.2vw,39px)}
+/* Keep keyboard interaction consistently visible on light and dark sections */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+ outline:2px solid #8faabb!important;outline-offset:4px!important;
+}
+.site-header a:focus-visible,.site-footer a:focus-visible,.ux-close a:focus-visible,.service-close a:focus-visible,.sol-close a:focus-visible,.about-why a:focus-visible{
+ outline-color:#e2edf3!important;
+}
+.orv-motion-scroll:focus-visible{outline:2px solid #d7e5ed!important;outline-offset:7px!important}
+/* One subdued scroll reveal cadence across the public site */
+.orv-motion-reveal,.about-fade,.service-reveal,.sol-fade,.ux-fade{
+ transform:translate3d(0,17px,0)!important;
+ transition:opacity .64s var(--motion-ease),transform .64s var(--motion-ease)!important;
+}
+.orv-motion-reveal.is-visible,.about-fade.in-view,.service-reveal.in-view,.sol-fade.in-view,.ux-fade.in-view{
+ transform:none!important;
+}
+/* Prevent cards hopping excessively on hover */
+.orv-solution:hover{padding-left:8px!important}
+.orv-case img,.orv-intro__image img,.ux-photo img{transition:transform .58s var(--motion-ease)!important}
+.orv-case:hover img,.orv-intro__image img:hover,.ux-photo:hover img{transform:scale(1.025)!important}
+.site-back-top{transition:opacity .23s ease,visibility .23s ease,transform .23s ease,background .2s ease!important}
+.site-back-top:hover{background:#f3f6f7!important;color:#102635!important}
+/* Navigation contrast and mobile panel hierarchy */
+.site-mobile-menu.overlaymenu{overscroll-behavior:contain}
+.site-mobile-menu a{transition:color .2s ease,opacity .2s ease}
+.site-mobile-menu a:hover{color:#c5d9e4!important}
+.site-mobile-menu .menu-contact{font-weight:550!important}
+@media(max-width:760px){
+ .site-header .site-menu-toggle{width:40px!important;height:40px!important}
+ .site-mobile-menu.overlaymenu{top:60px!important}
+ .site-mobile-menu a{min-height:58px!important;padding-block:10px!important}
+ .orv-motion-hero__orbit{opacity:.68}
+}
+/* Cursor/hover interactions only on devices with a real mouse */
+@media(hover:none){
+ .orv-case:hover img,.orv-intro__image img:hover,.ux-photo:hover img{transform:none!important}
+ .orv-solution:hover{padding-left:0!important}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto!important}
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+ .orv-motion-reveal,.about-fade,.service-reveal,.sol-fade,.ux-fade{opacity:1!important;transform:none!important}
+}
