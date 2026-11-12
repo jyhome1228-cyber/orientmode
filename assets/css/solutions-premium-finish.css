@@ -1,0 +1,51 @@
+/* ORIENTIVE SOLUTIONS: premium editorial comparison / no shopping cards */
+.sol-page .sol-wrap{width:min(1280px,calc(100% - 96px))!important;max-width:1280px!important;margin-inline:auto!important}
+.sol-page .sol-programs{padding-top:clamp(112px,9.5vw,150px)!important;padding-bottom:105px!important}
+.sol-page .sol-head{margin-bottom:48px!important}
+.sol-page .sol-head .sol-heading{font-size:clamp(29px,2.7vw,40px)!important;line-height:1.4!important}
+.sol-page .sol-program-switch{margin-bottom:46px!important}
+.sol-page .sol-select{min-height:117px!important;padding:21px 26px 22px!important}
+.sol-page .sol-select[aria-selected=true]{background:#edf2f4!important;border-bottom:2px solid #244c5f!important}
+.sol-page .sol-select:hover{background:#edf2f4!important}
+.sol-page .sol-detail--preview{border:0!important;background:transparent!important;padding:0!important}
+.sol-page .sol-editorial{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);align-items:stretch;gap:clamp(36px,5.2vw,78px);min-height:545px}
+.sol-page .sol-editorial__copy{min-width:0;display:flex;flex-direction:column;padding:22px 0 18px}
+.sol-page .sol-editorial__eyebrow{font-size:11px!important;color:#68818d!important;letter-spacing:.13em!important;font-weight:650;margin:0 0 20px!important}
+.sol-page .sol-editorial__copy h3{font-size:clamp(30px,2.85vw,42px)!important;letter-spacing:-.055em!important;line-height:1.35!important;color:#1b3543!important;font-weight:550!important;margin:0 0 22px!important;max-width:570px}
+.sol-page .sol-editorial__description{font-size:14px!important;line-height:1.95!important;color:#637783!important;max-width:510px;margin:0 0 28px!important}
+.sol-page .sol-editorial__focus{margin:0 0 28px}
+.sol-page .sol-editorial__focus>span{display:block;font-size:11px;color:#77909b;font-weight:600;letter-spacing:.025em;margin-bottom:16px}
+.sol-page .sol-editorial__focus ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.sol-page .sol-editorial__focus li{font-size:14px;color:#304b59;font-weight:500;line-height:1.6;display:flex;align-items:center;gap:11px}
+.sol-page .sol-editorial__focus li::before{content:"";display:block;width:5px;height:5px;border-radius:50%;background:#55798b;flex:none}
+.sol-page .sol-editorial__bottom{margin-top:auto;padding-top:18px}
+.sol-page .sol-editorial__fee{margin-bottom:24px}
+.sol-page .sol-editorial__fee>span{font-size:10px;letter-spacing:.1em;color:#7b909b;font-weight:600}
+.sol-page .sol-editorial__fee p{font-size:15px;color:#2d4654;margin:7px 0 0!important;line-height:1.3}
+.sol-page .sol-editorial__fee strong{font-size:clamp(32px,2.55vw,38px);font-weight:550;color:#102635;letter-spacing:-.055em;margin:0 4px}
+.sol-page .sol-editorial__actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.sol-page .sol-editorial__actions a{font-size:12px;font-weight:550;min-height:47px;padding:13px 21px;display:inline-flex;justify-content:center;align-items:center;transition:background-color .25s,color .25s}
+.sol-page .sol-editorial__primary{background:#102635;color:#fff!important}
+.sol-page .sol-editorial__primary:hover{background:#315265}
+.sol-page .sol-editorial__secondary{color:#203c4a!important;background:transparent;border:1px solid #cad6dc}
+.sol-page .sol-editorial__secondary:hover{background:#e7eef1}
+.sol-page .sol-editorial__photo{margin:0;min-width:0;align-self:stretch;background:#dce5e8;display:flex;flex-direction:column}
+.sol-page .sol-editorial__photo img{display:block;width:100%;height:calc(100% - 24px);min-height:500px;object-fit:cover;object-position:center;filter:saturate(.83)}
+.sol-page .sol-editorial__photo figcaption{font-size:10px;letter-spacing:.1em;color:#8396a0;padding-top:11px;text-align:right}
+@media(max-width:950px){.sol-page .sol-editorial{grid-template-columns:1.04fr .96fr;gap:30px}.sol-page .sol-editorial__copy h3{font-size:31px!important}.sol-page .sol-editorial__photo img{min-height:430px}}
+@media(max-width:760px){
+.sol-page .sol-wrap{width:calc(100% - 12vw)!important}
+.sol-page .sol-programs{padding-top:106px!important;padding-bottom:73px!important}
+.sol-page .sol-head{margin-bottom:33px!important}
+.sol-page .sol-program-switch{margin-bottom:31px!important}
+.sol-page .sol-select{min-height:105px!important;padding:16px 10px!important}
+.sol-page .sol-editorial{display:flex;flex-direction:column-reverse;gap:24px;min-height:0}
+.sol-page .sol-editorial__copy{padding:0}
+.sol-page .sol-editorial__copy h3{font-size:29px!important}
+.sol-page .sol-editorial__photo img{min-height:0;height:auto;aspect-ratio:16/10}
+.sol-page .sol-editorial__photo figcaption{padding-top:8px}
+.sol-page .sol-editorial__description{margin-bottom:22px!important}
+.sol-page .sol-editorial__focus{margin-bottom:29px}
+.sol-page .sol-editorial__actions a{flex:1;padding:13px 10px}
+}
+@media(prefers-reduced-motion:reduce){.sol-page .sol-editorial__actions a{transition:none}}
