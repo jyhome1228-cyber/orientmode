@@ -1,0 +1,15 @@
+/* SOLUTIONS / compact premium program previews */
+.sol-page .sol-detail--preview{animation:none;padding:0!important;border:0!important;background:transparent!important}
+.sol-page .sol-preview{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:6%;align-items:stretch;min-height:440px}
+.sol-page .sol-preview__copy{padding:24px 0 18px;display:flex;flex-direction:column;align-items:flex-start}
+.sol-page .sol-preview__copy h3{font-size:clamp(29px,2.75vw,41px)!important;font-weight:550!important;letter-spacing:-.055em;line-height:1.32!important;margin:17px 0 18px!important;max-width:540px}
+.sol-page .sol-preview__lede{font-size:14px;color:#627883;line-height:1.95;max-width:490px;margin:0 0 28px}
+.sol-page .sol-preview__info{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:0 0 27px}
+.sol-page .sol-preview__info strong{width:100%;font-size:11px;letter-spacing:.03em;color:#718995;font-weight:600;margin-bottom:3px}
+.sol-page .sol-preview__info span{font-size:12px;background:#eaf0f2;padding:9px 12px;color:#4b6775}
+.sol-page .sol-preview__link{font-size:13px;background:#102635;color:white;padding:16px 23px;display:inline-flex;gap:25px;align-items:center;margin-top:auto;transition:background .25s}
+.sol-page .sol-preview__link:hover{background:#2d4f60}
+.sol-page .sol-preview__link span{font-size:17px}
+.sol-page .sol-preview__photo{overflow:hidden;background:#dce5e8;min-height:420px}
+.sol-page .sol-preview__photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/4.2;filter:saturate(.83)}
+@media(max-width:760px){.sol-page .sol-preview{grid-template-columns:1fr;gap:22px;min-height:0}.sol-page .sol-preview__photo{grid-row:1;min-height:0}.sol-page .sol-preview__photo img{aspect-ratio:16/10}.sol-page .sol-preview__copy{padding:0 0 12px}.sol-page .sol-preview__copy h3{font-size:29px!important}.sol-page .sol-preview__lede{margin-bottom:22px}.sol-page .sol-preview__link{margin-top:5px}}
