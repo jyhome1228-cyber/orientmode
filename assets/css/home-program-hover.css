@@ -1,0 +1,35 @@
+/* ORIENTIVE / home program cards: equal default state and hover navy */
+.orv-solutions--premium .orv-program-grid .orv-program-card,
+.orv-solutions--premium .orv-program-grid .orv-program-card--featured{
+ --program-ink:#102635;--program-muted:#61727d;--program-rule:#dae2e5;
+ background:#fff!important;border:1px solid #dce3e5!important;color:#102635!important;
+ box-shadow:none;transition:background-color .35s ease,color .35s ease,border-color .35s ease,box-shadow .35s ease,transform .35s ease;
+}
+.orv-solutions--premium .orv-program-grid .orv-program-card .orv-program-card__code{color:#688291}
+.orv-solutions--premium .orv-program-grid .orv-program-card .orv-program-card__features li::before{background:#899da8}
+.orv-solutions--premium .orv-program-grid .orv-program-card .orv-program-card__action{background:#102635;color:#fff!important;border-color:#102635}
+.orv-solutions--premium .orv-program-grid .orv-program-card__description{font-size:12.8px!important;line-height:1.72!important}
+.orv-solutions--premium .orv-program-grid .orv-program-card__features{gap:9px;margin-top:18px;padding-top:16px}
+.orv-solutions--premium .orv-program-grid .orv-program-card__features li{font-size:12.4px;line-height:1.5}
+@media(hover:hover) and (pointer:fine){
+ .orv-solutions--premium .orv-program-grid .orv-program-card:hover,
+ .orv-solutions--premium .orv-program-grid .orv-program-card:focus-within{
+ --program-ink:#fff;--program-muted:#bed0d9;--program-rule:#496272;
+ background:#102635!important;border-color:#102635!important;color:#fff!important;
+ box-shadow:0 15px 32px rgba(15,37,48,.15);
+ transform:translateY(-4px);
+ }
+ .orv-solutions--premium .orv-program-grid .orv-program-card:hover .orv-program-card__code,
+ .orv-solutions--premium .orv-program-grid .orv-program-card:focus-within .orv-program-card__code{color:#b9cbd5}
+ .orv-solutions--premium .orv-program-grid .orv-program-card:hover .orv-program-card__features li::before,
+ .orv-solutions--premium .orv-program-grid .orv-program-card:focus-within .orv-program-card__features li::before{background:#d7e3e8}
+ .orv-solutions--premium .orv-program-grid .orv-program-card:hover .orv-program-card__action,
+ .orv-solutions--premium .orv-program-grid .orv-program-card:focus-within .orv-program-card__action{background:#fff;color:#102635!important;border-color:#fff}
+ .orv-solutions--premium .orv-program-grid .orv-program-card:hover .orv-program-card__action:hover{background:#dce9ef;color:#102635!important}
+}
+@media(max-width:760px){
+ .orv-solutions--premium .orv-program-grid .orv-program-card{min-height:0}
+}
+@media(prefers-reduced-motion:reduce){
+ .orv-solutions--premium .orv-program-grid .orv-program-card{transition:none!important;transform:none!important}
+}
