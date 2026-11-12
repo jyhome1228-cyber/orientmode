@@ -18,7 +18,7 @@
 .orv-process--active.is-inview .orv-timeline__step{animation:orv-step-rise .62s cubic-bezier(.16,.8,.3,1) both;animation-delay:calc(.12s + var(--step-order)*.38s)}
 @keyframes orv-step-rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 .orv-process--active .orv-timeline__step:hover{background:#eaf1f3;box-shadow:0 7px 26px #12384713;transform:translateX(5px)}
-.orv-timeline__icon{display:grid;place-items:center;width:50px;height:50px;color:#3c6173;background:#edf3f5}
+.orv-process--active .orv-timeline__icon{padding:0!important;display:grid;place-items:center;width:50px;height:50px;color:#3c6173;background:#edf3f5}
 .orv-timeline__icon svg{width:29px;height:29px;display:block}
 .orv-timeline__label{display:block!important;font-size:10px!important;letter-spacing:.13em;color:#7b939e!important;font-weight:600!important;padding:0!important;margin:0 0 5px!important}
 .orv-process--active .orv-timeline__text h3{font-size:clamp(17px,1.35vw,20px)!important;font-weight:550!important;line-height:1.4;margin:0 0 6px!important;color:#1c3544}
