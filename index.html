@@ -29,6 +29,7 @@
 <link rel="icon" type="image/svg+xml" sizes="any" href="assets/images/orientive-favicon.svg?v=20261113">
 <link rel="stylesheet" href="assets/css/cursor-accent.css?v=20261113">
 <link rel="stylesheet" href="assets/css/orientive-section-images.css?v=20261113">
+<link rel="stylesheet" href="assets/css/growth-hero.css?v=20261113-ascending01">
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
@@ -51,14 +52,41 @@
 <header class="header site-header is-home at-top" id="header"><a href="./" class="site-logo" aria-label="ORIENTIVE 홈"><img src="./assets/images/orientive-logo-white.svg?v=20261111-official" alt="ORIENTIVE" width="600" height="47" decoding="async"></a><nav class="site-nav" aria-label="주요 메뉴"><a href="./about/">ABOUT</a><a href="./service/">SERVICE</a><a href="./solutions/">SOLUTIONS</a><a href="./cases/">CASES</a><a href="./insights/">INSIGHTS</a><a href="./contact/" class="site-cta">상담 문의</a></nav><button class="hamb site-menu-toggle" type="button" aria-controls="mobileNav" aria-expanded="false" aria-label="메뉴 열기"><span class="menu-icon" aria-hidden="true"></span></button></header>
 <nav class="overlaymenu site-mobile-menu" id="mobileNav" aria-label="모바일 메뉴" aria-hidden="true"><a href="./about/">ABOUT</a><a href="./service/">SERVICE</a><a href="./solutions/">SOLUTIONS</a><a href="./cases/">CASES</a><a href="./insights/">INSIGHTS</a><a href="./contact/" class="menu-contact">CONTACT</a><span class="mobile-caption">ORIENTIVE · HOSPITALITY GROWTH PARTNER</span></nav>
 <main id="main">
-<section class="orv-hero orv-motion-hero" aria-label="오리엔티브 브랜드 오프닝">
-  <div class="orv-motion-hero__system" aria-hidden="true">
-    <div class="orv-motion-hero__orbit"></div><div class="orv-motion-hero__orbit"></div><div class="orv-motion-hero__orbit"></div>
-    <div class="orv-motion-hero__core"></div>
+<section class="orv-hero orv-motion-hero orv-growth-hero" aria-label="오리엔티브 브랜드 오프닝">
+  <div class="orv-growth-hero__ambient" aria-hidden="true"></div>
+  <div class="orv-growth-hero__graphic" aria-hidden="true">
+    <svg class="orv-growth-hero__svg" viewBox="0 0 1120 680" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="orvGrowthHighlight" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#637D8F" stop-opacity=".08"/>
+          <stop offset="48%" stop-color="#8DA9B9" stop-opacity=".4"/>
+          <stop offset="100%" stop-color="#DCECF5" stop-opacity=".92"/>
+        </linearGradient>
+        <linearGradient id="orvGrowthSoft" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#506D80" stop-opacity=".08"/>
+          <stop offset="100%" stop-color="#B6CBD8" stop-opacity=".4"/>
+        </linearGradient>
+      </defs>
+      <g class="orv-growth-hero__tracks">
+        <path class="orv-growth-hero__trail orv-growth-hero__trail--back" d="M72 566 C255 550 390 532 528 446 S815 296 1038 140"/>
+        <path class="orv-growth-hero__trail orv-growth-hero__trail--soft" d="M96 616 C310 594 400 523 602 415 S875 268 1055 207"/>
+        <path id="orvGrowthPath" class="orv-growth-hero__trail orv-growth-hero__trail--main" d="M66 582 C270 580 402 540 548 451 S849 262 1064 93"/>
+      </g>
+      <g class="orv-growth-hero__waypoints">
+        <circle cx="240" cy="571" r="3" />
+        <circle cx="547" cy="451" r="3" />
+        <circle cx="833" cy="275" r="3" />
+      </g>
+      <circle class="orv-growth-hero__endpoint" cx="1064" cy="93" r="5"/>
+      <circle class="orv-growth-hero__endpoint-halo" cx="1064" cy="93" r="17"/>
+      <circle class="orv-growth-hero__traveler" r="4.5" fill="#EDF7FB">
+        <animateMotion dur="4.2s" begin="indefinite" fill="freeze" keySplines=".2 .65 .25 1" calcMode="spline" keyTimes="0;1"><mpath href="#orvGrowthPath"/></animateMotion>
+      </circle>
+    </svg>
   </div>
   <div class="orv-motion-hero__content">
-    <div class="orv-motion-hero__line">숙박의 가능성을<span>Discover the potential.</span></div>
-    <div class="orv-motion-hero__line right">성장의 방향으로.<span>Design the next growth.</span></div>
+    <div class="orv-motion-hero__line orv-growth-hero__copy--first">숙박의 가능성을,<span>Discover the potential.</span></div>
+    <div class="orv-motion-hero__line right orv-growth-hero__copy--second">성장의 방향으로.<span>Design the next growth.</span></div>
   </div>
 </section>
 <section class="orv-section orv-intro" id="about">
@@ -160,4 +188,5 @@ const revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.
 <script defer src="./assets/js/motion-2026.js?v=20261113-programcards"></script>
 <script defer src="./assets/js/fullpage-2026.js?v=20261113-scene"></script>
 <script defer src="assets/js/cursor-accent.js?v=20261113"></script>
+<script defer src="./assets/js/growth-hero.js?v=20261113-ascending01"></script>
 </body></html>
