@@ -185,3 +185,42 @@
 @media(prefers-reduced-motion:reduce){
   .cases-editorial .cases-story__photo,.cases-gallery__grid img{transition:none!important}
 }
+
+/* Clean visual-only cases presentation — supplied photos, zero image decoration. */
+.cases-editorial .cases-story__visual--photo {
+ background:transparent!important;
+ height:auto!important;
+ aspect-ratio:1/1!important;
+ position:relative;
+}
+.cases-editorial .cases-story__visual--photo::before,
+.cases-editorial .cases-story__visual--photo::after,
+.cases-editorial .cases-story__visual-caption {
+ content:none!important;display:none!important;
+ background:none!important;box-shadow:none!important;
+}
+.cases-editorial .cases-story__photo{
+ display:block!important;width:100%!important;height:100%!important;
+ object-fit:cover!important;object-position:center!important;
+ filter:none!important;opacity:1!important;
+ transition:none!important;transform:none!important;
+}
+.cases-editorial .cases-story__visual--photo:hover .cases-story__photo{
+ transform:none!important;filter:none!important;
+}
+.cases-editorial .cases-gallery {margin-top:36px!important;border-top:0!important;padding-top:0!important}
+.cases-editorial .cases-gallery__intro,
+.cases-editorial .cases-gallery__grid figcaption {display:none!important}
+.cases-editorial .cases-gallery__grid{gap:18px!important}
+.cases-editorial .cases-gallery__grid figure{overflow:visible!important}
+.cases-editorial .cases-gallery__grid img{
+ display:block!important;width:100%!important;height:auto!important;
+ aspect-ratio:1/1!important;object-fit:cover!important;object-position:center!important;
+ filter:none!important;transform:none!important;transition:none!important;
+}
+.cases-editorial .cases-gallery__grid figure:hover img{filter:none!important;transform:none!important}
+.cases-editorial .cases-visual-disclosure{display:none!important}
+@media(max-width:760px){
+ .cases-editorial .cases-story__visual--photo{aspect-ratio:1/1!important;height:auto!important}
+ .cases-editorial .cases-gallery__grid img{aspect-ratio:1/1!important}
+}
