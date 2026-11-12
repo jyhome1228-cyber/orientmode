@@ -1,6 +1,6 @@
 /* ORIENTIVE full-page scene transitions, desktop only */
 @media (min-width: 1025px) and (min-height: 620px) and (prefers-reduced-motion: no-preference) {
- html.orv-fullpage-active {scroll-behavior:auto;scroll-snap-type:y proximity}
+ html.orv-fullpage-active {scroll-behavior:auto;scroll-snap-type:none}
  html.orv-fullpage-active body {scroll-snap-type:none}
  html.orv-fullpage-active main > section {height:100svh;min-height:0;box-sizing:border-box;scroll-snap-align:start;scroll-snap-stop:always}
  html.orv-fullpage-active main > .orv-section,
@@ -28,4 +28,16 @@
 }
 @media(max-width:1024px),(max-height:619px),(prefers-reduced-motion:reduce){
  .orv-page-indicator{display:none!important}
+}
+
+/* Navigation script controls snapping; browser-native snap must not fight animations. */
+.orv-page-indicator[hidden]{display:none!important}
+@media(min-width:1025px) and (min-height:620px) and (prefers-reduced-motion:no-preference){
+ html.orv-fullpage-active main>.orv-section,
+ html.orv-fullpage-active main>.orv-final{scroll-snap-align:none}
+ .orv-page-indicator{gap:9px;right:22px}
+ .orv-page-indicator button{width:26px;height:26px}
+ .orv-page-indicator button::after{transition:width .23s ease,height .23s ease,background .23s ease}
+ .orv-page-indicator button:hover::after{width:7px;background:#e8f1f5}
+ .orv-page-indicator.is-light button:hover::after{background:#213c4c}
 }
