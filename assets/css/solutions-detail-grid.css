@@ -1,0 +1,24 @@
+/* ORIENTIVE — align standalone program pages with the main site's design grid */
+.sdp{--site-grid-max:1280px;--site-grid-gutter:48px}
+.sdp .sdp-wrap{width:min(var(--site-grid-max),calc(100% - 2*var(--site-grid-gutter)))!important;max-width:var(--site-grid-max)!important;margin-inline:auto!important}
+.sdp-head{padding:clamp(116px,10vw,145px) 0 74px}
+.sdp-head h1{font-size:clamp(32px,3vw,45px)!important;line-height:1.34!important;letter-spacing:-.05em!important}
+.sdp-intro{font-size:14px!important;line-height:1.9}
+.sdp-headside{border-left:0;padding-left:0;gap:22px}
+.sdp-headside>div{border-top:1px solid #d8e1e4;padding-top:14px}
+.sdp-heroimage{max-height:500px}
+.sdp-overview{padding:95px 0 105px}
+.sdp-sectionhead h2{font-size:clamp(28px,2.55vw,38px)!important}
+.sdp-activity{border-color:#e2e9eb;background:#fff}
+.sdp-scope-steps div:last-child{border-bottom:0}
+.sdp-otherlinks a{border:1px solid #e2e9ec;background:transparent}
+.sdp-otherlinks a:hover{background:#ecf1f3}
+.sdp-close .sdp-wrap{width:min(var(--site-grid-max),calc(100% - 2*var(--site-grid-gutter)))!important}
+@media(max-width:760px){
+.sdp{--site-grid-gutter:6vw}
+.sdp-head{padding:108px 0 48px}
+.sdp .sdp-wrap,.sdp-close .sdp-wrap{width:calc(100% - 12vw)!important}
+.sdp-headgrid{grid-template-columns:1fr}
+.sdp-heroimage{height:280px}
+.sdp-activities{grid-template-columns:1fr}
+}
