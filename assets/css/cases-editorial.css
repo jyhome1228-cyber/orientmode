@@ -19,7 +19,7 @@
 .cases-story__visual--coast::before{background:linear-gradient(130deg,rgba(12,38,54,.42),rgba(24,52,68,.07) 60%),linear-gradient(155deg,#819fa8 0%,#c2d0cf 42%,#607e8e 43%,#324f63 100%)}
 .cases-story__visual--mountain::before{background:linear-gradient(140deg,rgba(13,31,43,.35),transparent 66%),linear-gradient(160deg,#8babb9 0%,#dee3de 38%,#718c8c 38%,#3b5868 72%,#233c50 100%)}
 .cases-story__visual--lake::before{background:linear-gradient(150deg,rgba(19,43,57,.39),transparent 69%),linear-gradient(165deg,#b6cbd0 0%,#dee2dd 35%,#819ba7 35%,#436378 70%,#1b3b51 100%)}
-.cases-story__visual::after{content:"";pointer-events:none;position:absolute;inset:-18% -22%;border:1px solid rgba(255,255,255,.16);border-radius:50%;transform:rotate(-20deg);box-shadow:0 0 0 105px rgba(255,255,255,.045),0 0 0 230px rgba(255,255,255,.027)}
+.cases-story__visual::after{content:"";pointer-events:none;position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,29,43,.2),transparent 48%),repeating-linear-gradient(90deg,transparent 0,transparent 149px,rgba(255,255,255,.048) 150px);mix-blend-mode:normal}
 .cases-story__visual-inner{position:absolute;z-index:1;inset:0;padding:clamp(24px,3vw,43px);display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between}
 .cases-story__photo-label{font-size:clamp(28px,3.2vw,43px);line-height:1.1;letter-spacing:-.045em;font-weight:500;color:#fff;text-shadow:0 1px 16px rgba(0,0,0,.1)}
 .cases-story__photo-caption{font-size:10px;letter-spacing:.13em;font-weight:500;color:rgba(255,255,255,.8)}
