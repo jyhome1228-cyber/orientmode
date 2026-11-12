@@ -1,0 +1,148 @@
+/* ORIENTIVE – Ascending Flow brand hero | 2026-11-13
+   Preserve original copy scale and editorial hierarchy. */
+.orv-growth-hero.orv-motion-hero{
+  overflow:hidden!important;
+  background:#142331!important;
+  isolation:isolate;
+}
+.orv-growth-hero .orv-growth-hero__ambient{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse at 58% 52%,rgba(91,127,151,.095),transparent 42%),
+             linear-gradient(115deg,rgba(7,24,36,.14),transparent 55%);
+}
+.orv-growth-hero .orv-growth-hero__graphic{
+  position:absolute;z-index:1;pointer-events:none;
+  width:min(71vw,1030px);height:auto;aspect-ratio:1120 / 680;
+  left:50%;top:50%;transform:translate(-50%,-50%);
+  opacity:.93;
+  transition:transform .95s cubic-bezier(.22,.68,.2,1);
+  will-change:transform;
+}
+.orv-growth-hero .orv-growth-hero__svg{
+  display:block;width:100%;height:100%;overflow:visible;
+}
+.orv-growth-hero .orv-growth-hero__trail{
+  fill:none;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:1000;stroke-dashoffset:0;
+}
+.orv-growth-hero .orv-growth-hero__trail--main{
+  stroke:url(#orvGrowthHighlight);stroke-width:2.3;
+}
+.orv-growth-hero .orv-growth-hero__trail--soft{
+  stroke:url(#orvGrowthSoft);stroke-width:1.3;opacity:.8;
+}
+.orv-growth-hero .orv-growth-hero__trail--back{
+  stroke:rgba(139,176,196,.19);stroke-width:1.1;
+}
+.orv-growth-hero .orv-growth-hero__waypoints circle{
+  fill:#B5CCD9;opacity:.65;
+}
+.orv-growth-hero .orv-growth-hero__endpoint{
+  fill:#E3F0F7;opacity:1;
+}
+.orv-growth-hero .orv-growth-hero__endpoint-halo{
+  fill:none;stroke:rgba(221,239,247,.36);stroke-width:1.1;
+}
+.orv-growth-hero .orv-growth-hero__traveler{
+  opacity:0;filter:drop-shadow(0 0 8px rgba(228,243,250,.65));
+}
+.orv-growth-hero .orv-motion-hero__content{
+  position:absolute!important;inset:0!important;z-index:3!important;
+  display:flex!important;align-items:center!important;justify-content:space-between!important;
+  gap:8%!important;width:min(1280px,calc(100% - 96px))!important;
+  margin:0 auto!important;padding:0!important;
+}
+.orv-growth-hero .orv-motion-hero__line{
+  animation:none!important;
+  opacity:1;transform:none;
+  font-size:clamp(34px,3.35vw,53px)!important;
+  font-weight:550!important;line-height:1.3!important;
+  max-width:45%!important;
+  letter-spacing:-.065em!important;
+  white-space:nowrap;
+}
+.orv-growth-hero .orv-motion-hero__line.right{
+  text-align:right!important;
+}
+.orv-growth-hero .orv-motion-hero__line span{
+  margin-top:16px!important;
+  font-size:13px!important;line-height:1.7!important;
+  color:#AFC2CF!important;white-space:normal;
+}
+/* Only hide elements once the motion controller initializes; no-JS stays readable. */
+.orv-growth-hero.is-ready:not(.is-active) .orv-motion-hero__line{
+  opacity:0;transform:translateY(22px);
+}
+.orv-growth-hero.is-ready:not(.is-active) .orv-growth-hero__trail{
+  stroke-dashoffset:1000;
+}
+.orv-growth-hero.is-ready:not(.is-active) .orv-growth-hero__waypoints,
+.orv-growth-hero.is-ready:not(.is-active) .orv-growth-hero__endpoint,
+.orv-growth-hero.is-ready:not(.is-active) .orv-growth-hero__endpoint-halo{
+  opacity:0;
+}
+.orv-growth-hero.is-active .orv-growth-hero__trail--main{
+  animation:orv-ascending-draw 3.25s cubic-bezier(.28,.65,.22,1) .17s both;
+}
+.orv-growth-hero.is-active .orv-growth-hero__trail--back{
+  animation:orv-ascending-draw 3.7s cubic-bezier(.28,.65,.22,1) .55s both;
+}
+.orv-growth-hero.is-active .orv-growth-hero__trail--soft{
+  animation:orv-ascending-draw 3.65s cubic-bezier(.28,.65,.22,1) .88s both;
+}
+.orv-growth-hero.is-active .orv-growth-hero__waypoints{
+  animation:orv-ascending-appear .7s ease 2.55s both;
+}
+.orv-growth-hero.is-active .orv-growth-hero__endpoint{
+  animation:orv-ascending-appear .65s ease 3.25s both;
+}
+.orv-growth-hero.is-active .orv-growth-hero__endpoint-halo{
+  animation:orv-ascending-halo 2.5s ease-in-out 3.25s infinite;
+}
+.orv-growth-hero.is-active .orv-growth-hero__traveler{
+  animation:orv-ascending-appear .4s ease .65s both;
+}
+.orv-growth-hero.is-active .orv-growth-hero__copy--first{
+  animation:orv-ascending-copy 1.05s cubic-bezier(.2,.7,.2,1) .18s both!important;
+}
+.orv-growth-hero.is-active .orv-growth-hero__copy--second{
+  animation:orv-ascending-copy 1.05s cubic-bezier(.2,.7,.2,1) 1.08s both!important;
+}
+@keyframes orv-ascending-draw{from{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
+@keyframes orv-ascending-copy{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes orv-ascending-appear{from{opacity:0}to{opacity:1}}
+@keyframes orv-ascending-halo{
+  0%,100%{opacity:.3;transform:scale(.9);transform-origin:1064px 93px}
+  50%{opacity:.68;transform:scale(1.27);transform-origin:1064px 93px}
+}
+@media(max-width:1024px){
+ .orv-growth-hero .orv-growth-hero__graphic{width:min(83vw,830px);top:49%}
+ .orv-growth-hero .orv-motion-hero__content{width:calc(100% - 12vw)!important}
+ .orv-growth-hero .orv-motion-hero__line{font-size:clamp(30px,4vw,43px)!important}
+}
+@media(max-width:760px){
+ .orv-growth-hero .orv-growth-hero__graphic{
+   width:124vw;left:54%;top:49%;opacity:.65;
+ }
+ .orv-growth-hero .orv-motion-hero__content{
+   width:calc(100% - 12vw)!important;
+   flex-direction:column!important;justify-content:center!important;
+   align-items:stretch!important;gap:35px!important;
+   padding-top:45px!important;
+ }
+ .orv-growth-hero .orv-motion-hero__line{
+   max-width:100%!important;font-size:clamp(30px,7.8vw,42px)!important;
+   white-space:normal;
+ }
+ .orv-growth-hero .orv-motion-hero__line span{
+   font-size:11px!important;margin-top:10px!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .orv-growth-hero .orv-growth-hero__trail,
+ .orv-growth-hero .orv-growth-hero__waypoints,
+ .orv-growth-hero .orv-growth-hero__endpoint{stroke-dashoffset:0!important;opacity:1!important;animation:none!important}
+ .orv-growth-hero .orv-motion-hero__line{animation:none!important;opacity:1!important;transform:none!important}
+ .orv-growth-hero .orv-growth-hero__traveler{display:none}
+ .orv-growth-hero .orv-growth-hero__endpoint-halo{animation:none!important}
+}
