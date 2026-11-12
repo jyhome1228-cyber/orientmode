@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="../assets/css/interaction-polish.css?v=20261112-cta-premium">
 <link rel="icon" type="image/svg+xml" sizes="any" href="../assets/images/orientive-favicon.svg?v=20261113">
+<link rel="stylesheet" href="../assets/css/cursor-accent.css?v=20261113">
 </head>
 <body><a class="skip" href="#content">본문 바로가기</a>
 <header class="header site-header" id="header"><a href="../" class="site-logo" aria-label="ORIENTIVE 홈"><img src="../assets/images/orientive-logo-white.svg?v=20261111-official" alt="ORIENTIVE" width="600" height="47" decoding="async"></a><nav class="site-nav" aria-label="주요 메뉴"><a href="../about/">ABOUT</a><a href="../service/">SERVICE</a><a href="../solutions/">SOLUTIONS</a><a href="../cases/">CASES</a><a href="../insights/">INSIGHTS</a><a href="../contact/" class="site-cta" aria-current="page">상담 문의</a></nav><button class="hamb site-menu-toggle" type="button" aria-controls="mobileNav" aria-expanded="false" aria-label="메뉴 열기"><span class="menu-icon" aria-hidden="true"></span></button></header>
@@ -48,4 +49,5 @@ const subject='[ORIENTIVE '+get('inqType')+'] '+get('inqProperty');
 const body=['문의 유형: '+get('inqType'),'담당자: '+get('inqName'),'연락처: '+get('inqPhone'),'이메일: '+get('inqEmail'),'숙소명: '+get('inqProperty'),'시설 유형: '+get('inqCategory'),'소재 지역: '+get('inqRegion'),'관심 프로그램: '+get('inqProgram'),'','문의 내용:',get('inqMessage')].join('\n');
 location.href='mailto:orientgroup@naver.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
 });})();
-</script></body></html>
+</script><script defer src="../assets/js/cursor-accent.js?v=20261113"></script>
+</body></html>
