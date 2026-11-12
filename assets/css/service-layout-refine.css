@@ -1,0 +1,40 @@
+/* ORIENTIVE SERVICE / refined layout, override shared site styles */
+.service-page .service-difference{padding:105px 0 112px}
+.service-page .service-difference__intro{margin-bottom:48px}
+.service-page .service-difference__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto;gap:clamp(16px,2.2vw,30px);border:0}
+.service-page .service-difference__item,
+.service-page .service-difference__item:first-child,
+.service-page .service-difference__item:nth-child(2),
+.service-page .service-difference__item:nth-child(3){grid-row:auto;grid-column:auto;min-height:245px;padding:32px 30px 34px!important;background:rgba(255,255,255,.055);border:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;transform:none;transition:background-color .35s ease}
+.service-page .service-difference__item:hover{background:rgba(255,255,255,.095);transform:none}
+.service-difference__icon{width:52px;height:52px;display:flex;align-items:center;justify-content:center;margin:0 0 32px;color:#d0e0e8;transition:transform .4s ease}
+.service-difference__icon svg{display:block;width:43px;height:43px}
+.service-page .service-difference__item:hover .service-difference__icon{transform:translateY(-4px)}
+.service-page .service-difference__body{margin:0!important}
+.service-page .service-difference__item h3,.service-page .service-difference__item:first-child h3{font-size:clamp(21px,1.75vw,26px)!important;line-height:1.35;margin:0 0 13px!important;font-weight:550}
+.service-page .service-difference__item p,.service-page .service-difference__item:first-child p{font-size:14px;line-height:1.8;color:#bfd0da;max-width:340px}
+.service-page .service-process .service-wrap{width:min(1240px,calc(100% - 11vw))!important;margin-inline:auto!important;box-sizing:border-box}
+.service-page .service-process__grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:48px 26px!important;width:100%;margin:0;padding:0;border:0}
+.service-page .service-process .service-process__step{min-width:0;width:100%;min-height:0!important;padding:0!important;margin:0;border:0!important;background:none!important}
+.service-page .service-process__trigger{min-width:0;width:100%;display:block;text-align:left;padding:0!important}
+.service-page .service-process__visual{width:100%;aspect-ratio:1.64/1;overflow:hidden}
+.service-page .service-process__visual img{width:100%;height:100%;object-fit:cover}
+.service-page .service-process__card-content{padding:17px 0 0!important;min-height:0;border:0!important}
+.service-page .service-process__index{justify-content:flex-start;margin:0 0 10px!important}
+.service-page .service-process__index span{font-size:10px;letter-spacing:.1em;font-weight:550;color:#627e8e}
+.service-page .service-process__step h3{font-size:clamp(20px,1.75vw,25px)!important;line-height:1.38;margin:0 0 7px!important}
+.service-page .service-process__step p{font-size:13px;line-height:1.75;margin:0!important}
+.service-page .service-process__more{margin:10px 0 0;font-size:12px}
+@media(max-width:900px){
+.service-page .service-difference__grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.service-page .service-difference__item,.service-page .service-difference__item:first-child,.service-page .service-difference__item:nth-child(2),.service-page .service-difference__item:nth-child(3){padding:25px 20px!important;min-height:265px}
+.service-page .service-process__grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:35px 20px!important}
+}
+@media(max-width:650px){
+.service-page .service-difference__grid{grid-template-columns:1fr;gap:10px}
+.service-page .service-difference__item,.service-page .service-difference__item:first-child,.service-page .service-difference__item:nth-child(2),.service-page .service-difference__item:nth-child(3){padding:26px!important;min-height:0}
+.service-difference__icon{margin-bottom:20px}
+.service-page .service-process .service-wrap{width:calc(100% - 12vw)!important}
+.service-page .service-process__grid{grid-template-columns:1fr!important;gap:32px!important}
+}
+@media(prefers-reduced-motion:reduce){.service-difference__icon{transition:none!important}}
