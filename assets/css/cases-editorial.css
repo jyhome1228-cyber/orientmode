@@ -101,3 +101,87 @@
 }
 .cases-method__panel{background:rgba(24,55,71,.92);backdrop-filter:blur(3px)}
 @media(max-width:760px){.cases-method{background-position:center,60% center;background-image:linear-gradient(rgba(10,30,43,.90),rgba(10,30,43,.86)),url("https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-203705-d02-25-goal-c4c7f81c.webp")}.cases-method__panel{background:rgba(24,55,71,.94)}}
+
+/* Cases image integration — user-provided image set (editorial concepts, not documentary claims). */
+.cases-editorial .cases-story__visual--photo{
+  background:#c4d0d4!important;
+}
+.cases-editorial .cases-story__visual--photo::before{
+  content:none!important;display:none!important;
+}
+.cases-editorial .cases-story__visual--photo::after{
+  background:linear-gradient(to top,rgba(5,24,35,.56),transparent 38%)!important;
+  z-index:1;
+}
+.cases-editorial .cases-story__photo{
+  display:block;width:100%;height:100%;object-fit:cover;object-position:center;
+  filter:saturate(.90) contrast(.98);
+  transition:transform .8s cubic-bezier(.22,.68,.2,1),filter .8s ease;
+}
+.cases-editorial .cases-story__visual-caption{
+  position:absolute;z-index:2;inset:0;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;
+  padding:clamp(24px,3vw,43px);pointer-events:none;
+}
+.cases-editorial .cases-story__photo-label{
+  font-size:clamp(25px,2.6vw,36px);font-weight:520;
+  letter-spacing:-.035em;text-shadow:0 1px 12px rgba(4,20,30,.32);
+}
+.cases-editorial .cases-story__photo-caption{
+  font-size:10px;letter-spacing:.11em;color:#fff;
+  text-shadow:0 1px 8px rgba(4,20,30,.32);
+}
+.cases-editorial .cases-story__detail{
+  line-height:1.95!important;
+}
+.cases-editorial .cases-gallery{
+  margin-top:clamp(32px,4vw,56px);
+  border-top:1px solid #d5dcdf;padding-top:27px;
+}
+.cases-gallery__intro{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding-bottom:21px;
+}
+.cases-editorial .cases-gallery__intro p:last-child{
+  font-size:12px;line-height:1.6;color:#72838c;
+}
+.cases-gallery__grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;
+}
+.cases-gallery__grid figure{
+  margin:0;min-width:0;
+}
+.cases-gallery__grid img{
+  width:100%;aspect-ratio:16/9;height:auto;display:block;object-fit:cover;
+  filter:saturate(.88);transition:filter .6s ease,transform .6s ease;
+}
+.cases-gallery__grid figcaption{
+  margin:10px 0 0;font-size:10px;color:#738895;
+  letter-spacing:.09em;
+}
+.cases-editorial .cases-visual-disclosure{
+  padding-top:15px;padding-bottom:28px;
+  color:#697c87;font-size:11px;line-height:1.75;
+}
+@media(hover:hover) and (pointer:fine){
+  .cases-editorial .cases-story__visual--photo:hover .cases-story__photo{
+    transform:scale(1.035);filter:saturate(.98) contrast(1);
+  }
+  .cases-gallery__grid figure{overflow:hidden}
+  .cases-gallery__grid figure:hover img{filter:saturate(.98)}
+}
+@media(max-width:760px){
+  .cases-editorial .cases-gallery{margin-top:32px;padding-top:23px}
+  .cases-gallery__intro{align-items:flex-start;flex-direction:column;gap:7px}
+  .cases-gallery__grid{gap:12px}
+  .cases-gallery__grid img{aspect-ratio:4/5}
+  .cases-editorial .cases-story__photo-label{font-size:26px}
+  .cases-editorial .cases-story__visual-caption{padding:25px}
+}
+@media(max-width:480px){
+  .cases-gallery__grid{grid-template-columns:1fr}
+  .cases-gallery__grid img{aspect-ratio:16/10}
+}
+@media(prefers-reduced-motion:reduce){
+  .cases-editorial .cases-story__photo,.cases-gallery__grid img{transition:none!important}
+}
