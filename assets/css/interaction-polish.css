@@ -51,3 +51,41 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
  .orv-motion-reveal,.about-fade,.service-reveal,.sol-fade,.ux-fade{opacity:1!important;transform:none!important}
 }
+
+/* ORIENTIVE · site-wide editorial refinement · Nov 2026
+   Shared rhythm, restrained typography, meaningful interaction. */
+:root{--orv-editorial-ink:#102635;--orv-editorial-muted:#5d707c;--orv-editorial-line:rgba(23,47,61,.16)}
+.about-page,.service-page,.sol-page,.ux-page{font-family:"Pretendard Variable","Pretendard",sans-serif!important;-webkit-font-smoothing:antialiased}
+.about-page .about-label,.service-page .service-kicker,.sol-page .sol-label,.ux-page .ux-label,
+.orv-section .orv-kicker{
+ font-size:11px!important;line-height:1.4!important;letter-spacing:.105em!important;font-weight:600!important;
+}
+.about-page h1,.about-page h2,.service-page h1,.service-page .service-heading,.sol-page h1,.sol-page .sol-heading,.ux-page h1,.ux-page .ux-heading{
+ word-break:keep-all!important;overflow-wrap:break-word!important;letter-spacing:-.045em!important;
+}
+.about-page .about-copy,.service-page .service-copy,.sol-page .sol-copy,.ux-page .ux-body{
+ word-break:keep-all!important;line-height:1.86!important;
+}
+.about-page .about-year__title,.service-page .service-item h3,.sol-page .sol-panel h3,.ux-page .ux-list-row h3{
+ letter-spacing:-.035em!important;word-break:keep-all!important;
+}
+.site-footer a,.site-header a{text-underline-offset:5px}
+.site-footer .sf-bottom{border-top-color:rgba(126,147,161,.22)!important}
+.orv-section img,.ux-page img,.about-page img,.service-page img,.sol-page img{max-width:100%}
+/* Preserve clear content hierarchy and avoid aggressive hover displacement */
+@media(hover:hover) and (pointer:fine){
+ .service-item,.ux-list-row,.about-year{transition:background-color .25s ease,border-color .25s ease}
+ .service-item:hover,.ux-list-row:hover{background-color:rgba(96,132,153,.035)}
+}
+@media(max-width:760px){
+ .about-page .about-copy,.service-page .service-copy,.sol-page .sol-copy,.ux-page .ux-body{
+  font-size:14px!important;line-height:1.8!important;
+ }
+ .about-page h1,.about-page h2,.service-page h1,.service-page .service-heading,.sol-page h1,.sol-page .sol-heading,.ux-page h1,.ux-page .ux-heading{
+  hyphens:none!important;word-break:keep-all!important;
+ }
+ .site-footer .sf-shell{overflow-wrap:break-word}
+}
+@media(prefers-reduced-motion:reduce){
+ .about-page .about-fade,.service-page .service-reveal,.sol-page .sol-fade,.ux-page .ux-fade{opacity:1!important;transform:none!important}
+}
