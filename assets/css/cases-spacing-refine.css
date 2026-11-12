@@ -33,3 +33,54 @@
  .cases-editorial #taean .cases-story__layout{grid-template-columns:1fr!important;gap:22px!important}
  .cases-editorial #taean .cases-story__content{padding-top:0!important}
 }
+
+/* Tablet and mobile: remove excess white space and align case media/copy */
+.cases-editorial{overflow-x:clip}
+.cases-editorial .cases-page-intro{padding-bottom:clamp(20px,2vw,30px)!important}
+.cases-editorial #taean.cases-story{padding-top:12px!important}
+.cases-editorial #taean .cases-story__layout{
+  align-items:start!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(26px,4.4vw,62px);
+}
+.cases-editorial #taean .cases-story__visual{
+  align-self:start!important;
+  margin:0!important;
+}
+.cases-editorial #taean .cases-story__content{
+  align-self:start!important;
+  padding-top:0!important;
+  margin:0!important;
+}
+.cases-editorial #taean .cases-story__content h2{margin:13px 0 19px!important}
+.cases-editorial #taean .cases-story__lead{margin-bottom:22px!important}
+.cases-editorial #taean .cases-story__info{padding:17px 0!important}
+.cases-editorial #taean .cases-story__detail{margin-top:21px!important}
+@media(max-width:1100px){
+ .cases-editorial .cases-shell{width:calc(100% - 10vw)!important}
+ .cases-editorial .cases-page-intro{padding-top:clamp(102px,11vw,130px)!important;padding-bottom:21px!important}
+ .cases-editorial #taean.cases-story{padding-top:10px!important;padding-bottom:55px!important}
+ .cases-editorial #taean .cases-story__layout{gap:clamp(24px,4vw,45px)}
+ .cases-editorial #taean .cases-story__content h2{font-size:clamp(26px,3vw,32px)!important}
+ .cases-editorial #taean .cases-story__lead{font-size:14px!important;line-height:1.8!important}
+ .cases-editorial #taean .cases-story__info{gap:14px}
+}
+@media(max-width:760px){
+ .cases-editorial .cases-shell{width:calc(100% - 12vw)!important}
+ .cases-editorial .cases-page-intro{padding-top:96px!important;padding-bottom:21px!important}
+ .cases-editorial #taean.cases-story{padding-top:0!important;padding-bottom:54px!important}
+ .cases-editorial #taean .cases-story__layout{
+   display:flex!important;flex-direction:column!important;gap:19px!important;
+ }
+ .cases-editorial #taean .cases-story__visual{
+   order:0!important;width:100%;aspect-ratio:4/3!important;height:auto!important;
+ }
+ .cases-editorial #taean .cases-story__content{
+   order:1!important;width:100%;padding:0!important;
+ }
+ .cases-editorial #taean .cases-story__content h2{font-size:27px!important;margin:11px 0 16px!important}
+ .cases-editorial #taean .cases-story__lead{font-size:14px!important;margin-bottom:18px!important}
+ .cases-editorial #taean .cases-story__info{padding:15px 0!important}
+ .cases-editorial #taean .cases-story__detail{margin-top:18px!important}
+ .cases-editorial #taean .cases-gallery{margin-top:24px!important}
+}
