@@ -13,11 +13,17 @@
      img.src=fallback;
      img.alt='숙박시설 공간 참고 이미지';
    });
-   img.addEventListener('load',()=>{
+   const markLoaded=()=>{
      img.classList.add('is-loaded');
      const figure=img.closest('figure');
      if(figure)figure.classList.add('has-photo');
-   });
+   };
+   img.addEventListener('load',markLoaded);
+   // Images can finish (or fail) before a deferred script attaches handlers.
+   if(img.complete){
+     if(img.naturalWidth>0)markLoaded();
+     else img.dispatchEvent(new Event('error'));
+   }
  });
  const tablist=root.querySelector('.cases-method__tabs');
  const tabs=[...root.querySelectorAll('.cases-method__tab')];
