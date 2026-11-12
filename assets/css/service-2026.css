@@ -101,3 +101,11 @@
 @media(max-width:900px){.service-process__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}.service-difference__item,.service-difference__item+.service-difference__item{padding:24px 18px}.service-difference__item:first-child{padding-left:0}}
 @media(max-width:600px){.service-difference__item,.service-difference__item+.service-difference__item{min-height:0;padding:25px 0}.service-difference__body{margin:22px 0 0}.service-difference__line{left:0}.service-difference__item:hover .service-difference__line{width:100%}.service-process__grid{grid-template-columns:1fr;gap:27px}.service-process__visual{aspect-ratio:1.8/1}.service-process__card-content{min-height:0;padding:16px 0}.service-process__step:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){.service-process__step,.service-process__visual img,.service-difference__item,.service-difference__line{transition:none!important;transform:none!important}}
+
+/* FIND YOUR SOLUTION — grayscale image background, contrast-safe */
+.service-close{position:relative;isolation:isolate;overflow:hidden;background:#102635}
+.service-close::before{content:"";position:absolute;inset:0;z-index:-2;background:url("https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-210639-kakaotalk-photo-2026-11-13-06-06-09-4d4efc3a.webp") center center / cover no-repeat;filter:grayscale(1);transform:scale(1.015)}
+.service-close::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,31,45,.94) 0%,rgba(10,31,45,.84) 46%,rgba(10,31,45,.64) 100%)}
+.service-close>.service-wrap{position:relative;z-index:1}
+.service-close .service-copy{color:#d2dce1}
+@media(max-width:600px){.service-close::before{background-position:60% center}.service-close::after{background:linear-gradient(90deg,rgba(10,31,45,.92),rgba(10,31,45,.78))}}
