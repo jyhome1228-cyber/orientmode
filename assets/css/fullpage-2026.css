@@ -1,43 +1,40 @@
-/* ORIENTIVE full-page scene transitions, desktop only */
-@media (min-width: 1025px) and (min-height: 620px) and (prefers-reduced-motion: no-preference) {
- html.orv-fullpage-active {scroll-behavior:auto;scroll-snap-type:none}
- html.orv-fullpage-active body {scroll-snap-type:none}
- html.orv-fullpage-active main > section {height:100svh;min-height:0;box-sizing:border-box;scroll-snap-align:start;scroll-snap-stop:always}
- html.orv-fullpage-active main > .orv-section,
- html.orv-fullpage-active main > .orv-final {display:flex;align-items:center;padding-top:calc(66px + 30px);padding-bottom:38px;overflow-y:auto;overscroll-behavior:contain}
- html.orv-fullpage-active main > .orv-section > .orv-wrap,
- html.orv-fullpage-active main > .orv-final > .orv-wrap {flex:none;width:min(1312px,calc(100% - 10vw))}
- html.orv-fullpage-active .orv-intro__image{height:min(61vh,510px)}
- html.orv-fullpage-active .orv-top{margin-bottom:clamp(25px,4vh,45px)}
- html.orv-fullpage-active .orv-steps article{min-height:0;padding-top:26px;padding-bottom:29px}
- html.orv-fullpage-active .orv-steps h3{margin-top:29px!important}
- html.orv-fullpage-active .orv-case__image{height:min(43vh,350px)}
- html.orv-fullpage-active .orv-case:nth-child(2) .orv-case__image{height:min(35vh,275px);margin-top:clamp(25px,6vh,65px)}
- html.orv-fullpage-active .orv-process__sticky{position:static}
- html.orv-fullpage-active .orv-timeline article{padding:clamp(14px,2.3vh,26px) 0}
- html.orv-fullpage-active .orv-client__mock{padding:22px}
- html.orv-fullpage-active .orv-final{padding-top:66px}
- html.orv-fullpage-active .site-footer{scroll-snap-align:start}
- .orv-page-indicator{position:fixed;right:28px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:12px}
- .orv-page-indicator button{appearance:none;padding:4px;border:0;background:none;cursor:pointer;width:20px;height:20px;display:grid;place-items:center}
- .orv-page-indicator button::after{content:"";display:block;width:4px;height:4px;border-radius:100px;background:#91a6b5;transition:height .25s,width .25s,background .25s}
- .orv-page-indicator button.is-active::after{width:5px;height:20px;border-radius:6px;background:#d6e4ec}
- .orv-page-indicator.is-light button::after{background:#82929d}
- .orv-page-indicator.is-light button.is-active::after{background:#163248}
- .orv-page-indicator button:focus-visible{outline:2px solid #9db5c5;outline-offset:2px}
-}
-@media(max-width:1024px),(max-height:619px),(prefers-reduced-motion:reduce){
- .orv-page-indicator{display:none!important}
-}
-
-/* Navigation script controls snapping; browser-native snap must not fight animations. */
-.orv-page-indicator[hidden]{display:none!important}
-@media(min-width:1025px) and (min-height:620px) and (prefers-reduced-motion:no-preference){
+/* ORIENTIVE desktop scene layout: one wheel gesture = one scene.
+   No nested scene scrolling, no CSS snap competing with JS. */
+@media (min-width:1025px) and (min-height:680px) and (prefers-reduced-motion:no-preference){
+ html.orv-fullpage-active,html.orv-fullpage-active body{
+   scroll-snap-type:none!important;scroll-behavior:auto!important;
+ }
+ html.orv-fullpage-active main>section{
+   position:relative;box-sizing:border-box;
+   min-height:100svh!important;height:auto!important;
+   scroll-snap-align:none!important;scroll-snap-stop:normal!important;
+ }
+ html.orv-fullpage-active main>.orv-hero{
+   height:100svh!important;min-height:100svh!important;
+ }
  html.orv-fullpage-active main>.orv-section,
- html.orv-fullpage-active main>.orv-final{scroll-snap-align:none}
- .orv-page-indicator{gap:9px;right:22px}
- .orv-page-indicator button{width:26px;height:26px}
- .orv-page-indicator button::after{transition:width .23s ease,height .23s ease,background .23s ease}
- .orv-page-indicator button:hover::after{width:7px;background:#e8f1f5}
- .orv-page-indicator.is-light button:hover::after{background:#213c4c}
+ html.orv-fullpage-active main>.orv-final{
+   display:flex!important;align-items:center!important;
+   padding-top:clamp(105px,11vh,130px)!important;
+   padding-bottom:clamp(52px,7vh,82px)!important;
+   overflow:visible!important;overscroll-behavior:auto!important;
+ }
+ html.orv-fullpage-active main>.orv-section>.orv-wrap,
+ html.orv-fullpage-active main>.orv-final>.orv-wrap{
+   flex:none;max-width:1280px!important;
+   width:min(1280px,calc(100% - 96px))!important;
+   margin-inline:auto!important;
+ }
+ html.orv-fullpage-active .orv-intro__image{height:min(58vh,510px)}
+ html.orv-fullpage-active .orv-top{margin-bottom:clamp(25px,4vh,44px)}
+ html.orv-fullpage-active .orv-steps article{min-height:0;padding-top:23px;padding-bottom:25px}
+ html.orv-fullpage-active .orv-steps h3{margin-top:23px!important}
+ html.orv-fullpage-active .orv-case__image{height:min(38vh,345px)}
+ html.orv-fullpage-active .orv-case:nth-child(2) .orv-case__image{height:min(33vh,275px);margin-top:clamp(20px,4vh,48px)}
+ html.orv-fullpage-active .orv-process__sticky{position:static}
+ html.orv-fullpage-active .orv-timeline article{padding:clamp(13px,2vh,23px) 0}
+ html.orv-fullpage-active .orv-final{padding-top:100px!important}
+}
+@media (max-width:1024px),(max-height:679px),(prefers-reduced-motion:reduce){
+ html.orv-fullpage-active main>section{height:auto!important;min-height:0}
 }
