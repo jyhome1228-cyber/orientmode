@@ -30,7 +30,7 @@
  const scroll=document.getElementById('orvScrollCue');
  const section=document.getElementById('about');
  scroll?.addEventListener('click',()=>section?.scrollIntoView({behavior:reduce?'instant':'smooth'}));
- const targets=[...document.querySelectorAll('.orv-intro__grid,.orv-expertise__head,.orv-steps,.orv-top,.orv-solutions__list,.orv-casegrid,.orv-process__grid,.orv-client__grid,.orv-final .orv-wrap')];
+ const targets=[...document.querySelectorAll('.orv-intro__grid,.orv-expertise__head,.orv-steps,.orv-top,.orv-solutions__list,.orv-program-grid,.orv-casegrid,.orv-process__grid,.orv-client__grid,.orv-final .orv-wrap')];
  if(!('IntersectionObserver' in window)||reduce){targets.forEach(el=>el.classList.add('is-visible'));return}
  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
     if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}
