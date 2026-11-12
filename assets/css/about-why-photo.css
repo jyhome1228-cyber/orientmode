@@ -1,0 +1,9 @@
+/* WHY ORIENTIVE: supplied desaturated photo behind navy brand overlay */
+.about-why{position:relative;isolation:isolate;overflow:hidden;background:#102635}
+.about-why::before{content:"";position:absolute;inset:0;z-index:-2;background:url("https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261112-210639-kakaotalk-photo-2026-11-13-06-06-09-4d4efc3a.webp") center center / cover no-repeat;filter:grayscale(1) saturate(0)}
+.about-why::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,30,44,.95) 0%,rgba(9,30,44,.87) 42%,rgba(9,30,44,.63) 100%)}
+.about-why>.about-wrap{position:relative;z-index:1}
+.about-why .about-copy{color:#d0dbe1}
+.about-why__line{display:none!important}
+.about-why__cta{margin-top:30px}
+@media(max-width:680px){.about-why::before{background-position:60% center}.about-why::after{background:linear-gradient(90deg,rgba(9,30,44,.93),rgba(9,30,44,.78))}}
