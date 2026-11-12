@@ -1,0 +1,35 @@
+/* CASES: tightly connect introduction to first case, desktop and mobile */
+.cases-editorial .cases-page-intro{
+ padding-top:clamp(113px,10vw,145px)!important;
+ padding-bottom:clamp(26px,3vw,40px)!important;
+}
+.cases-editorial .cases-page-intro h1{
+ margin:17px 0 24px!important;
+}
+.cases-editorial .cases-page-intro>p:last-child{
+ max-width:780px;
+ font-size:14px!important;
+ line-height:1.9!important;
+ margin:0!important;
+}
+.cases-editorial #taean.cases-story{
+ padding-top:clamp(20px,2.8vw,38px)!important;
+ padding-bottom:clamp(65px,6vw,90px)!important;
+}
+.cases-editorial #taean .cases-story__layout{
+ align-items:start!important;
+}
+.cases-editorial #taean .cases-story__content{
+ padding-top:clamp(0px,1vw,15px)!important;
+}
+.cases-editorial #taean .cases-story__content h2{
+ margin-top:15px!important;
+}
+@media(max-width:760px){
+ .cases-editorial .cases-page-intro{padding-top:105px!important;padding-bottom:24px!important}
+ .cases-editorial .cases-page-intro h1{font-size:clamp(27px,6.7vw,34px)!important;margin:12px 0 18px!important}
+ .cases-editorial .cases-page-intro>p:last-child{font-size:14px!important;line-height:1.85!important}
+ .cases-editorial #taean.cases-story{padding-top:18px!important;padding-bottom:65px!important}
+ .cases-editorial #taean .cases-story__layout{grid-template-columns:1fr!important;gap:22px!important}
+ .cases-editorial #taean .cases-story__content{padding-top:0!important}
+}
