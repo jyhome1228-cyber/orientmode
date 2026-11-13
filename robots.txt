@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /orientmode/
+Disallow: /orientmode/admin/
+Sitemap: https://jyhome1228-cyber.github.io/orientmode/sitemap.xml
