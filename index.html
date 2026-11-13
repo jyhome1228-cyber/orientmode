@@ -39,7 +39,22 @@
 <link rel="canonical" href="https://jyhome1228-cyber.github.io/orientmode/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jyhome1228-cyber.github.io/orientmode/">
-<meta property="og:description" content="ORIENTIVE는 숙박시설의 가능성을 발견하고 지속 가능한 성장을 설계하는 숙박사업 전문 파트너입니다."></head>
+<meta property="og:description" content="ORIENTIVE는 숙박시설의 가능성을 발견하고 지속 가능한 성장을 설계하는 숙박사업 전문 파트너입니다."><style id="orv-consult-cta-style">
+.orv-consult-float{position:fixed;right:clamp(16px,3.3vw,54px);bottom:clamp(18px,3.2vw,45px);z-index:46;width:min(345px,calc(100vw - 32px));padding:24px 24px 22px;background:#f6f7f5;color:#152b3a;border:1px solid rgba(20,43,60,.1);border-radius:14px;box-shadow:0 15px 48px rgba(12,28,39,.19);transform:translateY(22px);opacity:0;pointer-events:none;transition:opacity .55s ease,transform .55s ease;font-family:Pretendard,"Apple SD Gothic Neo",sans-serif}
+.orv-consult-float.is-visible{transform:translateY(0);opacity:1;pointer-events:auto}
+.orv-consult-float[hidden]{display:none!important}
+.orv-consult-float__close{position:absolute;top:13px;right:13px;width:30px;height:30px;display:grid;place-items:center;border:0;background:transparent;color:#73808a;font-size:23px;line-height:1;border-radius:50%;cursor:pointer}
+.orv-consult-float__close:hover,.orv-consult-float__close:focus-visible{background:#e8ebe9;color:#172b36}
+.orv-consult-float__eyebrow{display:block;color:#527080;font-size:10px;font-weight:750;letter-spacing:.12em;margin-bottom:12px}
+.orv-consult-float__title{display:block;font-size:21px;line-height:1.4;letter-spacing:-.055em;font-weight:750;margin:0 26px 8px 0}
+.orv-consult-float__desc{font-size:12px;color:#65747d;line-height:1.7;margin:0 0 19px}
+.orv-consult-float__link{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#17344a;color:white;border-radius:7px;padding:14px 17px;font-size:12px;font-weight:700;transition:background .2s ease,transform .2s ease}
+.orv-consult-float__link:hover,.orv-consult-float__link:focus-visible{background:#28536e;transform:translateY(-1px)}
+.orv-consult-float__arrow{font-size:18px;line-height:1}
+body:has(.orv-consult-float.is-visible) .site-back-top{bottom:235px}
+@media(max-width:600px){.orv-consult-float{right:12px;left:12px;bottom:max(12px,env(safe-area-inset-bottom));width:auto;padding:17px 18px 16px;border-radius:11px}.orv-consult-float__eyebrow{font-size:9px;margin-bottom:6px}.orv-consult-float__title{font-size:17px;margin-bottom:4px}.orv-consult-float__desc{font-size:11px;margin-bottom:12px}.orv-consult-float__link{padding:12px 14px}.orv-consult-float__close{top:7px;right:8px}body:has(.orv-consult-float.is-visible) .site-back-top{bottom:220px}}
+@media(prefers-reduced-motion:reduce){.orv-consult-float,.orv-consult-float__link{transition:none}}
+</style></head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
 <div class="orv-opening orv-booking-intro" id="orvOpening" role="region" aria-label="오리엔티브 브랜드 인트로">
@@ -189,7 +204,13 @@
   </div>
  </div>
  <div class="sf-bottom"><span>© 2026 <strong>ORIENTIVE</strong>. All rights reserved.</span><span>ORIENTIVE · 주식회사 오리엔트리조트</span></div>
- </div></footer><button class="site-back-top" type="button" aria-label="페이지 맨 위로 이동" title="맨 위로">↑</button>
+ </div></footer><aside class="orv-consult-float" id="orvConsultFloat" aria-label="무료 숙박시설 상담 안내" hidden>
+  <button class="orv-consult-float__close" type="button" aria-label="상담 안내 닫기" id="orvConsultClose">×</button>
+  <span class="orv-consult-float__eyebrow">ORIENTIVE CONSULTING</span>
+  <strong class="orv-consult-float__title">우리 숙소의 가능성,<br>함께 진단해 보세요.</strong>
+  <p class="orv-consult-float__desc">운영과 매출의 고민부터, 우리 숙소에 필요한 변화까지.</p>
+  <a class="orv-consult-float__link" href="./contact/">무료 상담 문의하기 <span class="orv-consult-float__arrow" aria-hidden="true">↗</span></a>
+</aside><button class="site-back-top" type="button" aria-label="페이지 맨 위로 이동" title="맨 위로">↑</button>
 <script>
 const revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 
@@ -200,4 +221,25 @@ const revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.
 <script defer src="./assets/js/home-process-motion.js?v=20261113"></script>
 <script defer src="assets/js/cursor-accent.js?v=20261113"></script>
 <script defer src="./assets/js/growth-hero.js?v=20261113-photohover02"></script>
+<script>
+(function(){
+  const panel=document.getElementById('orvConsultFloat');
+  const close=document.getElementById('orvConsultClose');
+  const intro=document.getElementById('orvOpening');
+  if(!panel||!close)return;
+  let dismissed=false;
+  try{dismissed=sessionStorage.getItem('orvConsultDismissed')==='1'}catch(e){}
+  if(dismissed)return;
+  let shown=false;
+  const show=()=>{if(shown||panel.hidden===false)return;shown=true;panel.hidden=false;requestAnimationFrame(()=>panel.classList.add('is-visible'))};
+  const canShow=()=>!intro||getComputedStyle(intro).display==='none'||getComputedStyle(intro).visibility==='hidden'||intro.getAttribute('aria-hidden')==='true'||!intro.isConnected;
+  if(canShow())setTimeout(show,900);
+  else{
+    const observer=new MutationObserver(()=>{if(canShow()){observer.disconnect();setTimeout(show,500)}});
+    observer.observe(intro,{attributes:true,attributeFilter:['class','style','aria-hidden']});
+    setTimeout(()=>{observer.disconnect();show()},12000);
+  }
+  close.addEventListener('click',()=>{panel.classList.remove('is-visible');panel.hidden=true;try{sessionStorage.setItem('orvConsultDismissed','1')}catch(e){}});
+})();
+</script>
 </body></html>
