@@ -37,3 +37,6 @@
 .orv-mobile-overview{font-weight:700!important;color:#fff!important}
 .orv-mobile-contact{display:block!important;color:#fff!important;padding:20px 0!important}
 @media(min-width:761px) and (max-width:1060px){.site-header .hamb{display:flex!important}.site-mobile-menu.open{display:flex!important;position:fixed!important;inset:72px 0 0!important;z-index:110!important;background:#0c2031;padding:35px 7vw;flex-direction:column;overflow-y:auto;gap:8px}.site-mobile-menu a{color:#e7f0f5}.site-mobile-menu .orv-mobile-subnav a{display:block;padding:11px 0!important}}
+
+.orv-mobile-direct{display:block!important;color:#fff!important;padding:19px 0!important;border-bottom:1px solid rgba(255,255,255,.17)!important;font-size:18px!important;font-weight:700!important}
+.orv-mobile-direct:hover{color:#c9dbe5!important}
