@@ -111,3 +111,6 @@ body.menu-open{overflow:hidden}
 }
 @media(max-width:400px){.site-footer .sf-top{grid-template-columns:1fr}.site-footer .sf-col:first-child{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){.site-header .site-nav a:not(.site-cta)::after,.site-back-top,.site-footer .sf-cta-button{transition:none}}
+
+/* Sitemap renewal: responsive navigation for the expanded 6-item header */
+@media(min-width:761px) and (max-width:1060px){.site-mobile-menu.open{display:flex!important;position:fixed!important;inset:68px 0 0!important;z-index:101!important;flex-direction:column;overflow-y:auto;background:#0c2031;padding:35px 7vw}.site-mobile-menu a{color:#fff;padding:14px 0;border-bottom:1px solid #ffffff25;font-size:18px}.site-header .hamb{display:flex!important}}
