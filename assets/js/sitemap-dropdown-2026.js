@@ -31,7 +31,7 @@ let shown=false;let skipNotice=false;
 try{skipNotice=sessionStorage.getItem('orvRenovationNoticeSeen')==='1'}catch(e){}
 if(skipNotice)return;
 const overlay=document.createElement('div');overlay.id='orvRenovationNotice';overlay.className='orv-renovation-overlay';overlay.hidden=true;
-overlay.innerHTML='<section class="orv-renovation-dialog" role="dialog" aria-modal="true" aria-labelledby="orv-renovation-title" aria-describedby="orv-renovation-desc"><p class="orv-renovation-kicker">ORIENTIVE / SITE NOTICE</p><h2 id="orv-renovation-title">더 나은 경험을 위해<br>홈페이지를 개편하고 있습니다.</h2><p class="orv-renovation-copy" id="orv-renovation-desc">현재 오리엔티브 홈페이지의 콘텐츠와 일부 기능을 개선하고 있습니다. 이용 중 일부 정보가 변경되거나 페이지 구성이 조정될 수 있는 점 양해 부탁드립니다.</p><button class="orv-renovation-continue" type="button">홈페이지 둘러보기</button></section>';
+overlay.innerHTML='<section class="orv-renovation-dialog" role="dialog" aria-modal="true" aria-labelledby="orv-renovation-title" aria-describedby="orv-renovation-desc"><p class="orv-renovation-kicker">ORIENTIVE SITE NOTICE</p><h2 id="orv-renovation-title">더 나은 경험을 위해<br>홈페이지를 개편하고 있습니다.</h2><p class="orv-renovation-copy" id="orv-renovation-desc">현재 오리엔티브 홈페이지의 콘텐츠와 일부 기능을 개선하고 있습니다. 이용 중 일부 정보가 변경되거나 페이지 구성이 조정될 수 있는 점 양해 부탁드립니다.</p><button class="orv-renovation-continue" type="button">홈페이지 둘러보기</button></section>';
 document.body.append(overlay);
 let previousFocus;
 const close=()=>{overlay.classList.remove('is-visible');document.body.style.overflow='';try{sessionStorage.setItem('orvRenovationNoticeSeen','1')}catch(e){}setTimeout(()=>{overlay.hidden=true;previousFocus?.focus?.()},250)};
