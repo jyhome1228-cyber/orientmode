@@ -16,7 +16,8 @@ if(desktop){
 }
 const mobile=document.querySelector('.site-mobile-menu,.mobile-nav');
 if(mobile){
- mobile.innerHTML=menu.map(([name,slug,subs])=>'<a class="orv-mobile-parent" href="'+url(slug+'/')+'">'+name+'</a><div class="orv-mobile-subnav">'+subs.map(([label,path])=>'<a href="'+url(path)+'">'+label+'</a>').join('')+'</div>').join('')+'<a class="orv-mobile-parent" href="'+url('contact/')+'">무료 진단 신청</a><a href="'+url('insights/')+'">INSIGHTS</a>';
+ mobile.innerHTML=menu.map(([name,slug,subs],i)=>'<div class="orv-mobile-section"><button type="button" class="orv-mobile-parent" aria-expanded="false" aria-controls="orv-sub-'+i+'">'+name+'<span class="orv-mobile-chevron" aria-hidden="true"></span></button><div id="orv-sub-'+i+'" class="orv-mobile-subnav" hidden><a class="orv-mobile-overview" href="'+url(slug+'/')+'">'+name+' 전체보기</a>'+subs.filter(([label,path])=>path!==slug+'/').map(([label,path])=>'<a href="'+url(path)+'">'+label+'</a>').join('')+'</div></div>').join('')+'<a class="orv-mobile-parent orv-mobile-contact" href="'+url('contact/')+'">무료 진단 신청</a><a href="'+url('insights/')+'">INSIGHTS</a>';
+ mobile.querySelectorAll('.orv-mobile-section>button').forEach(button=>button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')==='true';mobile.querySelectorAll('.orv-mobile-section>button').forEach(el=>el.setAttribute('aria-expanded','false'));mobile.querySelectorAll('.orv-mobile-subnav').forEach(el=>el.hidden=true);button.setAttribute('aria-expanded',String(!open));button.nextElementSibling.hidden=open;}));
  mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.classList.remove('open');mobile.setAttribute('aria-hidden','true');document.body.classList.remove('menu-open');document.querySelector('.site-menu-toggle,.mobile-toggle')?.setAttribute('aria-expanded','false')}));
 }
 const logo=document.querySelector('.orv-opening'); // On homepage, show notice after intro.
