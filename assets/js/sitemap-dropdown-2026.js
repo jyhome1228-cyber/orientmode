@@ -2,21 +2,27 @@
 (()=> {
 const hrefPrefix=location.pathname.includes('/solutions/basic/')||location.pathname.includes('/solutions/middle/')||location.pathname.includes('/solutions/premium/')?'../../':location.pathname.replace(/\/+$/,'').endsWith('/orientmode')?'./':'../';
 const menu=[
- ['ABOUT','about',[['회사 소개','about/'],['주요 연혁','about/#experience'],['그룹 운영 이력','about/#experience']]],
- ['BUSINESS','business',[['6대 핵심 역량','business/'],['호텔 운영·위탁관리','business/#capability-1'],['호텔 매출·마케팅','business/#capability-2'],['숙박자산 개발·공간개선','business/#capability-3'],['부동산·금융·투자','business/#capability-4'],['멤버십·제휴 네트워크','business/#capability-5'],['브랜드·복합사업 개발','business/#capability-6']]],
- ['PERFORMANCE','performance',[['핵심 운영 실적','performance/'],['매출·운영 성과','performance/#operating-results']]],
- ['PORTFOLIO','portfolio',[['프로젝트 전체','portfolio/'],['태안 오션더힐','cases/#taean'],['평창 리조트','cases/#pyeongchang'],['경포콘도','cases/#gyeongpo']]],
- ['SOLUTIONS','solutions',[['프로그램 전체','solutions/'],['BASIC','solutions/basic/'],['MIDDLE','solutions/middle/'],['PREMIUM','solutions/premium/']]]
+ ['ABOUT','about',[]],
+ ['BUSINESS','business',[['호텔 운영·위탁관리','business/#capability-1'],['호텔 매출·마케팅','business/#capability-2'],['숙박자산 개발·공간개선','business/#capability-3'],['부동산·금융·투자','business/#capability-4'],['멤버십·제휴 네트워크','business/#capability-5'],['브랜드·복합사업 개발','business/#capability-6']]],
+ ['PERFORMANCE','performance',[]],
+ ['PORTFOLIO','portfolio',[]],
+ ['SOLUTIONS','solutions',[['BASIC · 마케팅 지원형','solutions/basic/'],['MIDDLE · 매출 개선형','solutions/middle/'],['PREMIUM · 고객 유입형','solutions/premium/']]]
 ];
 const url=path=>hrefPrefix+path;
 const current=location.pathname.split('/').filter(Boolean).filter(x=>x!=='orientmode').slice(0,1)[0]||'';
 const desktop=document.querySelector('.site-nav, .head .links');
 if(desktop){
- desktop.innerHTML=menu.map(([name,slug,subs])=>'<div class="orv-nav-group"><a href="'+url(slug+'/')+'"'+(current===slug?' aria-current="page"':'')+'>'+name+'<span class="orv-nav-chevron" aria-hidden="true"></span></a><div class="orv-nav-dropdown">'+subs.map(([label,path])=>'<a href="'+url(path)+'">'+label+'</a>').join('')+'</div></div>').join('')+'<a class="'+(desktop.classList.contains('site-nav')?'site-cta':'cta')+'" href="'+url('contact/')+'">무료 진단 신청</a>';
+ desktop.innerHTML=menu.map(([name,slug,subs])=>subs.length?
+ '<div class="orv-nav-group"><a href="'+url(slug+'/')+'"'+(current===slug?' aria-current="page"':'')+'>'+name+'<span class="orv-nav-chevron" aria-hidden="true"></span></a><div class="orv-nav-dropdown">'+subs.map(([label,path])=>'<a href="'+url(path)+'">'+label+'</a>').join('')+'</div></div>':
+ '<a href="'+url(slug+'/')+'"'+(current===slug?' aria-current="page"':'')+'>'+name+'</a>'
+ ).join('')+'<a class="'+(desktop.classList.contains('site-nav')?'site-cta':'cta')+'" href="'+url('contact/')+'">무료 진단 신청</a>';
 }
 const mobile=document.querySelector('.site-mobile-menu,.mobile-nav');
 if(mobile){
- mobile.innerHTML=menu.map(([name,slug,subs],i)=>'<div class="orv-mobile-section"><button type="button" class="orv-mobile-parent" aria-expanded="false" aria-controls="orv-sub-'+i+'">'+name+'<span class="orv-mobile-chevron" aria-hidden="true"></span></button><div id="orv-sub-'+i+'" class="orv-mobile-subnav" hidden><a class="orv-mobile-overview" href="'+url(slug+'/')+'">'+name+' 전체보기</a>'+subs.filter(([label,path])=>path!==slug+'/').map(([label,path])=>'<a href="'+url(path)+'">'+label+'</a>').join('')+'</div></div>').join('')+'<a class="orv-mobile-parent orv-mobile-contact" href="'+url('contact/')+'">무료 진단 신청</a><a href="'+url('insights/')+'">INSIGHTS</a>';
+ mobile.innerHTML=menu.map(([name,slug,subs],i)=>subs.length?
+ '<div class="orv-mobile-section"><button type="button" class="orv-mobile-parent" aria-expanded="false" aria-controls="orv-sub-'+i+'">'+name+'<span class="orv-mobile-chevron" aria-hidden="true"></span></button><div id="orv-sub-'+i+'" class="orv-mobile-subnav" hidden><a class="orv-mobile-overview" href="'+url(slug+'/')+'">'+name+'</a>'+subs.map(([label,path])=>'<a href="'+url(path)+'">'+label+'</a>').join('')+'</div></div>':
+ '<a class="orv-mobile-parent orv-mobile-direct" href="'+url(slug+'/')+'">'+name+'</a>'
+ ).join('')+'<a class="orv-mobile-parent orv-mobile-contact" href="'+url('contact/')+'">무료 진단 신청</a><a href="'+url('insights/')+'">INSIGHTS</a>';
  mobile.querySelectorAll('.orv-mobile-section>button').forEach(button=>button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')==='true';mobile.querySelectorAll('.orv-mobile-section>button').forEach(el=>el.setAttribute('aria-expanded','false'));mobile.querySelectorAll('.orv-mobile-subnav').forEach(el=>el.hidden=true);button.setAttribute('aria-expanded',String(!open));button.nextElementSibling.hidden=open;}));
  mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.classList.remove('open');mobile.setAttribute('aria-hidden','true');document.body.classList.remove('menu-open');document.querySelector('.site-menu-toggle,.mobile-toggle')?.setAttribute('aria-expanded','false')}));
 }
