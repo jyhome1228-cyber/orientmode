@@ -19,11 +19,9 @@
  if(reduce){finish();}
  else {
    document.body.classList.add('orv-intro-lock');
-   const cards=[...intro?.querySelectorAll('.orv-chat-stack .orv-booking-intro__card')||[]];
-   cards.forEach((card,i)=>queue(()=>card.classList.add('is-shown'),180+i*460));
-   queue(()=>intro?.classList.add('is-message'),2920);
-   queue(()=>intro?.classList.add('is-logo'),4100);
-   queue(finish,5550);
+   queue(()=>intro?.classList.add('is-message'),250);
+   queue(()=>intro?.classList.add('is-logo'),1150);
+   queue(finish,2900);
    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!finished)finish()});
    document.addEventListener('visibilitychange',()=>{if(document.hidden)finish()});
  }
