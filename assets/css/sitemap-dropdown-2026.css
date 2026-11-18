@@ -1,0 +1,28 @@
+/* ORIENTIVE 2026-11 navigation and renovation notice */
+.orv-nav-group{position:relative;display:flex;align-items:center}
+.orv-nav-group>a{display:flex!important;align-items:center;gap:7px}
+.orv-nav-chevron{display:inline-block;width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.7}
+.orv-nav-dropdown{position:absolute;top:calc(100% + 18px);left:-20px;min-width:222px;max-width:330px;padding:10px;background:#f7f9fa;color:#183247;border:1px solid rgba(22,50,69,.12);box-shadow:0 18px 48px rgba(7,21,32,.2);border-radius:7px;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .18s,transform .18s,visibility .18s;z-index:170}
+.orv-nav-group:hover .orv-nav-dropdown,.orv-nav-group:focus-within .orv-nav-dropdown,.orv-nav-group.is-open .orv-nav-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.orv-nav-dropdown:before{content:"";position:absolute;inset:-19px 0 auto;height:19px}
+.orv-nav-dropdown a{display:block!important;color:#243d50!important;padding:12px 13px!important;background:transparent!important;border-radius:4px!important;font-size:12px!important;font-weight:550!important;letter-spacing:-.015em!important;line-height:1.4!important;white-space:nowrap}
+.orv-nav-dropdown a:hover,.orv-nav-dropdown a:focus-visible{background:#e9eef1!important;color:#122e43!important}
+.site-header .site-nav,.head .links{gap:clamp(11px,1.4vw,25px)!important}
+.site-header .site-nav .orv-nav-group>a,.head .links .orv-nav-group>a{font-size:11px!important;letter-spacing:.02em!important}
+.site-header .site-nav .orv-nav-dropdown a,.head .links .orv-nav-dropdown a{color:#243d50!important}
+.head .links .orv-nav-dropdown{top:calc(100% + 20px)}
+.orv-mobile-subnav{display:flex;flex-direction:column;margin:0 0 10px 15px;padding:3px 0 6px 15px;border-left:1px solid #ffffff44}
+.orv-mobile-subnav a{font-size:14px!important;color:#b7c9d5!important;padding:11px 0!important;border:0!important;min-height:auto!important}
+.orv-mobile-parent{font-size:18px!important;font-weight:750!important;color:#fff!important;padding:17px 0 9px!important}
+.orv-renovation-overlay{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:rgba(5,19,30,.68);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:20px;opacity:0;transition:opacity .3s}
+.orv-renovation-overlay.is-visible{opacity:1}
+.orv-renovation-overlay[hidden]{display:none!important}
+.orv-renovation-dialog{position:relative;width:min(520px,100%);background:#f7f8f8;color:#142c3c;padding:45px 42px 39px;border-radius:8px;box-shadow:0 35px 90px #020f1d4a;text-align:left}
+.orv-renovation-kicker{font-size:11px;letter-spacing:.15em;color:#54758b;font-weight:750;margin:0 0 22px}
+.orv-renovation-dialog h2{font-family:Pretendard,"Apple SD Gothic Neo",sans-serif!important;font-size:clamp(27px,3vw,37px);line-height:1.36;letter-spacing:-.065em;font-weight:750;margin:0 0 19px;color:#142c3c}
+.orv-renovation-dialog p.orv-renovation-copy{font-size:14px;line-height:1.9;color:#5b6f7d;margin:0 0 28px}
+.orv-renovation-continue{width:100%;border:0;border-radius:4px;background:#16384e;color:#fff;padding:17px 20px;font-size:13px;font-weight:700;cursor:pointer}
+.orv-renovation-continue:hover{background:#28526a}
+@media(max-width:1060px){.site-header .site-nav,.head .links{display:none!important}.site-header .hamb,.head .mobile-toggle{display:flex!important}}
+@media(max-width:600px){.orv-renovation-dialog{padding:35px 26px 28px}.orv-renovation-dialog p.orv-renovation-copy{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.orv-renovation-overlay,.orv-nav-dropdown{transition:none}}
