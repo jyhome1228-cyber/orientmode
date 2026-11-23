@@ -80,13 +80,13 @@ if(mobile){
 }
 const logo=document.querySelector('.orv-opening'); // On homepage, show notice after intro.
 let shown=false;let skipNotice=false;
-try{skipNotice=sessionStorage.getItem('orvRenovationNoticeSeen')==='1'}catch(e){}
+try{skipNotice=sessionStorage.getItem('orvRenovationNoticeSeenV2')==='1'}catch(e){}
 if(skipNotice)return;
 const overlay=document.createElement('div');overlay.id='orvRenovationNotice';overlay.className='orv-renovation-overlay';overlay.hidden=true;
 overlay.innerHTML='<section class="orv-renovation-dialog" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="orv-renovation-title" aria-describedby="orv-renovation-desc"><h2 id="orv-renovation-title">홈페이지 개편 중입니다.</h2><p class="orv-renovation-copy" id="orv-renovation-desc">일부 콘텐츠를 정비하고 있습니다.</p><button class="orv-renovation-continue" type="button">확인</button></section>';
 document.body.append(overlay);
 let previousFocus;
-const close=()=>{overlay.classList.remove('is-visible');document.body.style.overflow='';try{sessionStorage.setItem('orvRenovationNoticeSeen','1')}catch(e){}setTimeout(()=>{overlay.hidden=true;previousFocus?.focus?.()},250)};
+const close=()=>{overlay.classList.remove('is-visible');document.body.style.overflow='';try{sessionStorage.setItem('orvRenovationNoticeSeenV2','1')}catch(e){}setTimeout(()=>{overlay.hidden=true;previousFocus?.focus?.()},250)};
 overlay.querySelector('button').addEventListener('click',close);
 document.addEventListener('keydown',e=>{if(!overlay.hidden&&e.key==='Escape')close();});
 function show(){if(shown)return;shown=true;previousFocus=document.activeElement;overlay.hidden=false;document.body.style.overflow='hidden';requestAnimationFrame(()=>overlay.classList.add('is-visible'));overlay.querySelector('.orv-renovation-dialog').focus({preventScroll:true});}
