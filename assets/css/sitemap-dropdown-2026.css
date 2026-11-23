@@ -73,3 +73,10 @@
 .head .links>.orv-nav-group>a,.head .links>.orv-nav-direct{color:#fff}
 @media(min-width:1061px) and (max-width:1210px){.site-header .site-nav,.head .links{gap:12px!important}.orv-nav-dropdown--business{left:-105px}}
 @media(max-width:1060px){.orv-nav-dropdown{display:none!important}.site-header .site-nav,.head .links{display:none!important}}
+
+/* Official ORIENTIVE wordmark — supplied SVG proportions 428 × 73 */
+.site-header .site-logo img{width:clamp(164px,12vw,192px)!important;max-height:34px!important;height:auto!important;object-fit:contain!important}
+.site-footer .sf-brand img{width:clamp(230px,24vw,335px)!important;max-height:none!important;height:auto!important;object-fit:contain!important}
+.orv-opening .orv-opening__logo{width:clamp(210px,22vw,290px)!important;max-height:none!important;height:auto!important}
+.head .logo img{width:176px!important;max-width:176px!important;height:auto!important;object-fit:contain!important}
+@media(max-width:760px){.site-header .site-logo img{width:154px!important;max-height:29px!important}.site-footer .sf-brand img{width:min(70vw,260px)!important}.orv-opening .orv-opening__logo{width:min(74vw,245px)!important}.head .logo img{width:155px!important;max-width:155px!important}}
