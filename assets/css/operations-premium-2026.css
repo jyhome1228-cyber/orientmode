@@ -206,3 +206,23 @@ body.op-page a{text-decoration:none}
 .op-development-panels h3{font-size:22px!important}
 .op-dev-stages{gap:5px}
 }
+
+
+/* Investment detail: conceptual asset and operating-value illustrations */
+.op-fin-hero{aspect-ratio:1.66;background:#dde7eb;color:#244858;display:flex;flex-direction:column;justify-content:space-between;padding:27px 31px;min-width:0}
+.op-fin-hero__eyebrow,.op-fin-hero__caption{font-size:11px;letter-spacing:.12em;font-weight:650}
+.op-fin-hero__diagram{width:85%;align-self:center;display:flex;flex-direction:column;gap:15px}
+.op-fin-hero__center{padding:18px;text-align:center;background:#294d60;color:#fff;font-weight:600;font-size:18px}
+.op-fin-hero__nodes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.op-fin-hero__nodes span{background:#7799a8;color:white;text-align:center;padding:17px 5px;font-size:13px}
+.op-fin-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(26px,3.2vw,48px)}
+.op-fin-cards article{min-width:0}
+.op-fin-visual{aspect-ratio:1.9;background:#e4ebed;padding:23px 27px;display:flex;flex-direction:column;gap:16px;color:#294f62;margin-bottom:22px}
+.op-fin-visual--ops{background:#dce7eb}
+.op-fin-visual>span{font-size:11px;letter-spacing:.12em;font-weight:650}
+.op-fin-visual__layers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:center;flex:1}
+.op-fin-visual__layers i{font-style:normal;background:#456a7c;color:#fff;padding:24px 5px;text-align:center;font-size:13px}
+.op-fin-visual__layers i:nth-child(2){background:#7294a4}
+.op-fin-visual__layers i:nth-child(3){background:#91acb7;color:#193948}
+.op-fin-cards h3{font-size:23px!important}
+@media(max-width:760px){.op-fin-hero{padding:20px;aspect-ratio:1.65}.op-fin-hero__diagram{width:100%}.op-fin-hero__center{padding:13px;font-size:16px}.op-fin-hero__nodes span{font-size:11px;padding:12px 2px}.op-fin-cards{grid-template-columns:1fr;gap:35px}.op-fin-visual{padding:19px}.op-fin-visual__layers i{font-size:12px;padding:18px 4px}}
