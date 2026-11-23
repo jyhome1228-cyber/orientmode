@@ -161,3 +161,21 @@ body.op-page a{text-decoration:none}
 .op-journey__grid h3{font-size:23px!important;line-height:1.45!important}
 .op-journey__grid p{font-size:15px;line-height:1.85;color:#405865;margin-top:15px!important}
 @media(max-width:760px){.op-journey{padding:49px 0!important}.op-journey__grid{grid-template-columns:1fr;gap:29px}.op-journey__grid article{padding-top:20px}.op-journey__grid h3{font-size:21px!important}}
+
+
+/* Sales marketing: editorial visuals instead of repeated operation-site photography */
+.op-marketing-principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,3.2vw,48px)}
+.op-marketing-principles>article{min-width:0}
+.op-marketing-principles__visual{aspect-ratio:1.9;background:#e5ebed;margin-bottom:22px;overflow:hidden;color:#234b60}
+.op-marketing-principles__visual--season{background:#dde8ec}
+.op-marketing-principles__visual-inner{height:100%;padding:24px 30px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}
+.op-visual-caption{font-size:11px;letter-spacing:.1em;font-weight:600}
+.op-visual-bars{height:60%;display:flex;align-items:flex-end;gap:12px;width:min(75%,370px);margin:auto auto 0;align-self:center}
+.op-visual-bars i{display:block;flex:1;height:var(--h);background:#385f70}
+.op-visual-bars i:nth-child(even){background:#789aa7}
+.op-visual-season{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:auto 0}
+.op-visual-season span{display:flex;justify-content:center;align-items:center;text-align:center;aspect-ratio:1;background:#365f70;color:white;font-size:10px;letter-spacing:.03em}
+.op-visual-season span:nth-child(even){background:#7a9aa8}
+.op-marketing-principles h3{font-size:23px!important;line-height:1.48!important}
+.op-marketing-principles__note{font-size:11px;color:#667c87;line-height:1.7;margin-top:20px!important}
+@media(max-width:760px){.op-marketing-principles{grid-template-columns:1fr;gap:40px}.op-marketing-principles__visual-inner{padding:19px}.op-visual-bars{gap:9px}.op-visual-season{gap:5px}.op-visual-season span{font-size:9px}.op-marketing-principles h3{font-size:22px!important}}
