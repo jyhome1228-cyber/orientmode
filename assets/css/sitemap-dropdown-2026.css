@@ -14,17 +14,17 @@
 .orv-mobile-subnav{display:flex;flex-direction:column;margin:0 0 10px 15px;padding:3px 0 6px 15px;border-left:1px solid #ffffff44}
 .orv-mobile-subnav a{font-size:14px!important;color:#b7c9d5!important;padding:11px 0!important;border:0!important;min-height:auto!important}
 .orv-mobile-parent{font-size:18px!important;font-weight:750!important;color:#fff!important;padding:17px 0 9px!important}
-.orv-renovation-overlay{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:rgba(5,19,30,.68);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:20px;opacity:0;transition:opacity .3s}
+.orv-renovation-overlay{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:rgba(5,18,28,.45);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);padding:18px;opacity:0;transition:opacity .2s ease}
 .orv-renovation-overlay.is-visible{opacity:1}
 .orv-renovation-overlay[hidden]{display:none!important}
-.orv-renovation-dialog{position:relative;width:min(520px,100%);background:#f7f8f8;color:#142c3c;padding:45px 42px 39px;border-radius:8px;box-shadow:0 35px 90px #020f1d4a;text-align:left}
-.orv-renovation-kicker{font-size:11px;letter-spacing:.15em;color:#54758b;font-weight:750;margin:0 0 22px}
-.orv-renovation-dialog h2{font-family:Pretendard,"Apple SD Gothic Neo",sans-serif!important;font-size:clamp(27px,3vw,37px);line-height:1.36;letter-spacing:-.065em;font-weight:750;margin:0 0 19px;color:#142c3c}
-.orv-renovation-dialog p.orv-renovation-copy{font-size:14px;line-height:1.9;color:#5b6f7d;margin:0 0 28px}
-.orv-renovation-continue{width:100%;border:0;border-radius:4px;background:#16384e;color:#fff;padding:17px 20px;font-size:13px;font-weight:700;cursor:pointer}
-.orv-renovation-continue:hover{background:#28526a}
+.orv-renovation-dialog{position:relative;width:min(370px,100%);background:#fff;color:#142c3c;padding:32px 30px 26px;border:1px solid #e4e8eb;border-radius:6px;box-shadow:0 16px 46px rgba(3,18,29,.14);text-align:left;outline:none}
+.orv-renovation-dialog h2{font-family:Pretendard,"Apple SD Gothic Neo",sans-serif!important;font-size:22px!important;line-height:1.4!important;letter-spacing:-.04em!important;font-weight:650!important;margin:0 0 9px!important;color:#142c3c!important;white-space:normal}
+.orv-renovation-dialog p.orv-renovation-copy{font-size:13px!important;line-height:1.65!important;color:#667680!important;margin:0 0 23px!important}
+.orv-renovation-continue{display:block;width:100%;border:1px solid #17364b;border-radius:3px;background:#17364b;color:#fff;padding:12px 18px;font-size:13px;font-weight:600;cursor:pointer;line-height:1.4}
+.orv-renovation-continue:hover{background:#284d63}
+.orv-renovation-continue:focus-visible{outline:2px solid #809daf;outline-offset:3px}
 @media(max-width:1060px){.site-header .site-nav,.head .links{display:none!important}.site-header .hamb,.head .mobile-toggle{display:flex!important}}
-@media(max-width:600px){.orv-renovation-dialog{padding:35px 26px 28px}.orv-renovation-dialog p.orv-renovation-copy{font-size:13px}}
+@media(max-width:600px){.orv-renovation-dialog{padding:27px 24px 23px}.orv-renovation-dialog h2{font-size:20px!important}}
 @media(prefers-reduced-motion:reduce){.orv-renovation-overlay,.orv-nav-dropdown{transition:none}}
 
 /* Mobile accordion and tablet menu layout */
