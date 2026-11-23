@@ -226,3 +226,23 @@ body.op-page a{text-decoration:none}
 .op-fin-visual__layers i:nth-child(3){background:#91acb7;color:#193948}
 .op-fin-cards h3{font-size:23px!important}
 @media(max-width:760px){.op-fin-hero{padding:20px;aspect-ratio:1.65}.op-fin-hero__diagram{width:100%}.op-fin-hero__center{padding:13px;font-size:16px}.op-fin-hero__nodes span{font-size:11px;padding:12px 2px}.op-fin-cards{grid-template-columns:1fr;gap:35px}.op-fin-visual{padding:19px}.op-fin-visual__layers i{font-size:12px;padding:18px 4px}}
+
+
+/* Membership & partnerships: dedicated network-based visual language */
+.op-member-hero{aspect-ratio:1.66;min-width:0;background:#e3ecef;color:#22485d;padding:28px 32px;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.op-member-hero>span,.op-member-visual>span{font-size:11px;letter-spacing:.11em;font-weight:650}
+.op-member-hero__network{display:flex;flex-direction:column;gap:17px;align-items:center;width:100%;margin:auto}
+.op-member-hero__center{background:#234c61;color:#fff;padding:17px 37px;font-size:17px;letter-spacing:.05em}
+.op-member-hero__nodes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:10px}
+.op-member-hero__nodes span{background:#7897a5;color:white;padding:21px 8px;text-align:center;font-size:13px;font-weight:550}
+.op-member-hero__nodes span:nth-child(2){background:#3f6b80}
+.op-member-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(26px,3.2vw,48px)}
+.op-member-cards article{min-width:0}
+.op-member-visual{aspect-ratio:1.9;background:#e5edef;margin-bottom:22px;padding:23px 27px;display:flex;flex-direction:column;gap:15px;color:#294f62}
+.op-member-visual--partners{background:#dae8ed}
+.op-member-visual__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:center;flex:1}
+.op-member-visual__grid i{font-style:normal;background:#416b80;color:white;text-align:center;padding:22px 4px;font-size:13px}
+.op-member-visual__grid i:nth-child(2){background:#7799a8}
+.op-member-visual__grid i:nth-child(3){background:#94b0ba;color:#173747}
+.op-member-cards h3{font-size:23px!important}
+@media(max-width:760px){.op-member-hero{padding:20px;aspect-ratio:1.65}.op-member-hero__center{font-size:15px;padding:13px 23px}.op-member-hero__nodes{gap:6px}.op-member-hero__nodes span{padding:14px 3px;font-size:11px}.op-member-cards{grid-template-columns:1fr;gap:36px}.op-member-visual{padding:19px}.op-member-visual__grid{gap:6px}.op-member-visual__grid i{font-size:11px;padding:16px 2px}}
