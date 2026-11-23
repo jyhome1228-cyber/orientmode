@@ -179,3 +179,30 @@ body.op-page a{text-decoration:none}
 .op-marketing-principles h3{font-size:23px!important;line-height:1.48!important}
 .op-marketing-principles__note{font-size:11px;color:#667c87;line-height:1.7;margin-top:20px!important}
 @media(max-width:760px){.op-marketing-principles{grid-template-columns:1fr;gap:40px}.op-marketing-principles__visual-inner{padding:19px}.op-visual-bars{gap:9px}.op-visual-season{gap:5px}.op-visual-season span{font-size:9px}.op-marketing-principles h3{font-size:22px!important}}
+
+
+/* Lodging assets and space improvement — unique architectural graphics */
+.op-development .op-dev-hero-art{aspect-ratio:1.66;min-width:0;display:flex;flex-direction:column;justify-content:space-between;padding:28px 34px;background:#dce7eb;color:#244a5e;overflow:hidden}
+.op-dev-hero-art__head,.op-dev-hero-art__foot,.op-development-visual__tag{font-size:11px;font-weight:650;letter-spacing:.12em}
+.op-dev-building{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,1fr);gap:7px;width:75%;height:64%;align-self:center}
+.op-dev-building span{background:#3c6071;color:#f8fafb;display:flex;align-items:flex-end;padding:13px;font-size:11px;letter-spacing:.05em}
+.op-dev-building span:nth-child(2),.op-dev-building span:nth-child(3){background:#7595a3}
+.op-development-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(26px,3.2vw,48px)}
+.op-development-panels article{min-width:0}
+.op-development-visual{aspect-ratio:1.9;margin-bottom:22px;background:#e3ebee;padding:22px 26px;display:flex;flex-direction:column;justify-content:space-between;color:#2b5063}
+.op-development-visual--investment{background:#dce8ed}
+.op-dev-plan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,1fr);gap:7px;max-width:390px;width:85%;height:64%;margin:auto;align-self:center}
+.op-dev-plan span{display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.07em;background:#456b7d;color:white}
+.op-dev-plan span:nth-child(4),.op-dev-plan span:nth-child(6){background:#87a5b2}
+.op-dev-stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:auto 0}
+.op-dev-stages span{display:flex;justify-content:center;align-items:center;aspect-ratio:1;background:#496d7f;color:white;font-size:13px}
+.op-dev-stages span:nth-child(even){background:#8ba8b5}
+.op-development-panels h3{font-size:23px!important;line-height:1.48!important}
+@media(max-width:760px){
+.op-development .op-dev-hero-art{padding:20px;aspect-ratio:1.65}
+.op-dev-building{width:85%;height:65%}
+.op-development-panels{grid-template-columns:1fr;gap:37px}
+.op-development-visual{padding:19px}
+.op-development-panels h3{font-size:22px!important}
+.op-dev-stages{gap:5px}
+}
