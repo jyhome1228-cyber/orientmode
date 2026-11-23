@@ -70,6 +70,9 @@ if(mobile){
   mobile.querySelectorAll('.orv-mobile-section>button').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.hidden=true});
   button.setAttribute('aria-expanded',String(next));button.nextElementSibling.hidden=!next;
  }));
+ mobile.setAttribute('aria-hidden',mobile.classList.contains('open')?'false':'true');
+ const mobileToggle=document.querySelector('.site-menu-toggle, .mobile-toggle');
+ mobileToggle?.addEventListener('click',()=>requestAnimationFrame(()=>mobile.setAttribute('aria-hidden',mobile.classList.contains('open')?'false':'true')));
  mobile.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
   mobile.classList.remove('open');mobile.setAttribute('aria-hidden','true');document.body.classList.remove('menu-open');
   document.querySelector('.site-menu-toggle, .mobile-toggle')?.setAttribute('aria-expanded','false');
