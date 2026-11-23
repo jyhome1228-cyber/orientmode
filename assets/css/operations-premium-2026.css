@@ -266,3 +266,14 @@ body.op-page a{text-decoration:none}
 .op-brand-example__tiles b:nth-child(3){background:#a4bdb6;color:#20464a}
 .op-brand-examples h3{font-size:23px!important}
 @media(max-width:760px){.op-brand-hero{aspect-ratio:1.65;padding:20px}.op-brand-hero__mosaic{width:90%;gap:6px}.op-brand-hero__mosaic span{padding:10px;font-size:11px}.op-brand-examples{grid-template-columns:1fr;gap:37px}.op-brand-example{padding:18px}.op-brand-example__tiles{gap:6px}.op-brand-example__tiles b{font-size:10px;padding:17px 3px}}
+
+
+/* Hospitality development editorial refinement — remove schematic, placeholder-like visuals */
+.op-development .op-hero__image--development{margin:0;overflow:hidden;aspect-ratio:1.66;background:#233947}
+.op-development .op-hero__image--development img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center 54%;filter:saturate(.77) contrast(.99)}
+.op-dev-editorial{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,5vw,76px);border-top:1px solid #cbd8de}
+.op-dev-editorial article{padding:25px 0 5px;min-width:0}
+.op-dev-editorial__index{font-size:13px;font-weight:600;color:#456579;margin-bottom:22px}
+.op-development .op-dev-editorial h3{font-size:clamp(21px,1.8vw,25px)!important;line-height:1.52!important;letter-spacing:-.038em!important}
+.op-dev-editorial p{font-size:15px;line-height:1.9;color:#405865;max-width:570px;margin-top:18px!important}
+@media(max-width:760px){.op-development .op-hero__image--development{aspect-ratio:1.65}.op-dev-editorial{grid-template-columns:1fr;gap:18px}.op-dev-editorial article{padding-top:22px}.op-dev-editorial article+article{border-top:1px solid #d4dee3}.op-dev-editorial__index{margin-bottom:13px}.op-dev-editorial p{font-size:14.5px;margin-top:13px!important}}
