@@ -7,7 +7,7 @@ const page=location.pathname.startsWith(base.pathname)?location.pathname.slice(b
 const active=page==='service'?'business':page==='cases'?'portfolio':page;
 const businessGroups=[
  {name:'운영과 수익',items:[
-   {name:'호텔 운영·위탁관리',url:'business/#capability-1'},
+   {name:'호텔 운영·위탁관리',url:'business/hotel-operations/'},
    {name:'호텔 매출·마케팅',url:'business/#capability-2'}]},
  {name:'자산과 개발',items:[
    {name:'숙박자산 개발·공간개선',url:'business/#capability-3'},
