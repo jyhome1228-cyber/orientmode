@@ -47,14 +47,6 @@
 .op-project>p{font-size:13px;line-height:1.9;color:#61737e;margin-bottom:16px!important;max-width:620px}
 .op-project>a{font-size:13px;font-weight:550;color:#1b445b;text-decoration:none;border-bottom:1px solid #97adb9;padding-bottom:6px}
 .op-project>a:hover{border-color:#1b445b}
-.op-keywords{border-top:1px solid #c2ced4;display:grid;grid-template-columns:160px 1fr;gap:36px;padding-top:24px}
-.op-keywords h2{font-size:15px!important;line-height:1.7!important;font-weight:600!important;letter-spacing:-.02em;color:#324e5e}
-.op-keywords p{font-size:13.5px;line-height:2.2;color:#627984}
-.op-contact{background:#e7edef;padding:64px 0}
-.op-contact__grid{display:flex;gap:35px;justify-content:space-between;align-items:center}
-.op-contact h2{font-size:clamp(24px,2.35vw,33px)!important;font-weight:550!important;letter-spacing:-.05em!important;line-height:1.4!important;color:#183746!important}
-.op-contact p{font-size:13px;color:#617582;line-height:1.8;margin-top:12px!important;max-width:620px}
-.op-contact a{display:inline-block;white-space:nowrap;color:#193a4f;font-size:13px;font-weight:600;border-bottom:1px solid #718c9d;padding:10px 0}
 @media(max-width:960px){.op-hero__layout{gap:35px}.op-hero__image{height:300px}.op-statement{gap:42px}.op-section__header{gap:40px}}
 @media(max-width:760px){
  .op-container{width:calc(100% - 12vw)}
@@ -80,8 +72,38 @@
  .op-scope__row p{font-size:13px}
  .op-projects{grid-template-columns:1fr;gap:34px}
  .op-project__header h3{font-size:19px}
- .op-keywords{grid-template-columns:1fr;gap:9px}
- .op-contact{padding:56px 0}
- .op-contact__grid{align-items:start;flex-direction:column;gap:22px}
 }
 @media(prefers-reduced-motion:reduce){.op-project__image img{transition:none}}
+
+
+/* Final consultation block — one continuous surface, no stacked background bands */
+.op-closing{background:#edf1f2;padding:78px 0 83px;color:#1b3748}
+.op-closing__top{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1fr);gap:clamp(38px,7vw,110px);align-items:end;padding-bottom:34px}
+.op-closing__top h2{font-size:clamp(27px,2.55vw,36px)!important;font-weight:550!important;letter-spacing:-.052em!important;line-height:1.38!important;color:#203b4b!important}
+.op-closing__top p{font-size:14px;line-height:1.95;color:#5c727e;max-width:660px}
+.op-closing__areas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #bfcbd0;border-bottom:1px solid #bfcbd0}
+.op-closing__areas>div{padding:24px 30px 27px 0}
+.op-closing__areas>div+div{padding-left:29px;border-left:1px solid #cbd5d9}
+.op-closing__areas h3{font-size:15px;font-weight:650;line-height:1.45;color:#263f4e;margin:0 0 10px!important;letter-spacing:-.03em}
+.op-closing__areas p{font-size:13px;line-height:1.8;color:#697e8a;max-width:340px}
+.op-closing__action{display:flex;justify-content:space-between;align-items:center;gap:clamp(28px,6vw,100px);padding-top:37px}
+.op-closing__action>div{max-width:720px}
+.op-closing__action h3{font-size:clamp(21px,2vw,27px)!important;font-weight:550!important;letter-spacing:-.05em!important;line-height:1.45!important;color:#203a49!important;margin:0 0 9px!important}
+.op-closing__action p{font-size:13px;line-height:1.85;color:#627883;max-width:640px}
+.op-closing__action a{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-width:185px;min-height:46px;padding:13px 19px;border-radius:3px;text-decoration:none;background:#19374b;color:#fff;font-size:13px;font-weight:600;white-space:nowrap;transition:background .2s ease}
+.op-closing__action a:hover{background:#2a5268}
+.op-closing__action a:focus-visible{outline:2px solid #829eaf;outline-offset:3px}
+@media(max-width:760px){
+ .op-closing{padding:60px 0 65px}
+ .op-closing__top{grid-template-columns:1fr;gap:17px;padding-bottom:28px}
+ .op-closing__top h2{font-size:clamp(26px,6.5vw,32px)!important}
+ .op-closing__top p{font-size:13.5px}
+ .op-closing__areas{grid-template-columns:1fr}
+ .op-closing__areas>div,.op-closing__areas>div+div{padding:18px 0;border-left:0;border-bottom:1px solid #cbd5d9}
+ .op-closing__areas>div:last-child{border-bottom:0}
+ .op-closing__areas h3{margin-bottom:6px!important}
+ .op-closing__areas p{max-width:initial}
+ .op-closing__action{flex-direction:column;align-items:stretch;gap:21px;padding-top:31px}
+ .op-closing__action h3{font-size:22px!important}
+ .op-closing__action a{width:100%}
+}
