@@ -1,3 +1,40 @@
+/* Structural reset for Business pages.
+   The About page includes this globally; the new Business pages lacked it. */
+html:has(body.orv-sitemap-page){margin:0!important;padding:0;max-width:100%;overflow-x:clip}
+body.orv-sitemap-page{box-sizing:border-box!important;margin:0!important;width:100%;max-width:100%;overflow-x:clip}
+body.orv-sitemap-page *,
+body.orv-sitemap-page *::before,
+body.orv-sitemap-page *::after{box-sizing:border-box}
+body.orv-sitemap-page>.site-header{
+  box-sizing:border-box!important;
+  width:100%!important;max-width:100vw!important;
+  left:0!important;right:0!important;top:0!important;
+  margin:0!important;
+  flex-wrap:nowrap!important;
+  overflow:visible!important;
+}
+body.orv-sitemap-page>.site-header .site-logo{flex:0 0 auto!important;min-width:0}
+body.orv-sitemap-page>.site-header .site-nav{margin-left:auto!important;min-width:0;flex-wrap:nowrap!important;justify-content:flex-end!important}
+body.orv-sitemap-page>.site-header .site-nav>.orv-nav-direct,
+body.orv-sitemap-page>.site-header .site-nav>.orv-nav-group{flex-shrink:0!important}
+body.orv-sitemap-page .skip{
+  position:fixed!important;left:-10000px!important;top:0!important;
+  z-index:9999!important;width:1px!important;height:1px!important;
+  overflow:hidden!important;padding:0!important;border:0!important;
+  white-space:nowrap!important;
+}
+body.orv-sitemap-page .skip:focus-visible{
+  left:18px!important;top:13px!important;
+  width:auto!important;height:auto!important;
+  padding:9px 14px!important;
+  background:#fff!important;color:#112d40!important;
+  box-shadow:0 3px 14px rgba(0,0,0,.13)!important;
+}
+@media(max-width:1060px){
+  body.orv-sitemap-page>.site-header .site-nav{display:none!important}
+  body.orv-sitemap-page>.site-header .site-menu-toggle{flex:0 0 auto!important}
+}
+
 /* ORIENTIVE Business — editorial presentation aligned with About */
 .biz-page{background:#fafaf8;color:#223440;font-family:Pretendard,"Apple SD Gothic Neo",sans-serif;word-break:keep-all}
 .biz-page *{box-sizing:border-box}
