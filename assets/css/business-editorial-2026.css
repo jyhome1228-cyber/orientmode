@@ -119,3 +119,8 @@ body.orv-sitemap-page .skip:focus-visible{
  .biz-keys{gap:8px 20px}
 }
 @media(prefers-reduced-motion:reduce){.biz-project img{transition:none}}
+
+
+/* Align Business content to the exact horizontal grid used by the shared header and footer */
+body.orv-sitemap-page .biz-shell{width:min(1440px,calc(100% - 9vw))!important;max-width:1440px!important;margin-inline:auto!important}
+@media(max-width:760px){body.orv-sitemap-page .biz-shell{width:calc(100% - 12vw)!important}}
