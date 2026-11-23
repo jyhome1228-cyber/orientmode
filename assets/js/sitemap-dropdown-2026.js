@@ -10,7 +10,7 @@ const businessGroups=[
    {name:'호텔 운영·위탁관리',url:'business/hotel-operations/'},
    {name:'호텔 매출·마케팅',url:'business/hotel-sales-marketing/index.html?v=20261123-marketing09'}]},
  {name:'자산과 개발',items:[
-   {name:'숙박자산 개발·공간개선',url:'business/#capability-3'},
+   {name:'숙박자산 개발·공간개선',url:'business/hospitality-development/'},
    {name:'부동산·금융·투자',url:'business/#capability-4'}]},
  {name:'사업 확장',items:[
    {name:'멤버십·제휴 네트워크',url:'business/#capability-5'},
