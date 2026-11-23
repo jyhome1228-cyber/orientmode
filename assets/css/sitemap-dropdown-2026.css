@@ -110,3 +110,16 @@
  .site-footer.footer .sf-brand img{width:min(70vw,255px)!important}
  .orv-sitemap-page{padding-top:68px}
 }
+
+
+/* Compact shared header: reduced official wordmark and balanced desktop navigation */
+.site-header.site-header,.site-header.site-header.scrolled{height:72px!important}
+.site-header .site-logo img{width:144px!important;max-width:144px!important;max-height:27px!important;height:auto!important;object-fit:contain!important}
+.site-header .site-nav{gap:clamp(17px,2.1vw,28px)!important}
+.site-header .site-nav>a.orv-nav-direct,.site-header .site-nav .orv-nav-group>a.orv-nav-parent{font-size:13.5px!important;letter-spacing:.018em!important;font-weight:550!important;line-height:1.45!important}
+.site-header .site-nav .site-cta{font-size:12.5px!important;font-weight:650!important;padding:12px 17px!important}
+.site-header .orv-nav-toggle{width:15px}
+.site-header .orv-nav-chevron{width:5px;height:5px}
+.orv-sitemap-page{padding-top:72px}
+@media(max-width:1060px){.site-header.site-header,.site-header.site-header.scrolled{height:72px!important}}
+@media(max-width:760px){.site-header.site-header,.site-header.site-header.scrolled{height:64px!important}.site-header .site-logo img{width:128px!important;max-width:128px!important;max-height:24px!important}.orv-sitemap-page{padding-top:64px}.site-mobile-menu{top:64px!important;inset-block-start:64px!important}}
