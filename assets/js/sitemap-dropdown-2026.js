@@ -30,7 +30,7 @@ const items=[
 ];
 const a=(name,path,extra='')=>'<a href="'+href(path)+'"'+extra+'>'+name+'</a>';
 function drop(item){
- if(item.groups)return '<div class="orv-nav-dropdown orv-nav-dropdown--business" id="orv-drop-business"><div class="orv-dropdown-intro">사업 역량</div><div class="orv-mega-columns">'+item.groups.map(g=>'<div class="orv-mega-column"><h3>'+g.name+'</h3>'+g.items.map(x=>a(x.name,x.url)).join('')+'</div>').join('')+'</div></div>';
+ if(item.groups)return '<div class="orv-nav-dropdown orv-nav-dropdown--business" id="orv-drop-business"><div class="orv-mega-columns">'+item.groups.map(g=>'<div class="orv-mega-column"><h3>'+g.name+'</h3>'+g.items.map(x=>a(x.name,x.url)).join('')+'</div>').join('')+'</div></div>';
  return '<div class="orv-nav-dropdown orv-nav-dropdown--solutions" id="orv-drop-solutions">'+item.programs.map(p=>'<a class="orv-program-link" href="'+href(p.url)+'"><strong>'+p.name+'</strong><span>'+p.description+'</span></a>').join('')+'</div>';
 }
 const desktop=document.querySelector('.site-nav, .head .links');
