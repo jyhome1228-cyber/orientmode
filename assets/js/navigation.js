@@ -38,7 +38,7 @@
   document.addEventListener('keydown',e=>{
     if(e.key==='Escape'&&panel?.classList.contains('open'))closeMenu(true);
     if(e.key==='Tab'&&panel?.classList.contains('open')){
-      const nodes=[toggle,...panel.querySelectorAll('a')];const index=nodes.indexOf(document.activeElement);
+      const nodes=[toggle,...Array.from(panel.querySelectorAll('a,button')).filter(el=>!el.closest('[hidden]')&&!el.disabled&&el.getClientRects().length)];const index=nodes.indexOf(document.activeElement);
       if(e.shiftKey&&index===0){e.preventDefault();nodes[nodes.length-1].focus()}
       else if(!e.shiftKey&&index===nodes.length-1){e.preventDefault();nodes[0].focus()}
     }
