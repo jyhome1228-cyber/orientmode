@@ -151,3 +151,13 @@ body.op-page a{text-decoration:none}
 /* 2026-11-23: single, legible detail category instead of breadcrumb */
 .op-detail .op-hero__category{margin:0 0 19px!important;font-size:17px!important;line-height:1.55!important;font-weight:600!important;letter-spacing:-.02em!important;color:#e0ecf1!important}
 @media(max-width:760px){.op-detail .op-hero__category{font-size:16px!important;margin-bottom:16px!important}}
+
+
+/* Distinct hotel sales and marketing booking journey */
+.op-journey{padding-top:54px!important;padding-bottom:72px!important;background:#f2f5f6}
+.op-journey__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3.2vw,48px)}
+.op-journey__grid article{border-top:1px solid #91a5ae;padding:24px 0 0}
+.op-journey__grid span{display:block;font-size:13px;font-weight:600;color:#527083;margin-bottom:16px}
+.op-journey__grid h3{font-size:23px!important;line-height:1.45!important}
+.op-journey__grid p{font-size:15px;line-height:1.85;color:#405865;margin-top:15px!important}
+@media(max-width:760px){.op-journey{padding:49px 0!important}.op-journey__grid{grid-template-columns:1fr;gap:29px}.op-journey__grid article{padding-top:20px}.op-journey__grid h3{font-size:21px!important}}
