@@ -3,7 +3,7 @@
 .orv-nav-group>a{display:flex!important;align-items:center;gap:7px}
 .orv-nav-chevron{display:inline-block;width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.7}
 .orv-nav-dropdown{position:absolute;top:calc(100% + 18px);left:-20px;min-width:222px;max-width:330px;padding:10px;background:#f7f9fa;color:#183247;border:1px solid rgba(22,50,69,.12);box-shadow:0 18px 48px rgba(7,21,32,.2);border-radius:7px;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .18s,transform .18s,visibility .18s;z-index:170}
-.orv-nav-group:hover .orv-nav-dropdown,.orv-nav-group:focus-within .orv-nav-dropdown,.orv-nav-group.is-open .orv-nav-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.orv-nav-group.is-open .orv-nav-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
 .orv-nav-dropdown:before{content:"";position:absolute;inset:-19px 0 auto;height:19px}
 .orv-nav-dropdown a{display:block!important;color:#243d50!important;padding:12px 13px!important;background:transparent!important;border-radius:4px!important;font-size:12px!important;font-weight:550!important;letter-spacing:-.015em!important;line-height:1.4!important;white-space:nowrap}
 .orv-nav-dropdown a:hover,.orv-nav-dropdown a:focus-visible{background:#e9eef1!important;color:#122e43!important}
@@ -40,3 +40,36 @@
 
 .orv-mobile-direct{display:block!important;color:#fff!important;padding:19px 0!important;border-bottom:1px solid rgba(255,255,255,.17)!important;font-size:18px!important;font-weight:700!important}
 .orv-mobile-direct:hover{color:#c9dbe5!important}
+
+/* Site navigation refinement — plain links for About, Performance and Portfolio */
+.site-header .site-nav,.head .links{align-items:center;gap:clamp(14px,1.65vw,28px)!important}
+.site-header .site-nav .orv-nav-direct,.head .links .orv-nav-direct{white-space:nowrap}
+.orv-nav-group{gap:5px;flex-shrink:0;white-space:nowrap}
+.orv-nav-group>.orv-nav-parent{display:inline-flex!important;padding-right:0!important}
+.orv-nav-toggle{appearance:none;display:inline-flex;align-items:center;justify-content:center;width:20px;height:26px;padding:0;background:transparent;color:inherit;border:0;cursor:pointer}
+.orv-nav-toggle:focus-visible{outline:1px solid currentColor;outline-offset:3px}
+.orv-nav-chevron{margin:-3px 2px 0 0}
+.orv-nav-dropdown{top:calc(100% + 16px);min-width:0;transform:translateY(8px)}
+.orv-nav-dropdown:before{inset:-17px 0 auto;height:17px}
+.orv-nav-group.is-open .orv-nav-dropdown{transform:translateY(0)}
+.orv-nav-dropdown--business{left:-140px;right:auto;width:min(780px,calc(100vw - 70px));padding:30px 32px 33px;background:#f9fbfc;border-color:#d9e2e7}
+.orv-dropdown-intro{font-size:15px;font-weight:700;letter-spacing:-.025em;color:#102d40;padding-bottom:17px;margin-bottom:20px;border-bottom:1px solid #d8e1e7}
+.orv-mega-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.orv-mega-column{min-width:0}
+.orv-mega-column h3{font-family:Pretendard,"Apple SD Gothic Neo",sans-serif!important;font-size:14px!important;letter-spacing:-.03em!important;font-weight:700;margin:0 0 14px!important;color:#547285!important}
+.site-header .site-nav .orv-mega-column a,.head .links .orv-mega-column a{display:block!important;font-size:13px!important;white-space:normal!important;padding:10px 4px!important;line-height:1.6!important;color:#1c384a!important}
+.site-header .site-nav .orv-mega-column a:hover,.head .links .orv-mega-column a:hover{background:transparent!important;color:#527b98!important}
+.orv-nav-dropdown--solutions{left:auto;right:-22px;min-width:300px;max-width:350px;padding:8px 12px}
+.orv-nav-dropdown .orv-program-link{display:flex!important;align-items:center;gap:18px;padding:17px 12px!important;color:#213c4e!important;border-bottom:1px solid #e1e7ea;border-radius:0!important}
+.orv-nav-dropdown .orv-program-link:last-child{border-bottom:0}
+.orv-nav-dropdown .orv-program-link strong{font-weight:750;font-size:13px;min-width:68px}
+.orv-nav-dropdown .orv-program-link span{font-size:13px;color:#516b7d}
+.orv-mobile-group{padding:8px 0 12px}
+.orv-mobile-group p{font-size:13px;font-weight:700;color:#9fb8c9;padding:7px 0;margin:0 0 3px}
+.orv-mobile-group a{display:block!important;font-size:15px!important;color:#e0eaf1!important;padding:9px 0!important}
+.orv-mobile-subnav a span{display:block;font-size:13px;opacity:.7;margin-top:3px}
+.orv-mobile-insights{display:block;padding:16px 0;color:#b7c9d5!important;font-size:15px}
+.orv-mobile-overview{margin-bottom:10px}
+.head .links>.orv-nav-group>a,.head .links>.orv-nav-direct{color:#fff}
+@media(min-width:1061px) and (max-width:1210px){.site-header .site-nav,.head .links{gap:12px!important}.orv-nav-dropdown--business{left:-105px}}
+@media(max-width:1060px){.orv-nav-dropdown{display:none!important}.site-header .site-nav,.head .links{display:none!important}}
