@@ -80,3 +80,33 @@
 .orv-opening .orv-opening__logo{width:clamp(210px,22vw,290px)!important;max-height:none!important;height:auto!important}
 .head .logo img{width:176px!important;max-width:176px!important;height:auto!important;object-fit:contain!important}
 @media(max-width:760px){.site-header .site-logo img{width:154px!important;max-height:29px!important}.site-footer .sf-brand img{width:min(70vw,260px)!important}.orv-opening .orv-opening__logo{width:min(74vw,245px)!important}.head .logo img{width:155px!important;max-width:155px!important}}
+
+
+/* Shared header and footer: consistent content width and responsive geometry */
+.site-header.site-header{
+  height:76px!important;
+  padding-left:max(4.5vw,calc((100vw - 1440px)/2))!important;
+  padding-right:max(4.5vw,calc((100vw - 1440px)/2))!important;
+}
+.site-header.site-header.scrolled{height:72px!important}
+.site-footer.footer .sf-shell{
+  width:min(1440px,calc(100% - 9vw))!important;
+  max-width:1440px!important;
+}
+.site-footer.footer .sf-brand img{width:clamp(225px,22vw,310px)!important;max-width:100%!important;height:auto!important}
+.orv-sitemap-page{padding-top:76px}
+.orv-sitemap-page .wrap{max-width:1440px}
+.orv-sitemap-page .site-header .site-logo img{max-width:none}
+@media(max-width:1060px){
+ .site-header.site-header,.site-header.site-header.scrolled{height:72px!important}
+}
+@media(max-width:760px){
+ .site-header.site-header,.site-header.site-header.scrolled{
+   height:68px!important;
+   padding-left:6vw!important;
+   padding-right:6vw!important;
+ }
+ .site-footer.footer .sf-shell{width:calc(100% - 12vw)!important}
+ .site-footer.footer .sf-brand img{width:min(70vw,255px)!important}
+ .orv-sitemap-page{padding-top:68px}
+}
