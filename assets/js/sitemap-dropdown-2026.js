@@ -13,7 +13,7 @@ const businessGroups=[
    {name:'숙박자산 개발·공간개선',url:'business/hospitality-development/'},
    {name:'부동산·금융·투자',url:'business/real-estate-investment/'}]},
  {name:'사업 확장',items:[
-   {name:'멤버십·제휴 네트워크',url:'business/#capability-5'},
+   {name:'멤버십·제휴 네트워크',url:'business/membership-partnerships/'},
    {name:'브랜드·복합사업 개발',url:'business/#capability-6'}]}
 ];
 const solutions=[
