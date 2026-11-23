@@ -146,3 +146,8 @@ body.op-page a{text-decoration:none}
  .op-closing__note{font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){.op-button,.op-project__image img{transition:none}}
+
+
+/* 2026-11-23: single, legible detail category instead of breadcrumb */
+.op-detail .op-hero__category{margin:0 0 19px!important;font-size:17px!important;line-height:1.55!important;font-weight:600!important;letter-spacing:-.02em!important;color:#e0ecf1!important}
+@media(max-width:760px){.op-detail .op-hero__category{font-size:16px!important;margin-bottom:16px!important}}
