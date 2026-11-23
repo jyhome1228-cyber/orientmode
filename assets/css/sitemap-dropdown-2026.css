@@ -153,11 +153,11 @@
   }
   .orv-mega-column{
     min-width:0!important;
-    padding:1px 25px 0 0!important;
+    padding:1px 17px 0 0!important;
   }
   .orv-mega-column+.orv-mega-column{
     border-left:1px solid rgba(213,228,238,.15);
-    padding-left:27px!important;
+    padding-left:22px!important;
   }
   .orv-mega-column h3{
     margin:0 0 19px!important;
