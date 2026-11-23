@@ -14,7 +14,7 @@ const businessGroups=[
    {name:'부동산·금융·투자',url:'business/real-estate-investment/'}]},
  {name:'사업 확장',items:[
    {name:'멤버십·제휴 네트워크',url:'business/membership-partnerships/'},
-   {name:'브랜드·복합사업 개발',url:'business/#capability-6'}]}
+   {name:'브랜드·복합사업 개발',url:'business/brand-complex-development/'}]}
 ];
 const solutions=[
  {name:'BASIC',description:'마케팅 지원형',url:'solutions/basic/'},
