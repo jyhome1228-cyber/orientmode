@@ -11,7 +11,7 @@ const businessGroups=[
    {name:'호텔 매출·마케팅',url:'business/hotel-sales-marketing/index.html?v=20261123-marketing09'}]},
  {name:'자산과 개발',items:[
    {name:'숙박자산 개발·공간개선',url:'business/hospitality-development/'},
-   {name:'부동산·금융·투자',url:'business/#capability-4'}]},
+   {name:'부동산·금융·투자',url:'business/real-estate-investment/'}]},
  {name:'사업 확장',items:[
    {name:'멤버십·제휴 네트워크',url:'business/#capability-5'},
    {name:'브랜드·복합사업 개발',url:'business/#capability-6'}]}
