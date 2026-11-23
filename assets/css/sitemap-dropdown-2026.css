@@ -235,3 +235,26 @@
 @media(prefers-reduced-motion:reduce){
   .orv-nav-group .orv-nav-dropdown,.orv-nav-dropdown a{transition:none!important}
 }
+
+/* Header navigation: no decorative underlines, including hover and active */
+.site-header .site-nav a,
+.site-header .site-nav a:hover,
+.site-header .site-nav a:focus,
+.site-header .site-nav a:focus-visible,
+.site-header .site-nav a[aria-current="page"]{
+  text-decoration:none!important;
+  text-decoration-line:none!important;
+  box-shadow:none!important;
+}
+.site-header .site-nav a:not(.site-cta)::before,
+.site-header .site-nav a:not(.site-cta)::after{
+  content:none!important;
+  display:none!important;
+  height:0!important;
+  border:0!important;
+  background:none!important;
+}
+.site-header .site-nav>.orv-nav-direct,
+.site-header .site-nav .orv-nav-group>.orv-nav-parent{
+  border-bottom:0!important;
+}
