@@ -1,0 +1,27 @@
+/* ORIENTIVE ABOUT content expansion - 2026-11-24 */
+.about-story,.about-origin{font-family:Pretendard,"Apple SD Gothic Neo",sans-serif;color:#173344;word-break:keep-all}
+.about-story{background:#f7f8f7;padding:clamp(65px,7vw,105px) 0}
+.about-story__head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:end;margin-bottom:32px}
+.about-story__head h2,.about-origin h2{font-size:clamp(26px,2.35vw,34px)!important;line-height:1.42!important;letter-spacing:-.045em!important;font-weight:550!important;color:#173344!important;margin:12px 0 0!important}
+.about-story__head>p,.about-origin__inner>div:last-child p{font-size:14px;line-height:1.9;color:#536a76;margin:0}
+.about-story__media{margin:0 0 28px}
+.about-story__media img{width:100%;height:clamp(250px,30vw,430px);object-fit:cover;object-position:center 50%;display:block}
+.about-story__media p{font-size:11px;color:#71838b;margin:10px 0 0}
+.about-story__details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3.8vw,56px)}
+.about-story__details article{border-top:1px solid #cad5da;padding-top:23px}
+.about-story__details h3{font-size:18px!important;line-height:1.48!important;letter-spacing:-.035em!important;font-weight:600!important;color:#193646!important;margin:0 0 14px!important}
+.about-story__details p{font-size:13px;line-height:1.85;color:#546a76;margin:0}
+.about-origin{background:#eaf0f2;padding:clamp(65px,7vw,99px) 0}
+.about-origin__inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,80px)}
+.about-origin__inner>div:last-child p+p{margin-top:18px}
+.about-origin__inner a{display:inline-block;border-bottom:1px solid #7a929e;color:#1d4356;font-size:13px;font-weight:600;padding:7px 0;margin-top:25px}
+@media(max-width:760px){
+.about-story,.about-origin{padding:55px 0}
+.about-story__head,.about-origin__inner{grid-template-columns:1fr;gap:20px}
+.about-story__head h2,.about-origin h2{font-size:26px!important}
+.about-story__head>p,.about-origin__inner>div:last-child p{font-size:13.5px}
+.about-story__media img{height:240px}
+.about-story__details{grid-template-columns:1fr;gap:21px}
+.about-story__details article{padding-top:19px}
+.about-story__details h3{font-size:17px!important;margin-bottom:10px!important}
+}
