@@ -22,3 +22,18 @@ html.orv-fullpage-active main>.orv-home-proof .orv-wrap{max-width:1440px!importa
 }
 @media(max-width:850px){.orv-home-proof{padding:70px 0!important}.orv-home-proof__head{grid-template-columns:1fr;gap:16px;margin-bottom:26px}.orv-home-proof__grid article{padding-right:20px}.orv-home-proof__grid article+article{padding-left:20px}.orv-home-proof__year{font-size:36px!important}.orv-home-proof__grid h3{font-size:17px!important}}
 @media(max-width:640px){.orv-home-proof{padding:55px 0!important}.orv-home-proof .orv-wrap{width:calc(100% - 12vw)}.orv-home-proof__grid{grid-template-columns:1fr}.orv-home-proof__grid article,.orv-home-proof__grid article+article{border-left:0;padding:23px 0}.orv-home-proof__grid article+article{border-top:1px solid #d7e0e4}.orv-home-proof__year{font-size:36px!important;margin-bottom:14px!important}.orv-home-proof__grid h3{margin-bottom:9px!important}.orv-home-proof__bottom{flex-direction:column;align-items:flex-start;gap:13px}.orv-home-proof__bottom .orv-link{white-space:normal}}
+
+
+/* Genuine operating cases and member business narrative */
+.orv-cases .orv-case__image img{object-fit:cover}
+.orv-cases .orv-case:first-child .orv-case__image img{object-position:center 45%}
+.orv-cases .orv-case:nth-child(2) .orv-case__image img{object-position:center 52%}
+.orv-home-network{background:#edf1f2!important}
+.orv-home-network__layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(40px,5vw,85px)}
+.orv-home-network .orv-title{font-size:clamp(28px,2.55vw,37px)!important;line-height:1.38!important;font-weight:550!important;margin:16px 0 24px!important}
+.orv-home-network .orv-copy{font-size:14px!important;line-height:1.95!important;color:#405967!important;max-width:570px}
+.orv-home-network__note{font-size:11px!important;line-height:1.8!important;color:#667e89!important;margin:18px 0 24px!important;max-width:570px}
+.orv-home-network__photo{width:100%;height:clamp(300px,32vw,460px);min-width:0;overflow:hidden;background:#d3dfe3}
+.orv-home-network__photo img{width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block}
+@media(min-width:1025px) and (min-height:680px) and (prefers-reduced-motion:no-preference){html.orv-fullpage-active main>.orv-home-network .orv-wrap{max-width:1440px!important;width:min(1440px,calc(100% - 9vw))!important}}
+@media(max-width:760px){.orv-home-network__layout{grid-template-columns:1fr;gap:30px}.orv-home-network__photo{height:280px}.orv-home-network .orv-title{font-size:29px!important}.orv-home-network .orv-copy{font-size:13.5px!important}}
