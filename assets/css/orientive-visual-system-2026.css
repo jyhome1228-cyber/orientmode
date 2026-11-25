@@ -1,0 +1,49 @@
+/* ORIENTIVE | visual identity refinement | 2026-11-25
+   Stable typography and cooler, non-green navy. This stylesheet is intentionally
+   loaded last so legacy page styles cannot reintroduce warm/green navy. */
+:root{
+ --orv-brand-navy:#10293D;--orv-deep-navy:#0B2132;
+ --orv-ink:#173344;--orv-paper:#F8F9F8;--orv-slate:#587183;
+ --orv-line:#D9E2E8;--orv-quiet:#EDF1F3;
+ --hf-navy:#0B2132;--hf-navy-2:#091D2D;--hf-orange:#CBD9E2;
+}
+html{scroll-padding-top:76px}
+body{font-family:"Pretendard Variable","Pretendard","Apple SD Gothic Neo",sans-serif}
+.site-header.header,.site-header.header.scrolled,
+body.op-page>.site-header.header,body.op-page>.site-header.header.scrolled{
+ background:#0B2132!important;
+ border-bottom:1px solid rgba(235,244,249,.12)!important;
+ box-shadow:none!important;
+}
+.site-header.header.is-home.at-top:not(.menu-active){
+ background:linear-gradient(180deg,rgba(11,33,50,.84),rgba(11,33,50,.15))!important;
+}
+.site-header .site-nav .site-cta{
+ background:transparent!important;color:#F2F6F8!important;
+ border:1px solid rgba(232,241,245,.58)!important;
+ border-radius:2px!important;padding:12px 18px!important;
+ font-weight:550!important;
+}
+.site-header .site-nav .site-cta:hover{
+ background:#F1F6F8!important;color:#10293D!important;transform:none!important;
+}
+.site-mobile-menu.overlaymenu,.site-mobile-menu.overlaymenu.open{background:#0B2132!important}
+.site-footer.footer{background:#091D2D!important}
+.site-footer.footer .sf-shell{padding-top:31px!important;padding-bottom:16px!important}
+.site-footer.footer .sf-top{padding-bottom:23px!important}
+.site-footer.footer .sf-brand img{width:clamp(172px,15vw,220px)!important}
+.site-footer.footer .sf-links{gap:8px!important}
+.site-footer.footer .sf-bottom{padding-top:14px!important}
+.op-hero,.pf-hero,.pfp-hero,.biz-hero,
+.op-closing,.pf-closing,.pfp-close{background-color:#10293D!important}
+.op-detail,.biz-page,.pf-page,.pf-portfolio{--op-ink:#173344;--op-body:#4C6472;--op-line:#D9E2E8;--op-tint:#F0F3F4}
+.op-detail .op-hero__lead{color:#D4E0E6}
+.op-detail .op-button:not(.op-button--light){background:#10293D}
+.op-detail .op-section{color:#173344}
+.op-detail h1,.pf-page h1,.pf-portfolio h1{letter-spacing:-.04em!important}
+.op-detail .op-hero__category{color:#DDE8ED!important}
+@media(max-width:760px){
+ .site-header.header,.site-header.header.scrolled{height:70px!important;min-height:70px!important}
+ .site-footer.footer .sf-shell{padding-top:28px!important}
+ .site-footer.footer .sf-top{gap:22px!important;padding-bottom:24px!important}
+}
